@@ -1514,6 +1514,118 @@
 <pin name="P$3" x="5.08" y="2.54" visible="pin" length="middle" direction="pas" rot="R270"/>
 <wire x1="-5.08" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
 </symbol>
+<symbol name="ADM2587E">
+<pin name="GND1" x="-17.78" y="6.35" visible="off" length="middle" direction="pwr"/>
+<pin name="VCC" x="-17.78" y="3.81" visible="off" length="middle" direction="pwr"/>
+<pin name="RxD" x="-17.78" y="1.27" visible="off" length="middle" direction="out"/>
+<pin name="RE" x="-17.78" y="-1.27" visible="off" length="middle" direction="in"/>
+<pin name="DE" x="-17.78" y="-3.81" visible="off" length="middle" direction="in"/>
+<pin name="TxD" x="-17.78" y="-6.35" visible="off" length="middle" direction="in"/>
+<pin name="GND2" x="17.78" y="7.62" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="VISOOUT" x="17.78" y="5.08" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="Y" x="17.78" y="2.54" visible="off" length="middle" direction="out" rot="R180"/>
+<pin name="Z" x="17.78" y="0" visible="off" length="middle" direction="out" rot="R180"/>
+<pin name="B" x="17.78" y="-2.54" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="A" x="17.78" y="-5.08" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="VISOIN" x="17.78" y="-7.62" visible="off" length="middle" direction="pwr" rot="R180"/>
+<wire x1="-12.7" y1="-10.16" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="10.16" x2="12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="10.16" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-10.16" x2="-12.7" y2="-10.16" width="0.254" layer="94"/>
+<text x="-12.7" y="12.7" size="1.778" layer="95">&gt;NAME</text>
+<text x="-12.7" y="-13.97" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-13.97" y="6.985" size="1.6764" layer="94" rot="R180">GND1</text>
+<text x="-13.97" y="4.445" size="1.6764" layer="94" rot="R180">VCC</text>
+<text x="-13.97" y="1.905" size="1.6764" layer="94" rot="R180">RxD</text>
+<text x="-13.97" y="-0.635" size="1.6764" layer="94" rot="R180">RE</text>
+<text x="-13.97" y="-3.175" size="1.6764" layer="94" rot="R180">DE</text>
+<text x="-13.97" y="-5.715" size="1.6764" layer="94" rot="R180">TxD</text>
+<text x="13.97" y="8.255" size="1.6764" layer="94">GND2</text>
+<text x="13.97" y="5.715" size="1.6764" layer="94">VISOOUT</text>
+<text x="13.97" y="3.175" size="1.6764" layer="94">Y</text>
+<text x="13.97" y="0.635" size="1.6764" layer="94">Z</text>
+<text x="13.97" y="-1.905" size="1.6764" layer="94">B</text>
+<text x="13.97" y="-4.445" size="1.6764" layer="94">A</text>
+<text x="13.97" y="-6.985" size="1.6764" layer="94">VISOIN</text>
+</symbol>
+<symbol name="ADM3055E">
+<pin name="GND1" x="-20.32" y="8.89" visible="off" length="middle" direction="pwr"/>
+<pin name="VCC" x="-20.32" y="6.35" visible="off" length="middle" direction="pwr"/>
+<pin name="VIO" x="-20.32" y="3.81" visible="off" length="middle" direction="pwr"/>
+<pin name="RXD" x="-20.32" y="1.27" visible="off" length="middle" direction="out"/>
+<pin name="SILENT" x="-20.32" y="-1.27" visible="off" length="middle" direction="in"/>
+<pin name="TXD" x="-20.32" y="-3.81" visible="off" length="middle" direction="in"/>
+<pin name="STBY" x="-20.32" y="-6.35" visible="off" length="middle" direction="in"/>
+<pin name="AUXIN" x="-20.32" y="-8.89" visible="off" length="middle" direction="in"/>
+<pin name="GND2" x="20.32" y="8.89" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="RS" x="20.32" y="6.35" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="CANL" x="20.32" y="3.81" visible="off" length="middle" direction="io" rot="R180"/>
+<pin name="CANH" x="20.32" y="1.27" visible="off" length="middle" direction="io" rot="R180"/>
+<pin name="VISOIN" x="20.32" y="-1.27" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="AUXOUT" x="20.32" y="-3.81" visible="off" length="middle" direction="out" rot="R180"/>
+<pin name="GNDISO" x="20.32" y="-6.35" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="VISOOUT" x="20.32" y="-8.89" visible="off" length="middle" direction="pwr" rot="R180"/>
+<wire x1="-15.24" y1="-11.43" x2="-15.24" y2="11.43" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="11.43" x2="15.24" y2="11.43" width="0.254" layer="94"/>
+<wire x1="15.24" y1="11.43" x2="15.24" y2="-11.43" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-11.43" x2="-15.24" y2="-11.43" width="0.254" layer="94"/>
+<text x="-15.24" y="13.97" size="1.778" layer="95">&gt;NAME</text>
+<text x="-15.24" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-16.51" y="9.525" size="1.6764" layer="94" rot="R180">GND1</text>
+<text x="-16.51" y="6.985" size="1.6764" layer="94" rot="R180">VCC</text>
+<text x="-16.51" y="4.445" size="1.6764" layer="94" rot="R180">VIO</text>
+<text x="-16.51" y="1.905" size="1.6764" layer="94" rot="R180">RXD</text>
+<text x="-16.51" y="-0.635" size="1.6764" layer="94" rot="R180">SILENT</text>
+<text x="-16.51" y="-3.175" size="1.6764" layer="94" rot="R180">TXD</text>
+<text x="-16.51" y="-5.715" size="1.6764" layer="94" rot="R180">STBY</text>
+<text x="-16.51" y="-8.255" size="1.6764" layer="94" rot="R180">AUXIN</text>
+<text x="16.51" y="9.525" size="1.6764" layer="94">GND2</text>
+<text x="16.51" y="6.985" size="1.6764" layer="94">RS</text>
+<text x="16.51" y="4.445" size="1.6764" layer="94">CANL</text>
+<text x="16.51" y="1.905" size="1.6764" layer="94">CANH</text>
+<text x="16.51" y="-0.635" size="1.6764" layer="94">VISOIN</text>
+<text x="16.51" y="-3.175" size="1.6764" layer="94">AUXOUT</text>
+<text x="16.51" y="-5.715" size="1.6764" layer="94">GNDISO</text>
+<text x="16.51" y="-8.255" size="1.6764" layer="94">VISOOUT</text>
+</symbol>
+<symbol name="SLB9672">
+<pin name="VDD" x="-17.78" y="6.35" visible="off" length="middle" direction="pwr"/>
+<pin name="GND" x="-17.78" y="3.81" visible="off" length="middle" direction="pwr"/>
+<pin name="NC" x="-17.78" y="1.27" visible="off" length="middle" direction="nc"/>
+<pin name="NCI" x="-17.78" y="-1.27" visible="off" length="middle" direction="nc"/>
+<pin name="NCI_VDD" x="-17.78" y="-3.81" visible="off" length="middle" direction="pas"/>
+<pin name="NCI_GND" x="-17.78" y="-6.35" visible="off" length="middle" direction="pas"/>
+<pin name="RST#" x="17.78" y="6.35" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="PIRQ#" x="17.78" y="3.81" visible="off" length="middle" direction="oc" rot="R180"/>
+<pin name="SCLK" x="17.78" y="1.27" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="CS#" x="17.78" y="-1.27" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="MOSI" x="17.78" y="-3.81" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="MISO" x="17.78" y="-6.35" visible="off" length="middle" direction="out" rot="R180"/>
+<pin name="GPIO_00" x="-2.54" y="13.97" visible="off" length="middle" direction="io" rot="R270"/>
+<pin name="GPIO_01" x="0" y="13.97" visible="off" length="middle" direction="io" rot="R270"/>
+<pin name="GPIO_02" x="2.54" y="13.97" visible="off" length="middle" direction="io" rot="R270"/>
+<wire x1="-12.7" y1="-8.89" x2="-12.7" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="8.89" x2="12.7" y2="8.89" width="0.254" layer="94"/>
+<wire x1="12.7" y1="8.89" x2="12.7" y2="-8.89" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-8.89" x2="-12.7" y2="-8.89" width="0.254" layer="94"/>
+<text x="-12.7" y="16.51" size="1.778" layer="95">&gt;NAME</text>
+<text x="-12.7" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-13.97" y="6.985" size="1.6764" layer="94" rot="R180">VDD</text>
+<text x="-13.97" y="4.445" size="1.6764" layer="94" rot="R180">GND</text>
+<text x="-13.97" y="1.905" size="1.6764" layer="94" rot="R180">NC</text>
+<text x="-13.97" y="-0.635" size="1.6764" layer="94" rot="R180">NCI</text>
+<text x="-13.97" y="-3.175" size="1.6764" layer="94" rot="R180">NCI_VDD</text>
+<text x="-13.97" y="-5.715" size="1.6764" layer="94" rot="R180">NCI_GND</text>
+<text x="13.97" y="6.985" size="1.6764" layer="94">RST#</text>
+<text x="13.97" y="4.445" size="1.6764" layer="94">PIRQ#</text>
+<text x="13.97" y="1.905" size="1.6764" layer="94">SCLK</text>
+<text x="13.97" y="-0.635" size="1.6764" layer="94">CS#</text>
+<text x="13.97" y="-3.175" size="1.6764" layer="94">MOSI</text>
+<text x="13.97" y="-5.715" size="1.6764" layer="94">MISO</text>
+<text x="-3.175" y="10.16" size="1.6764" layer="94" rot="R90">GPIO_00</text>
+<text x="-0.635" y="10.16" size="1.6764" layer="94" rot="R90">GPIO_01</text>
+<text x="1.905" y="10.16" size="1.6764" layer="94" rot="R90">GPIO_02</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="C-EU" uservalue="yes">
