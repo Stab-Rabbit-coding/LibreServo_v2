@@ -1514,6 +1514,195 @@
 <pin name="P$3" x="5.08" y="2.54" visible="pin" length="middle" direction="pas" rot="R270"/>
 <wire x1="-5.08" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
 </symbol>
+<symbol name="ADM2587E">
+<pin name="GND1" x="-17.78" y="6.35" visible="off" length="middle" direction="pwr"/>
+<pin name="VCC" x="-17.78" y="3.81" visible="off" length="middle" direction="pwr"/>
+<pin name="RxD" x="-17.78" y="1.27" visible="off" length="middle" direction="out"/>
+<pin name="RE" x="-17.78" y="-1.27" visible="off" length="middle" direction="in"/>
+<pin name="DE" x="-17.78" y="-3.81" visible="off" length="middle" direction="in"/>
+<pin name="TxD" x="-17.78" y="-6.35" visible="off" length="middle" direction="in"/>
+<pin name="GND2" x="17.78" y="7.62" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="VISOOUT" x="17.78" y="5.08" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="Y" x="17.78" y="2.54" visible="off" length="middle" direction="out" rot="R180"/>
+<pin name="Z" x="17.78" y="0" visible="off" length="middle" direction="out" rot="R180"/>
+<pin name="B" x="17.78" y="-2.54" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="A" x="17.78" y="-5.08" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="VISOIN" x="17.78" y="-7.62" visible="off" length="middle" direction="pwr" rot="R180"/>
+<wire x1="-12.7" y1="-10.16" x2="-12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="10.16" x2="12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="10.16" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-10.16" x2="-12.7" y2="-10.16" width="0.254" layer="94"/>
+<text x="-12.7" y="12.7" size="1.778" layer="95">&gt;NAME</text>
+<text x="-12.7" y="-13.97" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-13.97" y="6.985" size="1.6764" layer="94" rot="R180">GND1</text>
+<text x="-13.97" y="4.445" size="1.6764" layer="94" rot="R180">VCC</text>
+<text x="-13.97" y="1.905" size="1.6764" layer="94" rot="R180">RxD</text>
+<text x="-13.97" y="-0.635" size="1.6764" layer="94" rot="R180">RE</text>
+<text x="-13.97" y="-3.175" size="1.6764" layer="94" rot="R180">DE</text>
+<text x="-13.97" y="-5.715" size="1.6764" layer="94" rot="R180">TxD</text>
+<text x="13.97" y="8.255" size="1.6764" layer="94">GND2</text>
+<text x="13.97" y="5.715" size="1.6764" layer="94">VISOOUT</text>
+<text x="13.97" y="3.175" size="1.6764" layer="94">Y</text>
+<text x="13.97" y="0.635" size="1.6764" layer="94">Z</text>
+<text x="13.97" y="-1.905" size="1.6764" layer="94">B</text>
+<text x="13.97" y="-4.445" size="1.6764" layer="94">A</text>
+<text x="13.97" y="-6.985" size="1.6764" layer="94">VISOIN</text>
+</symbol>
+<symbol name="ADM3055E">
+<pin name="GND1" x="-20.32" y="8.89" visible="off" length="middle" direction="pwr"/>
+<pin name="VCC" x="-20.32" y="6.35" visible="off" length="middle" direction="pwr"/>
+<pin name="VIO" x="-20.32" y="3.81" visible="off" length="middle" direction="pwr"/>
+<pin name="RXD" x="-20.32" y="1.27" visible="off" length="middle" direction="out"/>
+<pin name="SILENT" x="-20.32" y="-1.27" visible="off" length="middle" direction="in"/>
+<pin name="TXD" x="-20.32" y="-3.81" visible="off" length="middle" direction="in"/>
+<pin name="STBY" x="-20.32" y="-6.35" visible="off" length="middle" direction="in"/>
+<pin name="AUXIN" x="-20.32" y="-8.89" visible="off" length="middle" direction="in"/>
+<pin name="GND2" x="20.32" y="8.89" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="RS" x="20.32" y="6.35" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="CANL" x="20.32" y="3.81" visible="off" length="middle" direction="io" rot="R180"/>
+<pin name="CANH" x="20.32" y="1.27" visible="off" length="middle" direction="io" rot="R180"/>
+<pin name="VISOIN" x="20.32" y="-1.27" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="AUXOUT" x="20.32" y="-3.81" visible="off" length="middle" direction="out" rot="R180"/>
+<pin name="GNDISO" x="20.32" y="-6.35" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="VISOOUT" x="20.32" y="-8.89" visible="off" length="middle" direction="pwr" rot="R180"/>
+<wire x1="-15.24" y1="-11.43" x2="-15.24" y2="11.43" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="11.43" x2="15.24" y2="11.43" width="0.254" layer="94"/>
+<wire x1="15.24" y1="11.43" x2="15.24" y2="-11.43" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-11.43" x2="-15.24" y2="-11.43" width="0.254" layer="94"/>
+<text x="-15.24" y="13.97" size="1.778" layer="95">&gt;NAME</text>
+<text x="-15.24" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-16.51" y="9.525" size="1.6764" layer="94" rot="R180">GND1</text>
+<text x="-16.51" y="6.985" size="1.6764" layer="94" rot="R180">VCC</text>
+<text x="-16.51" y="4.445" size="1.6764" layer="94" rot="R180">VIO</text>
+<text x="-16.51" y="1.905" size="1.6764" layer="94" rot="R180">RXD</text>
+<text x="-16.51" y="-0.635" size="1.6764" layer="94" rot="R180">SILENT</text>
+<text x="-16.51" y="-3.175" size="1.6764" layer="94" rot="R180">TXD</text>
+<text x="-16.51" y="-5.715" size="1.6764" layer="94" rot="R180">STBY</text>
+<text x="-16.51" y="-8.255" size="1.6764" layer="94" rot="R180">AUXIN</text>
+<text x="16.51" y="9.525" size="1.6764" layer="94">GND2</text>
+<text x="16.51" y="6.985" size="1.6764" layer="94">RS</text>
+<text x="16.51" y="4.445" size="1.6764" layer="94">CANL</text>
+<text x="16.51" y="1.905" size="1.6764" layer="94">CANH</text>
+<text x="16.51" y="-0.635" size="1.6764" layer="94">VISOIN</text>
+<text x="16.51" y="-3.175" size="1.6764" layer="94">AUXOUT</text>
+<text x="16.51" y="-5.715" size="1.6764" layer="94">GNDISO</text>
+<text x="16.51" y="-8.255" size="1.6764" layer="94">VISOOUT</text>
+</symbol>
+<symbol name="SLB9672">
+<pin name="VDD" x="-17.78" y="6.35" visible="off" length="middle" direction="pwr"/>
+<pin name="GND" x="-17.78" y="3.81" visible="off" length="middle" direction="pwr"/>
+<pin name="NC" x="-17.78" y="1.27" visible="off" length="middle" direction="nc"/>
+<pin name="NCI" x="-17.78" y="-1.27" visible="off" length="middle" direction="nc"/>
+<pin name="NCI_VDD" x="-17.78" y="-3.81" visible="off" length="middle" direction="pas"/>
+<pin name="NCI_GND" x="-17.78" y="-6.35" visible="off" length="middle" direction="pas"/>
+<pin name="RST#" x="17.78" y="6.35" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="PIRQ#" x="17.78" y="3.81" visible="off" length="middle" direction="oc" rot="R180"/>
+<pin name="SCLK" x="17.78" y="1.27" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="CS#" x="17.78" y="-1.27" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="MOSI" x="17.78" y="-3.81" visible="off" length="middle" direction="in" rot="R180"/>
+<pin name="MISO" x="17.78" y="-6.35" visible="off" length="middle" direction="out" rot="R180"/>
+<pin name="GPIO_00" x="-2.54" y="13.97" visible="off" length="middle" direction="io" rot="R270"/>
+<pin name="GPIO_01" x="0" y="13.97" visible="off" length="middle" direction="io" rot="R270"/>
+<pin name="GPIO_02" x="2.54" y="13.97" visible="off" length="middle" direction="io" rot="R270"/>
+<wire x1="-12.7" y1="-8.89" x2="-12.7" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="8.89" x2="12.7" y2="8.89" width="0.254" layer="94"/>
+<wire x1="12.7" y1="8.89" x2="12.7" y2="-8.89" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-8.89" x2="-12.7" y2="-8.89" width="0.254" layer="94"/>
+<text x="-12.7" y="16.51" size="1.778" layer="95">&gt;NAME</text>
+<text x="-12.7" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-13.97" y="6.985" size="1.6764" layer="94" rot="R180">VDD</text>
+<text x="-13.97" y="4.445" size="1.6764" layer="94" rot="R180">GND</text>
+<text x="-13.97" y="1.905" size="1.6764" layer="94" rot="R180">NC</text>
+<text x="-13.97" y="-0.635" size="1.6764" layer="94" rot="R180">NCI</text>
+<text x="-13.97" y="-3.175" size="1.6764" layer="94" rot="R180">NCI_VDD</text>
+<text x="-13.97" y="-5.715" size="1.6764" layer="94" rot="R180">NCI_GND</text>
+<text x="13.97" y="6.985" size="1.6764" layer="94">RST#</text>
+<text x="13.97" y="4.445" size="1.6764" layer="94">PIRQ#</text>
+<text x="13.97" y="1.905" size="1.6764" layer="94">SCLK</text>
+<text x="13.97" y="-0.635" size="1.6764" layer="94">CS#</text>
+<text x="13.97" y="-3.175" size="1.6764" layer="94">MOSI</text>
+<text x="13.97" y="-5.715" size="1.6764" layer="94">MISO</text>
+<text x="-3.175" y="10.16" size="1.6764" layer="94" rot="R90">GPIO_00</text>
+<text x="-0.635" y="10.16" size="1.6764" layer="94" rot="R90">GPIO_01</text>
+<text x="1.905" y="10.16" size="1.6764" layer="94" rot="R90">GPIO_02</text>
+</symbol>
+<symbol name="STM32G431">
+<pin name="VDD_1" x="-25.4" y="17.78" visible="off" length="middle" direction="pwr"/>
+<pin name="PF0-OSC_IN" x="-25.4" y="12.7" visible="off" length="middle" direction="in"/>
+<pin name="PF1-OSC_OUT" x="-25.4" y="7.62" visible="off" length="middle" direction="pas"/>
+<pin name="PG10-NRST" x="-25.4" y="2.54" visible="off" length="middle" direction="in"/>
+<pin name="PA0" x="-25.4" y="-2.54" visible="off" length="middle"/>
+<pin name="PA1" x="-25.4" y="-7.62" visible="off" length="middle"/>
+<pin name="PA2" x="-25.4" y="-12.7" visible="off" length="middle"/>
+<pin name="PA3" x="-25.4" y="-17.78" visible="off" length="middle"/>
+<pin name="PA4" x="-17.78" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="PA5" x="-12.7" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="PA6" x="-7.62" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="PA7" x="-2.54" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="PB0" x="2.54" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="VSSA" x="7.62" y="-25.4" visible="off" length="middle" direction="pwr" rot="R90"/>
+<pin name="VDDA/VREF+" x="12.7" y="-25.4" visible="off" length="middle" direction="pas" rot="R90"/>
+<pin name="VSS_1" x="17.78" y="-25.4" visible="off" length="middle" direction="pwr" rot="R90"/>
+<pin name="VDD_2" x="25.4" y="-17.78" visible="off" length="middle" direction="pwr" rot="R180"/>
+<pin name="PA8" x="25.4" y="-12.7" visible="off" length="middle" rot="R180"/>
+<pin name="PA9" x="25.4" y="-7.62" visible="off" length="middle" rot="R180"/>
+<pin name="PA10" x="25.4" y="-2.54" visible="off" length="middle" rot="R180"/>
+<pin name="PA11" x="25.4" y="2.54" visible="off" length="middle" rot="R180"/>
+<pin name="PA12" x="25.4" y="7.62" visible="off" length="middle" rot="R180"/>
+<pin name="PA13" x="25.4" y="12.7" visible="off" length="middle" rot="R180"/>
+<pin name="PA14" x="25.4" y="17.78" visible="off" length="middle" rot="R180"/>
+<pin name="PA15" x="17.78" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PB3" x="12.7" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PB4" x="7.62" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PB5" x="2.54" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PB6" x="-2.54" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PB7" x="-7.62" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PB8-BOOT0" x="-12.7" y="25.4" visible="off" length="middle" direction="pas" rot="R270"/>
+<pin name="VSS_2" x="-17.78" y="25.4" visible="off" length="middle" direction="pwr" rot="R270"/>
+<pin name="EP" x="0" y="-5.08" visible="off" length="point" direction="pwr"/>
+<wire x1="-20.32" y1="-20.32" x2="-20.32" y2="20.32" width="0.6096" layer="94"/>
+<wire x1="-20.32" y1="20.32" x2="20.32" y2="20.32" width="0.6096" layer="94"/>
+<wire x1="20.32" y1="20.32" x2="20.32" y2="-20.32" width="0.6096" layer="94"/>
+<wire x1="20.32" y1="-20.32" x2="-20.32" y2="-20.32" width="0.6096" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<text x="0.635" y="-5.08" size="1.778" layer="94">EP</text>
+<text x="-20.32" y="30.48" size="1.778" layer="95">&gt;NAME</text>
+<text x="-20.32" y="-33.02" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-21.59" y="18.415" size="1.6764" layer="94" rot="R180">VDD_1</text>
+<text x="-21.59" y="13.335" size="1.6764" layer="94" rot="R180">PF0-OSC_IN</text>
+<text x="-21.59" y="8.255" size="1.6764" layer="94" rot="R180">PF1-OSC_OUT</text>
+<text x="-21.59" y="3.175" size="1.6764" layer="94" rot="R180">PG10-NRST</text>
+<text x="-21.59" y="-1.905" size="1.6764" layer="94" rot="R180">PA0</text>
+<text x="-21.59" y="-6.985" size="1.6764" layer="94" rot="R180">PA1</text>
+<text x="-21.59" y="-12.065" size="1.6764" layer="94" rot="R180">PA2</text>
+<text x="-21.59" y="-17.145" size="1.6764" layer="94" rot="R180">PA3</text>
+<text x="-18.415" y="-21.59" size="1.6764" layer="94" rot="R90">PA4</text>
+<text x="-13.335" y="-21.59" size="1.6764" layer="94" rot="R90">PA5</text>
+<text x="-8.255" y="-21.59" size="1.6764" layer="94" rot="R90">PA6</text>
+<text x="-3.175" y="-21.59" size="1.6764" layer="94" rot="R90">PA7</text>
+<text x="1.905" y="-21.59" size="1.6764" layer="94" rot="R90">PB0</text>
+<text x="6.985" y="-21.59" size="1.6764" layer="94" rot="R90">VSSA</text>
+<text x="12.065" y="-21.59" size="1.6764" layer="94" rot="R90">VDDA/VREF+</text>
+<text x="17.145" y="-21.59" size="1.6764" layer="94" rot="R90">VSS_1</text>
+<text x="21.59" y="-17.145" size="1.6764" layer="94">VDD_2</text>
+<text x="21.59" y="-12.065" size="1.6764" layer="94">PA8</text>
+<text x="21.59" y="-6.985" size="1.6764" layer="94">PA9</text>
+<text x="21.59" y="-1.905" size="1.6764" layer="94">PA10</text>
+<text x="21.59" y="3.175" size="1.6764" layer="94">PA11</text>
+<text x="21.59" y="8.255" size="1.6764" layer="94">PA12</text>
+<text x="21.59" y="13.335" size="1.6764" layer="94">PA13</text>
+<text x="21.59" y="18.415" size="1.6764" layer="94">PA14</text>
+<text x="17.145" y="21.59" size="1.6764" layer="94" rot="R90">PA15</text>
+<text x="12.065" y="21.59" size="1.6764" layer="94" rot="R90">PB3</text>
+<text x="6.985" y="21.59" size="1.6764" layer="94" rot="R90">PB4</text>
+<text x="1.905" y="21.59" size="1.6764" layer="94" rot="R90">PB5</text>
+<text x="-3.175" y="21.59" size="1.6764" layer="94" rot="R90">PB6</text>
+<text x="-8.255" y="21.59" size="1.6764" layer="94" rot="R90">PB7</text>
+<text x="-13.335" y="21.59" size="1.6764" layer="94" rot="R90">PB8-BOOT0</text>
+<text x="-18.415" y="21.59" size="1.6764" layer="94" rot="R90">VSS_2</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="C-EU" uservalue="yes">
