@@ -4,6 +4,11 @@ Engineering analysis and part recommendations for the LibreServo v2.3.1 board (`
 
 **Decision: MCU is being swapped to STM32G431** (native FDCAN) — see §5. This is the bigger of the two alternatives originally laid out, chosen over adding an external MCP2518FD controller to the existing STM32F302K8U6.
 
+Local datasheet copies for the three parts driving this change are in [`datasheets/`](datasheets/):
+- [`ADM2582E-ADM2587E.pdf`](datasheets/ADM2582E-ADM2587E.pdf) — isolated RS-485 transceiver (§2)
+- [`ADM3055E-ADM3057E.pdf`](datasheets/ADM3055E-ADM3057E.pdf) — isolated CAN-FD transceiver (§3)
+- [`Infineon-SLB9672-TPM2.0-SPI-FW16.xx-datasheet.pdf`](datasheets/Infineon-SLB9672-TPM2.0-SPI-FW16.xx-datasheet.pdf) — TPM (§4)
+
 ## 1. MCU CAN-FD capability — verified: no (on the current `U1`, STM32F302K8U6)
 
 `U1` is currently an **STM32F302K8U6** (STM32F302x6/x8 subfamily, Cat.2, UFQFPN32, 64 KB Flash). This subfamily includes ST's classic **bxCAN** peripheral (CAN 2.0B, up to 1 Mbit/s, 8-byte frames only) — it does **not** implement **FDCAN** (the flexible-data-rate peripheral with BRS and up to 64-byte frames). FDCAN was introduced later, starting with the STM32F7/G0/G4/H7/L5 families ([AN5348, "Introduction to FDCAN peripherals for STM32 MCUs"](https://www.st.com/resource/en/application_note/an5348-introduction-to-fdcan-peripherals-for-stm32-mcus-stmicroelectronics.pdf) lists which families have it — F3 is not one of them).
@@ -14,7 +19,7 @@ Practically, this was moot either way for the *current* board: the schematic doe
 
 Current part: `U5`, SIT3485 half-duplex RS-485, MSOP-8, no isolation — the daisy-chain bus (`U$8`/`U$9`, JST-PH-4) shares digital GND directly with every other servo on the chain today.
 
-**Recommendation: Analog Devices [ADM2587E](https://www.analog.com/ADM2587E/datasheet)** (USA). Single-chip signal *and* power isolation (iCoupler + isoPower — no external isolated DC/DC needed), half/full-duplex configurable, ±15 kV ESD, 2.5 kV rms isolation, single 3.3 V or 5 V supply on the logic side, 20-lead wide-body SOIC.
+**Recommendation: Analog Devices [ADM2587E](https://www.analog.com/ADM2587E/datasheet)** (USA, local copy: [`datasheets/ADM2582E-ADM2587E.pdf`](datasheets/ADM2582E-ADM2587E.pdf)). Single-chip signal *and* power isolation (iCoupler + isoPower — no external isolated DC/DC needed), half/full-duplex configurable, ±15 kV ESD, 2.5 kV rms isolation, single 3.3 V or 5 V supply on the logic side, 20-lead wide-body SOIC.
 
 Why this over a signal-only isolator (e.g. TI [ISO1176](https://www.ti.com/product/ISO1176)): board space on this design is very tight, and a signal-only part still needs a separate isolated bus-side supply (push-pull driver + transformer, or a small isolated DC/DC module) — more parts, more area, more failure modes, for a part that's smaller/cheaper only in isolation. If SOIC-20 footprint area turns out to be the binding constraint, ISO1176 + an isolated supply is the fallback.
 
@@ -22,7 +27,7 @@ Why this over a signal-only isolator (e.g. TI [ISO1176](https://www.ti.com/produ
 
 ## 3. Isolated CAN-FD transceiver (new)
 
-**Recommendation: Analog Devices [ADM3055E](https://www.analog.com/media/en/technical-documentation/data-sheets/adm3055e-adm3057e.pdf)** (USA). Same iCoupler/isoPower approach as the ADM2587E above — 5 kV rms signal+power isolation, single 5 V supply, ISO 11898-2:2016 compliant, rated to 5 Mbps CAN FD (up to 12 Mbps demonstrated), 20-lead increased-creepage SOIC.
+**Recommendation: Analog Devices [ADM3055E](https://www.analog.com/media/en/technical-documentation/data-sheets/adm3055e-adm3057e.pdf)** (USA, local copy: [`datasheets/ADM3055E-ADM3057E.pdf`](datasheets/ADM3055E-ADM3057E.pdf)). Same iCoupler/isoPower approach as the ADM2587E above — 5 kV rms signal+power isolation, single 5 V supply, ISO 11898-2:2016 compliant, rated to 5 Mbps CAN FD (up to 12 Mbps demonstrated), 20-lead increased-creepage SOIC.
 
 Picking the same vendor/technology family as the RS-485 part (§2) is deliberate: both isolate power internally, so neither needs its own isolated DC/DC design, and the two parts share a design/verification approach (same iCoupler isolation barrier characterization, same qualification data).
 
@@ -30,7 +35,7 @@ Fallback if SOIC-20 area is a problem: TI [ISO1042](https://www.ti.com/lit/ds/sy
 
 ## 4. TPM: Infineon SLB9672
 
-[SLB9672](https://www.infineon.com/assets/row/public/documents/30/49/infineon-slb9672-tpm20-spi-fw16.xx-ds-rev1-3-2024-11-18-datasheet-en.pdf) (Germany/EU) — TPM 2.0, SPI up to 33 MHz, PG-UQFN-32 package, internal power management (no explicit standby control needed).
+[SLB9672](https://www.infineon.com/assets/row/public/documents/30/49/infineon-slb9672-tpm20-spi-fw16.xx-ds-rev1-3-2024-11-18-datasheet-en.pdf) (Germany/EU, local copy: [`datasheets/Infineon-SLB9672-TPM2.0-SPI-FW16.xx-datasheet.pdf`](datasheets/Infineon-SLB9672-TPM2.0-SPI-FW16.xx-datasheet.pdf)) — TPM 2.0, SPI up to 33 MHz, PG-UQFN-32 package, internal power management (no explicit standby control needed).
 
 Connects to `U1` on **SPI1**. On the new STM32G431 (§5), SPI1 is dedicated to the TPM alone — FDCAN is a separate hardware peripheral with its own TX/RX pins, so there's no bus-sharing between the TPM and the CAN-FD interface as there would have been with the external-controller alternative. Needs one GPIO for `~CS` and ideally one for an interrupt/ready line if the firmware wants event-driven reads rather than polling.
 
