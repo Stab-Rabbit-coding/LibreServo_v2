@@ -1,12 +1,14 @@
-# Hardware upgrade notes: isolated RS-485, isolated CAN-FD, TPM (SLB9672)
+# Hardware upgrade notes: isolated RS-485, isolated CAN-FD, TPM (SLB9672), MCU swap to STM32G431
 
 Engineering analysis and part recommendations for the LibreServo v2.3.1 board (`PCB/LibreServo-v2.3.1.sch`, MCU `U1`). This is a decision record and BOM proposal, not yet reflected in the EAGLE `.sch`/`.brd` files — see "Status / next steps" at the bottom for why, and what's needed to finish the layout.
 
-## 1. MCU CAN-FD capability — verified: no
+**Decision: MCU is being swapped to STM32G431** (native FDCAN) — see §5. This is the bigger of the two alternatives originally laid out, chosen over adding an external MCP2518FD controller to the existing STM32F302K8U6.
 
-`U1` is an **STM32F302K8U6** (STM32F302x6/x8 subfamily, Cat.2, UFQFPN32, 64 KB Flash). This subfamily includes ST's classic **bxCAN** peripheral (CAN 2.0B, up to 1 Mbit/s, 8-byte frames only) — it does **not** implement **FDCAN** (the flexible-data-rate peripheral with BRS and up to 64-byte frames). FDCAN was introduced later, starting with the STM32F7/G0/G4/H7/L5 families ([AN5348, "Introduction to FDCAN peripherals for STM32 MCUs"](https://www.st.com/resource/en/application_note/an5348-introduction-to-fdcan-peripherals-for-stm32-mcus-stmicroelectronics.pdf) lists which families have it — F3 is not one of them).
+## 1. MCU CAN-FD capability — verified: no (on the current `U1`, STM32F302K8U6)
 
-Practically, this is moot either way for this board: the current schematic doesn't route `U1`'s CAN pins anywhere and there's no CAN transceiver in the BOM — CAN is unused silicon on this design today. So "add CAN-FD" here means building a new interface from nothing, not upgrading an existing one, and it requires solving the FDCAN-controller problem below regardless of transceiver choice.
+`U1` is currently an **STM32F302K8U6** (STM32F302x6/x8 subfamily, Cat.2, UFQFPN32, 64 KB Flash). This subfamily includes ST's classic **bxCAN** peripheral (CAN 2.0B, up to 1 Mbit/s, 8-byte frames only) — it does **not** implement **FDCAN** (the flexible-data-rate peripheral with BRS and up to 64-byte frames). FDCAN was introduced later, starting with the STM32F7/G0/G4/H7/L5 families ([AN5348, "Introduction to FDCAN peripherals for STM32 MCUs"](https://www.st.com/resource/en/application_note/an5348-introduction-to-fdcan-peripherals-for-stm32-mcus-stmicroelectronics.pdf) lists which families have it — F3 is not one of them).
+
+Practically, this was moot either way for the *current* board: the schematic doesn't route `U1`'s CAN pins anywhere and there's no CAN transceiver in the BOM — CAN is unused silicon on this design today. This is exactly why §5 resolves the gap by swapping to a family that has FDCAN natively, rather than bolting a CAN-FD controller onto silicon that never had CAN wired up in the first place.
 
 ## 2. Isolated RS-485 transceiver (replaces `U5`, SIT3485EUA)
 
@@ -30,43 +32,34 @@ Fallback if SOIC-20 area is a problem: TI [ISO1042](https://www.ti.com/lit/ds/sy
 
 [SLB9672](https://www.infineon.com/assets/row/public/documents/30/49/infineon-slb9672-tpm20-spi-fw16.xx-ds-rev1-3-2024-11-18-datasheet-en.pdf) (Germany/EU) — TPM 2.0, SPI up to 33 MHz, PG-UQFN-32 package, internal power management (no explicit standby control needed).
 
-Connects to `U1` on **SPI1** (`PA5`/`PA6`/`PA7` = SCK/MISO/MOSI), which is currently completely unused in this design (`Test_LibreServo_v2.ioc` only configures `ADC1`, `TIM1/15/16/17`, and `USART1` — no SPI). Needs one GPIO for `~CS` and ideally one for an interrupt/ready line if the firmware wants event-driven reads rather than polling.
+Connects to `U1` on **SPI1**. On the new STM32G431 (§5), SPI1 is dedicated to the TPM alone — FDCAN is a separate hardware peripheral with its own TX/RX pins, so there's no bus-sharing between the TPM and the CAN-FD interface as there would have been with the external-controller alternative. Needs one GPIO for `~CS` and ideally one for an interrupt/ready line if the firmware wants event-driven reads rather than polling.
 
-**Pin-budget flag**: `U1` is a 32-pin UFQFPN part with a fair number of pins already spoken for (motor gate drivers, ADC current sense, encoder, USART1, RGB LED, oscillator). Adding SLB9672 (SPI + CS [+ IRQ]) is workable since SPI1 is free today, but if §5's Alternative 1 (external CAN-FD controller, also SPI) is chosen, both devices should share the SPI1 bus with independent `~CS` lines rather than each wanting a dedicated bus — do a full pin audit against the schematic before finalizing, this MCU doesn't have much headroom left.
+**Pin-budget flag**: still worth a full pin audit once the STM32G431 package/pinout is finalized in EAGLE (motor gate drivers, ADC current sense, encoder, USART1, RGB LED, oscillator, FDCAN TX/RX, and now SPI1 + TPM CS/IRQ all need a home) — the G431 has more GPIO headroom than the F302K8 it's replacing, but it's not unlimited, especially if a similarly small package (e.g. K6/K8, UFQFPN32) is kept for footprint/size parity.
 
-## 5. No on-chip FDCAN controller → two alternatives
+## 5. MCU swap: STM32G431 for native FDCAN
 
-Since §1 confirmed `U1` has no FDCAN peripheral, an isolated CAN-FD *transceiver* alone isn't sufficient — something has to run the CAN-FD protocol/arbitration. Two options, both US/EU-sourced:
+Since §1 confirmed the current `U1` (STM32F302K8U6) has no FDCAN peripheral, an isolated CAN-FD *transceiver* alone isn't sufficient — something has to run the CAN-FD protocol/arbitration. Two options were evaluated; **STM32G431 is the one being taken forward**.
 
-### Alternative 1 — Keep the MCU, add an external CAN-FD controller
-
-**[Microchip MCP2518FD](https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/External-CAN-FD-Controller-with-SPI-Interface-DS20006027B.pdf)** — Microchip Technology Inc., Chandler, Arizona, **USA**. External CAN FD controller, SPI interface (SCK/SDI/SDO/`nCS`, plus `INT`), sits between `U1`'s SPI1 and the ADM3055E transceiver from §3. Arbitration up to 1 Mbps, data phase up to 8 Mbps.
-
-| | Pros | Cons |
-|---|---|---|
-| **Design impact** | Smallest change: keeps the proven, already-qualified STM32F302K8U6 and existing firmware/motor-control code untouched; no MCU footprint or pinout rework | Extra SPI-bus contention/latency vs. a hardware peripheral; needs a driver stack (register-level MCP2518FD driver) added to firmware; CPU has to service SPI transactions for every frame instead of DMA-into-a-peripheral-FIFO |
-| **Sourcing / "reach"** | Microchip is a large US IDM with broad, redundant stocking at Digi-Key, Mouser, Arrow, Newark/Farnell — good availability and long industrial-lifecycle commitment; standard EAR99-class part, no unusual export licensing | Single extra BOM line/cost; if SPI1 is shared with the SLB9672 TPM (§4), bus arbitration and timing budget need care |
-| **REACH/RoHS** | Microchip publishes REACH SVHC and RoHS declarations for this part as standard | — |
-
-### Alternative 2 — Replace the MCU with one that has native FDCAN
-
-**STMicroelectronics STM32G431** series (e.g. STM32G431K6/K8, UFQFPN32) — HQ Plan-les-Ouates, Switzerland, fabs in France/Italy, **EU**. Cortex-M4 @ up to 170 MHz, native FDCAN peripheral (hardware bit-timing, message RAM, no CPU-mediated SPI framing), and is ST's official successor line to F3 — see [AN5094, "Migrating between STM32F334/303 and STM32G431/G474/G491"](https://www.st.com/resource/en/application_note/an5094-migrating-between-stm32f334303-and-stm32g431g474g491-mcus-stmicroelectronics.pdf).
+**Decision: [STMicroelectronics STM32G431](https://www.st.com/resource/en/datasheet/stm32g431c6.pdf)** series (e.g. STM32G431K6/K8, UFQFPN32) — HQ Plan-les-Ouates, Switzerland, fabs in France/Italy, **EU**. Cortex-M4 @ up to 170 MHz, native FDCAN peripheral (hardware bit-timing, message RAM, no CPU-mediated SPI framing), and is ST's official successor line to F3 — see [AN5094, "Migrating between STM32F334/303 and STM32G431/G474/G491"](https://www.st.com/resource/en/application_note/an5094-migrating-between-stm32f334303-and-stm32g431g474g491-mcus-stmicroelectronics.pdf).
 
 | | Pros | Cons |
 |---|---|---|
 | **Design impact** | Hardware FDCAN = precise bit timing, higher achievable throughput, no CPU cycles spent bit-banging SPI framing; frees SPI1 for the TPM alone; more GPIO/peripheral headroom than the F302K8 for future features | Full MCU swap: new schematic symbol/footprint, PCB relayout, and a firmware port (clock tree, HAL/peripheral register differences, re-mapping ADC/TIM/USART pins for existing PID/curve-generation/current-sense code) — the biggest-impact item in this whole upgrade |
-| **Sourcing / "reach"** | ST has deep, redundant EU + global distribution (Digi-Key, Mouser, Farnell/element14, RS Components, Arrow); G4 is a current mainstream family with a long support runway, not a legacy part being phased out | Bigger BOM/unit-cost delta than Alternative 1; verification/requalification effort (schematic, layout, firmware, EMC) is proportionally larger |
+| **Sourcing / "reach"** | ST has deep, redundant EU + global distribution (Digi-Key, Mouser, Farnell/element14, RS Components, Arrow); G4 is a current mainstream family with a long support runway, not a legacy part being phased out | Bigger BOM/unit-cost delta than the external-controller alternative; verification/requalification effort (schematic, layout, firmware, EMC) is proportionally larger |
 | **REACH/RoHS** | ST publishes REACH SVHC and RoHS declarations for this family as standard | — |
 
-**On "UK-sourced"**: there isn't a UK fabless/IDM vendor making a comparable CAN-FD controller or MCU — UK-based semiconductor firms in this space are mostly IP licensors (e.g. Arm) rather than chip suppliers. If UK sourcing specifically matters (e.g. procurement policy), the practical route is buying either of the above through a UK distributor (Farnell/element14 or RS Components, both UK-headquartered) rather than a UK-origin die.
+**Alternative considered, not chosen — external CAN-FD controller on the existing MCU**: [Microchip MCP2518FD](https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/External-CAN-FD-Controller-with-SPI-Interface-DS20006027B.pdf) (Microchip Technology Inc., Chandler, Arizona, **USA**) — SPI CAN-FD controller, would have sat between `U1`'s SPI1 and the ADM3055E transceiver from §3, keeping the STM32F302K8U6 in place. Pros were smallest change/lowest risk (no MCU footprint or firmware-port rework) and equally solid US sourcing (Digi-Key/Mouser/Arrow/Newark, EAR99, standard REACH/RoHS declarations). Cons were SPI-bus contention/latency vs. a hardware peripheral, a bus shared with the TPM, and CPU overhead servicing SPI transactions per frame instead of DMA-into-a-peripheral-FIFO — the STM32G431's native FDCAN avoids all of that, which is why it was picked instead.
 
-**Recommendation**: Alternative 1 (MCP2518FD) is the lower-risk, lower-effort path and is what I'd default to given how much else is already changing on this board (isolated RS-485 + isolated CAN-FD + TPM all at once). Alternative 2 is the better long-term architecture if a board respin was already on the table for other reasons.
+**On "UK-sourced"**: there isn't a UK fabless/IDM vendor making a comparable CAN-FD controller or MCU — UK-based semiconductor firms in this space are mostly IP licensors (e.g. Arm) rather than chip suppliers. If UK sourcing specifically matters (e.g. procurement policy), the practical route is buying the STM32G431 through a UK distributor (Farnell/element14 or RS Components, both UK-headquartered) rather than a UK-origin die.
 
 ## Status / next steps
 
-This document captures the part selection and the reasoning; it does **not** modify `PCB/LibreServo-v2.3.1.sch` or `.brd`. Those are EAGLE 7.6 XML files, and the new parts (ADM2587E/ADM3055E's SOIC-20 wide-body isolation packages, SLB9672's PG-UQFN-32, MCP2518FD) don't have existing library symbols/footprints/3D models in this project's `Propio` library. Hand-editing that XML to fabricate new library parts isn't something I can do reliably or verify visually without EAGLE itself — a wrong pad stack or symbol pin mapping would look "done" in a diff but be wrong on the board. Recommend doing the actual schematic/footprint placement in EAGLE, using this document as the part list and pin-mapping reference; happy to iterate on the design decisions further if useful.
+This document captures the part selection and the reasoning; it does **not** modify `PCB/LibreServo-v2.3.1.sch` or `.brd`. Those are EAGLE 7.6 XML files, and the new parts (STM32G431 MCU, ADM2587E/ADM3055E's SOIC-20 wide-body isolation packages, SLB9672's PG-UQFN-32) don't have existing library symbols/footprints/3D models in this project's `Propio` library. Hand-editing that XML to fabricate new library parts isn't something I can do reliably or verify visually without EAGLE itself — a wrong pad stack or symbol pin mapping would look "done" in a diff but be wrong on the board. Recommend doing the actual schematic/footprint placement in EAGLE, using this document as the part list and pin-mapping reference; happy to iterate on the design decisions further if useful.
 
-Open items for whoever does the layout pass:
-- Full pin audit of `U1` before committing to SPI1 sharing between TPM and (if Alternative 1) MCP2518FD.
-- Confirm isolation-barrier creepage/clearance fits the existing board outline for two SOIC-20 parts.
+The MCU swap also means a firmware port, not just a layout change: `Src/main.c`, `Src/LS_*.c`, and `Test_LibreServo_v2.ioc` all target the STM32F302K8U6's HAL/register set today (ADC1, TIM1/15/16/17, USART1 pin mappings) and will need re-mapping onto the STM32G431's pinout, plus new FDCAN and SPI1 (TPM) init code.
+
+Open items for whoever does the layout/firmware pass:
+- Pick the exact STM32G431 part/package (K6 vs K8 flash size, UFQFPN32 vs a larger package if the extra FDCAN/SPI/TPM pins don't fit UFQFPN32) and re-map existing peripherals (ADC current sense, TIM1 motor PWM, TIM15/16/17, USART1, encoder read, RGB LED) onto its pinout.
+- Full pin audit once that package is chosen, to confirm FDCAN TX/RX + SPI1 (TPM) + everything existing all fit.
+- Confirm isolation-barrier creepage/clearance fits the existing board outline for two SOIC-20 parts (ADM2587E, ADM3055E).
 - Decide whether the isolated-power caveat in §2 (shared `Vmot`/GND on the daisy-chain connector) needs to be addressed, or is acceptable as-is.
