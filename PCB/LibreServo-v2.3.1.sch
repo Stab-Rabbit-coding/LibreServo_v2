@@ -2267,6 +2267,19 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="SLB9672">
+<description>&lt;b&gt;SLB9672&lt;/b&gt; TPM 2.0 (SPI). Symbol-only placeholder: footprint/package not yet defined, see PCB/RS485-CANFD-TPM-upgrade.md.</description>
+<gates>
+<gate name="G$1" symbol="SLB9672" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="ACS711">
 <gates>
 <gate name="G$1" symbol="ACS711" x="5.08" y="5.08"/>
@@ -10189,7 +10202,6 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="SUPPLY43" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY44" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY45" library="supply2" deviceset="GND" device=""/>
-<part name="U$14" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="U$15" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="U$16" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="U$7" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
@@ -10226,6 +10238,22 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="SUPPLY47" library="supply2" deviceset="GND" device=""/>
 <part name="+3V15" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V16" library="supply1" deviceset="+3V3" device=""/>
+<part name="U7" library="Propio" deviceset="SLB9672" device="" value="SLB9672"/>
+<part name="C39" library="Propio" deviceset="C-EU" device="0402" value="1u"/>
+<part name="C40" library="Propio" deviceset="C-EU" device="0402" value="100n"/>
+<part name="C41" library="Propio" deviceset="C-EU" device="0402" value="100n"/>
+<part name="C42" library="Propio" deviceset="C-EU" device="0402" value="100n"/>
+<part name="R21" library="Propio" deviceset="R-US" device="0402" value="10k"/>
+<part name="SUPPLY48" library="supply2" deviceset="GND" device=""/>
+<part name="+3V18" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V19" library="supply1" deviceset="+3V3" device=""/>
+<part name="+3V20" library="supply1" deviceset="+3V3" device=""/>
+<part name="U$26" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
+<part name="U$27" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
+<part name="U$28" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
+<part name="U$29" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
+<part name="U$30" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
+<part name="U$31" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10641,7 +10669,6 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <instance part="SUPPLY43" gate="GND" x="-101.6" y="-27.94"/>
 <instance part="SUPPLY44" gate="GND" x="157.48" y="160.02"/>
 <instance part="SUPPLY45" gate="GND" x="157.48" y="116.84"/>
-<instance part="U$14" gate="G$1" x="-83.82" y="10.16" rot="R270"/>
 <instance part="U$15" gate="G$1" x="-129.54" y="-10.16"/>
 <instance part="U$16" gate="G$1" x="-129.54" y="-15.24"/>
 <instance part="U$7" gate="G$1" x="-160.02" y="86.36"/>
@@ -10685,6 +10712,31 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <attribute name="VALUE" x="96.52" y="-181.61" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="SUPPLY47" gate="GND" x="5.08" y="-200.66"/>
+<instance part="U7" gate="G$1" x="220" y="-130" smashed="yes">
+<attribute name="NAME" x="207.3" y="-113.49" size="1.778" layer="95"/>
+<attribute name="VALUE" x="207.3" y="-142.7" size="1.778" layer="96"/>
+</instance>
+<instance part="C39" gate="G$1" x="150" y="-150"/>
+<instance part="C40" gate="G$1" x="160" y="-150"/>
+<instance part="C41" gate="G$1" x="170" y="-150"/>
+<instance part="C42" gate="G$1" x="180" y="-150"/>
+<instance part="R21" gate="G$1" x="250" y="-125" rot="R90"/>
+<instance part="SUPPLY48" gate="GND" x="150" y="-160"/>
+<instance part="+3V18" gate="G$1" x="180" y="-118" smashed="yes">
+<attribute name="VALUE" x="182.54" y="-115.46" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="+3V19" gate="G$1" x="245" y="-118" smashed="yes">
+<attribute name="VALUE" x="247.54" y="-115.46" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="+3V20" gate="G$1" x="250" y="-115" smashed="yes">
+<attribute name="VALUE" x="252.54" y="-112.46" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="U$26" gate="G$1" x="192.46" y="-128.73"/>
+<instance part="U$27" gate="G$1" x="192.46" y="-131.27"/>
+<instance part="U$28" gate="G$1" x="245" y="-126.19"/>
+<instance part="U$29" gate="G$1" x="217.46" y="-110" rot="R90"/>
+<instance part="U$30" gate="G$1" x="220" y="-110" rot="R90"/>
+<instance part="U$31" gate="G$1" x="222.54" y="-110" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -11015,6 +11067,30 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <wire x1="12.7" y1="-147.32" x2="12.7" y2="-142.24" width="0.1524" layer="91"/>
 <label x="12.7" y="-142.24" size="1.6764" layer="94" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U7" gate="G$1" pin="GND"/>
+<wire x1="202.22" y1="-126.19" x2="190" y2="-126.19" width="0.1524" layer="91"/>
+<wire x1="190" y1="-126.19" x2="190" y2="-152.54" width="0.1524" layer="91"/>
+<pinref part="U7" gate="G$1" pin="NCI_GND"/>
+<wire x1="202.22" y1="-136.35" x2="190" y2="-136.35" width="0.1524" layer="91"/>
+<wire x1="190" y1="-136.35" x2="190" y2="-126.19" width="0.1524" layer="91"/>
+<junction x="190" y="-126.19"/>
+<pinref part="SUPPLY48" gate="GND" pin="GND"/>
+<wire x1="150" y1="-157.46" x2="150" y2="-152.54" width="0.1524" layer="91"/>
+<pinref part="C39" gate="G$1" pin="2"/>
+<wire x1="150" y1="-152.54" x2="160" y2="-152.54" width="0.1524" layer="91"/>
+<junction x="150" y="-152.54"/>
+<pinref part="C40" gate="G$1" pin="2"/>
+<wire x1="160" y1="-152.54" x2="170" y2="-152.54" width="0.1524" layer="91"/>
+<junction x="160" y="-152.54"/>
+<pinref part="C41" gate="G$1" pin="2"/>
+<wire x1="170" y1="-152.54" x2="180" y2="-152.54" width="0.1524" layer="91"/>
+<junction x="170" y="-152.54"/>
+<pinref part="C42" gate="G$1" pin="2"/>
+<wire x1="180" y1="-152.54" x2="190" y2="-152.54" width="0.1524" layer="91"/>
+<junction x="180" y="-152.54"/>
+<junction x="190" y="-152.54"/>
+</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -11143,6 +11219,39 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <wire x1="40.64" y1="-137.16" x2="15.24" y2="-137.16" width="0.1524" layer="91"/>
 <label x="15.24" y="-137.16" size="1.6764" layer="94" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="+3V18" gate="G$1" pin="+3V3"/>
+<wire x1="180" y1="-120.54" x2="180" y2="-123.65" width="0.1524" layer="91"/>
+<pinref part="U7" gate="G$1" pin="VDD"/>
+<wire x1="180" y1="-123.65" x2="202.22" y2="-123.65" width="0.1524" layer="91"/>
+<junction x="180" y="-123.65"/>
+<pinref part="U7" gate="G$1" pin="NCI_VDD"/>
+<wire x1="180" y1="-133.81" x2="202.22" y2="-133.81" width="0.1524" layer="91"/>
+<wire x1="180" y1="-123.65" x2="180" y2="-133.81" width="0.1524" layer="91"/>
+<junction x="180" y="-133.81"/>
+<pinref part="C42" gate="G$1" pin="1"/>
+<wire x1="180" y1="-133.81" x2="180" y2="-144.92" width="0.1524" layer="91"/>
+<pinref part="C41" gate="G$1" pin="1"/>
+<wire x1="170" y1="-144.92" x2="180" y2="-144.92" width="0.1524" layer="91"/>
+<junction x="180" y="-144.92"/>
+<pinref part="C40" gate="G$1" pin="1"/>
+<wire x1="160" y1="-144.92" x2="170" y2="-144.92" width="0.1524" layer="91"/>
+<junction x="170" y="-144.92"/>
+<pinref part="C39" gate="G$1" pin="1"/>
+<wire x1="150" y1="-144.92" x2="160" y2="-144.92" width="0.1524" layer="91"/>
+<junction x="160" y="-144.92"/>
+</segment>
+<segment>
+<pinref part="+3V19" gate="G$1" pin="+3V3"/>
+<wire x1="245" y1="-120.54" x2="245" y2="-123.65" width="0.1524" layer="91"/>
+<pinref part="U7" gate="G$1" pin="RST#"/>
+<wire x1="245" y1="-123.65" x2="237.78" y2="-123.65" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="+3V20" gate="G$1" pin="+3V3"/>
+<wire x1="250" y1="-117.54" x2="250" y2="-119.92" width="0.1524" layer="91"/>
+<pinref part="R21" gate="G$1" pin="2"/>
+</segment>
 </net>
 <net name="N$17" class="0">
 <segment>
@@ -11162,6 +11271,11 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <wire x1="144.78" y1="66.04" x2="142.24" y2="66.04" width="0.1524" layer="91"/>
 <label x="142.24" y="66.04" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U7" gate="G$1" pin="SCLK"/>
+<wire x1="237.78" y1="-128.73" x2="245" y2="-128.73" width="0.1524" layer="91"/>
+<label x="245" y="-128.73" size="2.1844" layer="94" xref="yes"/>
+</segment>
 </net>
 <net name="SPI_IN" class="0">
 <segment>
@@ -11173,6 +11287,11 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <pinref part="U$4" gate="G$1" pin="P$4"/>
 <wire x1="144.78" y1="50.8" x2="142.24" y2="50.8" width="0.1524" layer="91"/>
 <label x="142.24" y="50.8" size="2.1844" layer="94" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U7" gate="G$1" pin="MISO"/>
+<wire x1="237.78" y1="-136.35" x2="245" y2="-136.35" width="0.1524" layer="91"/>
+<label x="245" y="-136.35" size="2.1844" layer="94" xref="yes"/>
 </segment>
 </net>
 <net name="SPI_OUT" class="0">
@@ -11190,6 +11309,11 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <pinref part="U$6" gate="G$1" pin="P$2"/>
 <wire x1="266.7" y1="53.34" x2="269.24" y2="53.34" width="0.1524" layer="91"/>
 <label x="269.24" y="53.34" size="2.1844" layer="94" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U7" gate="G$1" pin="MOSI"/>
+<wire x1="237.78" y1="-133.81" x2="245" y2="-133.81" width="0.1524" layer="91"/>
+<label x="245" y="-133.81" size="2.1844" layer="94" xref="yes"/>
 </segment>
 </net>
 <net name="VMOT" class="0">
@@ -11995,10 +12119,18 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <label x="-71.12" y="0" size="2.1844" layer="94" xref="yes"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="TPM_CS#" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="PA15"/>
-<pinref part="U$14" gate="G$1" pin="P$1"/>
+<wire x1="-83.82" y1="7.62" x2="-83.82" y2="12.7" width="0.1524" layer="91"/>
+<label x="-83.82" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U7" gate="G$1" pin="CS#"/>
+<wire x1="237.78" y1="-131.27" x2="250" y2="-131.27" width="0.1524" layer="91"/>
+<wire x1="250" y1="-131.27" x2="250" y2="-130.08" width="0.1524" layer="91"/>
+<pinref part="R21" gate="G$1" pin="1"/>
+<label x="250" y="-131.27" size="2.1844" layer="94" xref="yes"/>
 </segment>
 </net>
 <net name="N$10" class="0">
@@ -12083,6 +12215,42 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <segment>
 <pinref part="U6" gate="G$1" pin="AUXOUT"/>
 <pinref part="U$25" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="U7" gate="G$1" pin="NC"/>
+<pinref part="U$26" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$23" class="0">
+<segment>
+<pinref part="U7" gate="G$1" pin="NCI"/>
+<pinref part="U$27" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$24" class="0">
+<segment>
+<pinref part="U7" gate="G$1" pin="PIRQ#"/>
+<pinref part="U$28" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<pinref part="U7" gate="G$1" pin="GPIO_00"/>
+<pinref part="U$29" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$26" class="0">
+<segment>
+<pinref part="U7" gate="G$1" pin="GPIO_01"/>
+<pinref part="U$30" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="N$27" class="0">
+<segment>
+<pinref part="U7" gate="G$1" pin="GPIO_02"/>
+<pinref part="U$31" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="+5V_ISO_CANFD" class="1">
