@@ -1,6 +1,8 @@
 # <img src="https://www.libreservo.com/sites/libreservo.com/files/imagenes/LibreServo_logo_xs.png">
 An Open source controller to convert any servo motor to the best smart servo.
 
+This fork is focused improving the LibreServo design by adding resilience to the communication, allowing simultaneous CAN-FD and RS-485 connections, and by adding a post-quantum Trusted Platform Module allowing cryptographic authentication and message signing. 
+
 This project was born as a necessity of mine to build a biped robot with intelligent servos to be able to “feel the muscles” to walk more human like. In the past we had OpenServo, and I think this project inherits something from it, but OpenServo died many years ago and it didn't reach my expectations anyway (power, communications...), and the commercial alternatives are way too expensive (Dynamixel, Herkulex, Lynxmotion...).
 
 My goal with LibreServo is to make any standard servo the “smartest” one in the market. The "gold standard" nowadays is Robotis-Dynamixel, LibreServo should be better than that, that’s my goal at least.
