@@ -1,7 +1,7 @@
 # <img src="https://www.libreservo.com/sites/libreservo.com/files/imagenes/LibreServo_logo_xs.png">
 An Open source controller to convert any servo motor to the best smart servo.
 
-This fork is focused improving the LibreServo design by adding resilience to the communication, allowing simultaneous CAN-FD and RS-485 connections, and by moving to an NXP S32K144 MCU with an on-chip CSEc hardware security engine for firmware authentication and secure boot (symmetric AES-128/SHE-based -- see [`PCB/S32K144-MCU-swap.md`](PCB/S32K144-MCU-swap.md) for what that does and doesn't cover versus the TPM 2.0 approach it replaces). 
+This fork is focused improving the LibreServo design by moving to an TI MSPM0G3518-Q1 MCU, which provides simultaneous CAN-FD and RS485, and a robust cryptographic suite.
 
 This project was born as a necessity of mine to build a biped robot with intelligent servos to be able to “feel the muscles” to walk more human like. In the past we had OpenServo, and I think this project inherits something from it, but OpenServo died many years ago and it didn't reach my expectations anyway (power, communications...), and the commercial alternatives are way too expensive (Dynamixel, Herkulex, Lynxmotion...).
 
