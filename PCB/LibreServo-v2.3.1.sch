@@ -1588,76 +1588,36 @@
 <text x="16.51" y="-5.715" size="1.6764" layer="94">GNDISO</text>
 <text x="16.51" y="-8.255" size="1.6764" layer="94">VISOOUT</text>
 </symbol>
-<symbol name="SLB9672">
-<pin name="VDD" x="-17.78" y="6.35" visible="off" length="middle" direction="pwr"/>
-<pin name="GND" x="-17.78" y="3.81" visible="off" length="middle" direction="pwr"/>
-<pin name="NC" x="-17.78" y="1.27" visible="off" length="middle" direction="nc"/>
-<pin name="NCI" x="-17.78" y="-1.27" visible="off" length="middle" direction="nc"/>
-<pin name="NCI_VDD" x="-17.78" y="-3.81" visible="off" length="middle" direction="pas"/>
-<pin name="NCI_GND" x="-17.78" y="-6.35" visible="off" length="middle" direction="pas"/>
-<pin name="RST#" x="17.78" y="6.35" visible="off" length="middle" direction="in" rot="R180"/>
-<pin name="PIRQ#" x="17.78" y="3.81" visible="off" length="middle" direction="oc" rot="R180"/>
-<pin name="SCLK" x="17.78" y="1.27" visible="off" length="middle" direction="in" rot="R180"/>
-<pin name="CS#" x="17.78" y="-1.27" visible="off" length="middle" direction="in" rot="R180"/>
-<pin name="MOSI" x="17.78" y="-3.81" visible="off" length="middle" direction="in" rot="R180"/>
-<pin name="MISO" x="17.78" y="-6.35" visible="off" length="middle" direction="out" rot="R180"/>
-<pin name="GPIO_00" x="-2.54" y="13.97" visible="off" length="middle" direction="io" rot="R270"/>
-<pin name="GPIO_01" x="0" y="13.97" visible="off" length="middle" direction="io" rot="R270"/>
-<pin name="GPIO_02" x="2.54" y="13.97" visible="off" length="middle" direction="io" rot="R270"/>
-<wire x1="-12.7" y1="-8.89" x2="-12.7" y2="8.89" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="8.89" x2="12.7" y2="8.89" width="0.254" layer="94"/>
-<wire x1="12.7" y1="8.89" x2="12.7" y2="-8.89" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-8.89" x2="-12.7" y2="-8.89" width="0.254" layer="94"/>
-<text x="-12.7" y="16.51" size="1.778" layer="95">&gt;NAME</text>
-<text x="-12.7" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-13.97" y="6.985" size="1.6764" layer="94" rot="R180">VDD</text>
-<text x="-13.97" y="4.445" size="1.6764" layer="94" rot="R180">GND</text>
-<text x="-13.97" y="1.905" size="1.6764" layer="94" rot="R180">NC</text>
-<text x="-13.97" y="-0.635" size="1.6764" layer="94" rot="R180">NCI</text>
-<text x="-13.97" y="-3.175" size="1.6764" layer="94" rot="R180">NCI_VDD</text>
-<text x="-13.97" y="-5.715" size="1.6764" layer="94" rot="R180">NCI_GND</text>
-<text x="13.97" y="6.985" size="1.6764" layer="94">RST#</text>
-<text x="13.97" y="4.445" size="1.6764" layer="94">PIRQ#</text>
-<text x="13.97" y="1.905" size="1.6764" layer="94">SCLK</text>
-<text x="13.97" y="-0.635" size="1.6764" layer="94">CS#</text>
-<text x="13.97" y="-3.175" size="1.6764" layer="94">MOSI</text>
-<text x="13.97" y="-5.715" size="1.6764" layer="94">MISO</text>
-<text x="-3.175" y="10.16" size="1.6764" layer="94" rot="R90">GPIO_00</text>
-<text x="-0.635" y="10.16" size="1.6764" layer="94" rot="R90">GPIO_01</text>
-<text x="1.905" y="10.16" size="1.6764" layer="94" rot="R90">GPIO_02</text>
-</symbol>
-<symbol name="STM32G431">
+<symbol name="S32K144">
 <pin name="VDD_1" x="-25.4" y="17.78" visible="off" length="middle" direction="pwr"/>
-<pin name="PF0-OSC_IN" x="-25.4" y="12.7" visible="off" length="middle" direction="in"/>
-<pin name="PF1-OSC_OUT" x="-25.4" y="7.62" visible="off" length="middle" direction="pas"/>
-<pin name="PG10-NRST" x="-25.4" y="2.54" visible="off" length="middle" direction="in"/>
-<pin name="PA0" x="-25.4" y="-2.54" visible="off" length="middle"/>
-<pin name="PA1" x="-25.4" y="-7.62" visible="off" length="middle"/>
-<pin name="PA2" x="-25.4" y="-12.7" visible="off" length="middle"/>
-<pin name="PA3" x="-25.4" y="-17.78" visible="off" length="middle"/>
-<pin name="PA4" x="-17.78" y="-25.4" visible="off" length="middle" rot="R90"/>
-<pin name="PA5" x="-12.7" y="-25.4" visible="off" length="middle" rot="R90"/>
-<pin name="PA6" x="-7.62" y="-25.4" visible="off" length="middle" rot="R90"/>
-<pin name="PA7" x="-2.54" y="-25.4" visible="off" length="middle" rot="R90"/>
-<pin name="PB0" x="2.54" y="-25.4" visible="off" length="middle" rot="R90"/>
-<pin name="VSSA" x="7.62" y="-25.4" visible="off" length="middle" direction="pwr" rot="R90"/>
-<pin name="VDDA/VREF+" x="12.7" y="-25.4" visible="off" length="middle" direction="pas" rot="R90"/>
+<pin name="EXTAL" x="-25.4" y="12.7" visible="off" length="middle" direction="in"/>
+<pin name="XTAL" x="-25.4" y="7.62" visible="off" length="middle" direction="pas"/>
+<pin name="RESET_b" x="-25.4" y="2.54" visible="off" length="middle" direction="in"/>
+<pin name="SPI_IN" x="-25.4" y="-2.54" visible="off" length="middle"/>
+<pin name="SPI_OUT" x="-25.4" y="-7.62" visible="off" length="middle"/>
+<pin name="SPI_CLK" x="-25.4" y="-12.7" visible="off" length="middle"/>
+<pin name="LED_RED" x="-25.4" y="-17.78" visible="off" length="middle"/>
+<pin name="LED_GREEN" x="-17.78" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="LED_BLUE" x="-12.7" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="V_TEMP" x="-7.62" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="V_CORRIENTE" x="-2.54" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="V_BAT" x="2.54" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="VSS_A" x="7.62" y="-25.4" visible="off" length="middle" direction="pwr" rot="R90"/>
+<pin name="VDDA" x="12.7" y="-25.4" visible="off" length="middle" direction="pas" rot="R90"/>
 <pin name="VSS_1" x="17.78" y="-25.4" visible="off" length="middle" direction="pwr" rot="R90"/>
 <pin name="VDD_2" x="25.4" y="-17.78" visible="off" length="middle" direction="pwr" rot="R180"/>
-<pin name="PA8" x="25.4" y="-12.7" visible="off" length="middle" rot="R180"/>
-<pin name="PA9" x="25.4" y="-7.62" visible="off" length="middle" rot="R180"/>
-<pin name="PA10" x="25.4" y="-2.54" visible="off" length="middle" rot="R180"/>
-<pin name="PA11" x="25.4" y="2.54" visible="off" length="middle" rot="R180"/>
-<pin name="PA12" x="25.4" y="7.62" visible="off" length="middle" rot="R180"/>
-<pin name="PA13" x="25.4" y="12.7" visible="off" length="middle" rot="R180"/>
-<pin name="PA14" x="25.4" y="17.78" visible="off" length="middle" rot="R180"/>
-<pin name="PA15" x="17.78" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="PB3" x="12.7" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="PB4" x="7.62" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="PB5" x="2.54" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="PB6" x="-2.54" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="PB7" x="-7.62" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="PB8-BOOT0" x="-12.7" y="25.4" visible="off" length="middle" direction="pas" rot="R270"/>
+<pin name="PWM-1" x="25.4" y="-12.7" visible="off" length="middle" rot="R180"/>
+<pin name="PWM-3" x="25.4" y="-7.62" visible="off" length="middle" rot="R180"/>
+<pin name="EN-Q" x="25.4" y="-2.54" visible="off" length="middle" rot="R180"/>
+<pin name="CAN0_RX" x="25.4" y="2.54" visible="off" length="middle" rot="R180"/>
+<pin name="CAN0_TX" x="25.4" y="7.62" visible="off" length="middle" rot="R180"/>
+<pin name="SWD_DIO" x="25.4" y="12.7" visible="off" length="middle" rot="R180"/>
+<pin name="SWD_CLK" x="25.4" y="17.78" visible="off" length="middle" rot="R180"/>
+<pin name="PWM-4" x="12.7" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PWM-2" x="7.62" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="SEL_SERIAL" x="2.54" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="LPUART1_TX" x="-2.54" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="LPUART1_RX" x="-7.62" y="25.4" visible="off" length="middle" rot="R270"/>
 <pin name="VSS_2" x="-17.78" y="25.4" visible="off" length="middle" direction="pwr" rot="R270"/>
 <pin name="EP" x="0" y="-5.08" visible="off" length="point" direction="pwr"/>
 <wire x1="-20.32" y1="-20.32" x2="-20.32" y2="20.32" width="0.6096" layer="94"/>
@@ -1671,36 +1631,34 @@
 <text x="-20.32" y="30.48" size="1.778" layer="95">&gt;NAME</text>
 <text x="-20.32" y="-33.02" size="1.778" layer="96">&gt;VALUE</text>
 <text x="-21.59" y="18.415" size="1.6764" layer="94" rot="R180">VDD_1</text>
-<text x="-21.59" y="13.335" size="1.6764" layer="94" rot="R180">PF0-OSC_IN</text>
-<text x="-21.59" y="8.255" size="1.6764" layer="94" rot="R180">PF1-OSC_OUT</text>
-<text x="-21.59" y="3.175" size="1.6764" layer="94" rot="R180">PG10-NRST</text>
-<text x="-21.59" y="-1.905" size="1.6764" layer="94" rot="R180">PA0</text>
-<text x="-21.59" y="-6.985" size="1.6764" layer="94" rot="R180">PA1</text>
-<text x="-21.59" y="-12.065" size="1.6764" layer="94" rot="R180">PA2</text>
-<text x="-21.59" y="-17.145" size="1.6764" layer="94" rot="R180">PA3</text>
-<text x="-18.415" y="-21.59" size="1.6764" layer="94" rot="R90">PA4</text>
-<text x="-13.335" y="-21.59" size="1.6764" layer="94" rot="R90">PA5</text>
-<text x="-8.255" y="-21.59" size="1.6764" layer="94" rot="R90">PA6</text>
-<text x="-3.175" y="-21.59" size="1.6764" layer="94" rot="R90">PA7</text>
-<text x="1.905" y="-21.59" size="1.6764" layer="94" rot="R90">PB0</text>
-<text x="6.985" y="-21.59" size="1.6764" layer="94" rot="R90">VSSA</text>
-<text x="12.065" y="-21.59" size="1.6764" layer="94" rot="R90">VDDA/VREF+</text>
+<text x="-21.59" y="13.335" size="1.6764" layer="94" rot="R180">EXTAL</text>
+<text x="-21.59" y="8.255" size="1.6764" layer="94" rot="R180">XTAL</text>
+<text x="-21.59" y="3.175" size="1.6764" layer="94" rot="R180">RESET_b</text>
+<text x="-21.59" y="-1.905" size="1.6764" layer="94" rot="R180">SPI_IN</text>
+<text x="-21.59" y="-6.985" size="1.6764" layer="94" rot="R180">SPI_OUT</text>
+<text x="-21.59" y="-12.065" size="1.6764" layer="94" rot="R180">SPI_CLK</text>
+<text x="-21.59" y="-17.145" size="1.6764" layer="94" rot="R180">LED_RED</text>
+<text x="-18.415" y="-21.59" size="1.6764" layer="94" rot="R90">LED_GREEN</text>
+<text x="-13.335" y="-21.59" size="1.6764" layer="94" rot="R90">LED_BLUE</text>
+<text x="-8.255" y="-21.59" size="1.6764" layer="94" rot="R90">V_TEMP</text>
+<text x="-3.175" y="-21.59" size="1.6764" layer="94" rot="R90">V_CORRIENTE</text>
+<text x="1.905" y="-21.59" size="1.6764" layer="94" rot="R90">V_BAT</text>
+<text x="6.985" y="-21.59" size="1.6764" layer="94" rot="R90">VSS_A</text>
+<text x="12.065" y="-21.59" size="1.6764" layer="94" rot="R90">VDDA</text>
 <text x="17.145" y="-21.59" size="1.6764" layer="94" rot="R90">VSS_1</text>
 <text x="21.59" y="-17.145" size="1.6764" layer="94">VDD_2</text>
-<text x="21.59" y="-12.065" size="1.6764" layer="94">PA8</text>
-<text x="21.59" y="-6.985" size="1.6764" layer="94">PA9</text>
-<text x="21.59" y="-1.905" size="1.6764" layer="94">PA10</text>
-<text x="21.59" y="3.175" size="1.6764" layer="94">PA11</text>
-<text x="21.59" y="8.255" size="1.6764" layer="94">PA12</text>
-<text x="21.59" y="13.335" size="1.6764" layer="94">PA13</text>
-<text x="21.59" y="18.415" size="1.6764" layer="94">PA14</text>
-<text x="17.145" y="21.59" size="1.6764" layer="94" rot="R90">PA15</text>
-<text x="12.065" y="21.59" size="1.6764" layer="94" rot="R90">PB3</text>
-<text x="6.985" y="21.59" size="1.6764" layer="94" rot="R90">PB4</text>
-<text x="1.905" y="21.59" size="1.6764" layer="94" rot="R90">PB5</text>
-<text x="-3.175" y="21.59" size="1.6764" layer="94" rot="R90">PB6</text>
-<text x="-8.255" y="21.59" size="1.6764" layer="94" rot="R90">PB7</text>
-<text x="-13.335" y="21.59" size="1.6764" layer="94" rot="R90">PB8-BOOT0</text>
+<text x="21.59" y="-12.065" size="1.6764" layer="94">PWM-1</text>
+<text x="21.59" y="-6.985" size="1.6764" layer="94">PWM-3</text>
+<text x="21.59" y="-1.905" size="1.6764" layer="94">EN-Q</text>
+<text x="21.59" y="3.175" size="1.6764" layer="94">CAN0_RX</text>
+<text x="21.59" y="8.255" size="1.6764" layer="94">CAN0_TX</text>
+<text x="21.59" y="13.335" size="1.6764" layer="94">SWD_DIO</text>
+<text x="21.59" y="18.415" size="1.6764" layer="94">SWD_CLK</text>
+<text x="12.065" y="21.59" size="1.6764" layer="94" rot="R90">PWM-4</text>
+<text x="6.985" y="21.59" size="1.6764" layer="94" rot="R90">PWM-2</text>
+<text x="1.905" y="21.59" size="1.6764" layer="94" rot="R90">SEL_SERIAL</text>
+<text x="-3.175" y="21.59" size="1.6764" layer="94" rot="R90">LPUART1_TX</text>
+<text x="-8.255" y="21.59" size="1.6764" layer="94" rot="R90">LPUART1_RX</text>
 <text x="-18.415" y="21.59" size="1.6764" layer="94" rot="R90">VSS_2</text>
 </symbol>
 </symbols>
@@ -2059,10 +2017,10 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="STM32G431">
-<description>&lt;b&gt;STM32G431 (UFQFPN32)&lt;/b&gt;. Symbol-only placeholder: footprint/package not yet defined, see PCB/RS485-CANFD-TPM-upgrade.md.</description>
+<deviceset name="S32K144">
+<description>&lt;b&gt;NXP S32K144 (LQFP48)&lt;/b&gt;, Arm Cortex-M4F, native FlexCAN0 (CAN-FD) and on-chip CSEc (SHE-compliant hardware crypto/secure-boot engine) replacing the external SLB9672 TPM. Symbol-only placeholder: footprint/package and physical pin numbers not yet defined -- the S32K1xx Data Sheet in PCB/datasheets/S32K1xx.pdf explicitly defers package pinouts to the Reference Manual's IO Signal Description Input Multiplexing spreadsheet, which is not available in this repo. Pin names on this symbol are functional/net labels, not verified physical port assignments. See PCB/S32K144-MCU-swap.md.</description>
 <gates>
-<gate name="G$1" symbol="STM32G431" x="0" y="0"/>
+<gate name="G$1" symbol="S32K144" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -2258,19 +2216,6 @@
 <description>&lt;b&gt;ADM3055E&lt;/b&gt; isolated CAN-FD transceiver. Symbol-only placeholder: footprint/package not yet defined, see PCB/RS485-CANFD-TPM-upgrade.md.</description>
 <gates>
 <gate name="G$1" symbol="ADM3055E" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SLB9672">
-<description>&lt;b&gt;SLB9672&lt;/b&gt; TPM 2.0 (SPI). Symbol-only placeholder: footprint/package not yet defined, see PCB/RS485-CANFD-TPM-upgrade.md.</description>
-<gates>
-<gate name="G$1" symbol="SLB9672" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -10092,7 +10037,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
 <part name="B2" library="Propio" deviceset="FERRITE_BEAD_0603" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device="" value="Vmot"/>
-<part name="U1" library="Propio" deviceset="STM32G431" device="" value="STM32G431K6/K8"/>
+<part name="U1" library="Propio" deviceset="S32K144" device="" value="S32K144 (LQFP48)"/>
 <part name="SUPPLY24" library="supply2" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="U$100" library="Propio" deviceset="OSCILATOR" device=""/>
@@ -10238,22 +10183,6 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="SUPPLY47" library="supply2" deviceset="GND" device=""/>
 <part name="+3V15" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V16" library="supply1" deviceset="+3V3" device=""/>
-<part name="U7" library="Propio" deviceset="SLB9672" device="" value="SLB9672"/>
-<part name="C39" library="Propio" deviceset="C-EU" device="0402" value="1u"/>
-<part name="C40" library="Propio" deviceset="C-EU" device="0402" value="100n"/>
-<part name="C41" library="Propio" deviceset="C-EU" device="0402" value="100n"/>
-<part name="C42" library="Propio" deviceset="C-EU" device="0402" value="100n"/>
-<part name="R21" library="Propio" deviceset="R-US" device="0402" value="10k"/>
-<part name="SUPPLY48" library="supply2" deviceset="GND" device=""/>
-<part name="+3V18" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V19" library="supply1" deviceset="+3V3" device=""/>
-<part name="+3V20" library="supply1" deviceset="+3V3" device=""/>
-<part name="U$26" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
-<part name="U$27" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
-<part name="U$28" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
-<part name="U$29" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
-<part name="U$30" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
-<part name="U$31" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10267,7 +10196,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="-60.96" y1="45.72" x2="-60.96" y2="12.7" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-60.96" y1="12.7" x2="-15.24" y2="12.7" width="0.8128" layer="94" style="shortdash"/>
 <text x="-58.42" y="40.64" size="3.81" layer="94">SWD HEADER</text>
-<text x="-195.58" y="38.1" size="5.08" layer="94">STM32G431K6/K8 @ up to 170MHz</text>
+<text x="-195.58" y="38.1" size="5.08" layer="94">S32K144 (LQFP48) @ 80MHz RUN / 112MHz HSRUN, CSEc security</text>
 <wire x1="-198.12" y1="53.34" x2="-198.12" y2="149.86" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-198.12" y1="149.86" x2="-198.12" y2="215.9" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-198.12" y1="215.9" x2="-142.24" y2="215.9" width="0.8128" layer="94" style="shortdash"/>
@@ -10414,6 +10343,9 @@ JTCK -&gt; SWCLK</text>
 <text x="40.64" y="-207.01" size="1.778" layer="94">NEEDS: footprint/package, board placement, CANH/CANL bus connector,
 and a new 5V regulator for VCC (+5V_ISO_CANFD net) -- board has no 5V rail today.
 See PCB/RS485-CANFD-TPM-upgrade.md.</text>
+<text x="-195.58" y="-58.42" size="1.778" layer="94">TPM (SLB9672, U7) removed. Security now uses the S32K144's on-die
+CSEc (SHE-compliant hardware crypto engine) -- no external pins/bus needed.
+See PCB/S32K144-MCU-swap.md.</text>
 </plain>
 <instances>
 <instance part="M1" gate="G$1" x="-132.08" y="160.02"/>
@@ -10712,31 +10644,6 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <attribute name="VALUE" x="96.52" y="-181.61" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="SUPPLY47" gate="GND" x="5.08" y="-200.66"/>
-<instance part="U7" gate="G$1" x="220" y="-130" smashed="yes">
-<attribute name="NAME" x="207.3" y="-113.49" size="1.778" layer="95"/>
-<attribute name="VALUE" x="207.3" y="-142.7" size="1.778" layer="96"/>
-</instance>
-<instance part="C39" gate="G$1" x="150" y="-150"/>
-<instance part="C40" gate="G$1" x="160" y="-150"/>
-<instance part="C41" gate="G$1" x="170" y="-150"/>
-<instance part="C42" gate="G$1" x="180" y="-150"/>
-<instance part="R21" gate="G$1" x="250" y="-125" rot="R90"/>
-<instance part="SUPPLY48" gate="GND" x="150" y="-160"/>
-<instance part="+3V18" gate="G$1" x="180" y="-118" smashed="yes">
-<attribute name="VALUE" x="182.54" y="-115.46" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="+3V19" gate="G$1" x="245" y="-118" smashed="yes">
-<attribute name="VALUE" x="247.54" y="-115.46" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="+3V20" gate="G$1" x="250" y="-115" smashed="yes">
-<attribute name="VALUE" x="252.54" y="-112.46" size="1.778" layer="96" rot="R180"/>
-</instance>
-<instance part="U$26" gate="G$1" x="192.46" y="-128.73"/>
-<instance part="U$27" gate="G$1" x="192.46" y="-131.27"/>
-<instance part="U$28" gate="G$1" x="245" y="-126.19"/>
-<instance part="U$29" gate="G$1" x="217.46" y="-110" rot="R90"/>
-<instance part="U$30" gate="G$1" x="220" y="-110" rot="R90"/>
-<instance part="U$31" gate="G$1" x="222.54" y="-110" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -10791,11 +10698,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <pinref part="U1" gate="G$1" pin="VSS_2"/>
 <wire x1="-119.38" y1="7.62" x2="-119.38" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="-119.38" y1="22.86" x2="-134.62" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="PB8-BOOT0"/>
-<wire x1="-114.3" y1="7.62" x2="-114.3" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="22.86" x2="-119.38" y2="22.86" width="0.1524" layer="91"/>
 <junction x="-134.62" y="22.86"/>
-<junction x="-119.38" y="22.86"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 </segment>
@@ -10926,7 +10829,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 </segment>
 <segment>
 <wire x1="-147.32" y1="-27.94" x2="-147.32" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="VSSA"/>
+<pinref part="U1" gate="G$1" pin="VSS_A"/>
 <wire x1="-147.32" y1="-25.4" x2="-93.98" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="SUPPLY26" gate="GND" pin="GND"/>
 <wire x1="-162.56" y1="-30.48" x2="-162.56" y2="-27.94" width="0.1524" layer="91"/>
@@ -11067,30 +10970,6 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <wire x1="12.7" y1="-147.32" x2="12.7" y2="-142.24" width="0.1524" layer="91"/>
 <label x="12.7" y="-142.24" size="1.6764" layer="94" rot="R180" xref="yes"/>
 </segment>
-<segment>
-<pinref part="U7" gate="G$1" pin="GND"/>
-<wire x1="202.22" y1="-126.19" x2="190" y2="-126.19" width="0.1524" layer="91"/>
-<wire x1="190" y1="-126.19" x2="190" y2="-152.54" width="0.1524" layer="91"/>
-<pinref part="U7" gate="G$1" pin="NCI_GND"/>
-<wire x1="202.22" y1="-136.35" x2="190" y2="-136.35" width="0.1524" layer="91"/>
-<wire x1="190" y1="-136.35" x2="190" y2="-126.19" width="0.1524" layer="91"/>
-<junction x="190" y="-126.19"/>
-<pinref part="SUPPLY48" gate="GND" pin="GND"/>
-<wire x1="150" y1="-157.46" x2="150" y2="-152.54" width="0.1524" layer="91"/>
-<pinref part="C39" gate="G$1" pin="2"/>
-<wire x1="150" y1="-152.54" x2="160" y2="-152.54" width="0.1524" layer="91"/>
-<junction x="150" y="-152.54"/>
-<pinref part="C40" gate="G$1" pin="2"/>
-<wire x1="160" y1="-152.54" x2="170" y2="-152.54" width="0.1524" layer="91"/>
-<junction x="160" y="-152.54"/>
-<pinref part="C41" gate="G$1" pin="2"/>
-<wire x1="170" y1="-152.54" x2="180" y2="-152.54" width="0.1524" layer="91"/>
-<junction x="170" y="-152.54"/>
-<pinref part="C42" gate="G$1" pin="2"/>
-<wire x1="180" y1="-152.54" x2="190" y2="-152.54" width="0.1524" layer="91"/>
-<junction x="180" y="-152.54"/>
-<junction x="190" y="-152.54"/>
-</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -11219,39 +11098,6 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <wire x1="40.64" y1="-137.16" x2="15.24" y2="-137.16" width="0.1524" layer="91"/>
 <label x="15.24" y="-137.16" size="1.6764" layer="94" rot="R180" xref="yes"/>
 </segment>
-<segment>
-<pinref part="+3V18" gate="G$1" pin="+3V3"/>
-<wire x1="180" y1="-120.54" x2="180" y2="-123.65" width="0.1524" layer="91"/>
-<pinref part="U7" gate="G$1" pin="VDD"/>
-<wire x1="180" y1="-123.65" x2="202.22" y2="-123.65" width="0.1524" layer="91"/>
-<junction x="180" y="-123.65"/>
-<pinref part="U7" gate="G$1" pin="NCI_VDD"/>
-<wire x1="180" y1="-133.81" x2="202.22" y2="-133.81" width="0.1524" layer="91"/>
-<wire x1="180" y1="-123.65" x2="180" y2="-133.81" width="0.1524" layer="91"/>
-<junction x="180" y="-133.81"/>
-<pinref part="C42" gate="G$1" pin="1"/>
-<wire x1="180" y1="-133.81" x2="180" y2="-144.92" width="0.1524" layer="91"/>
-<pinref part="C41" gate="G$1" pin="1"/>
-<wire x1="170" y1="-144.92" x2="180" y2="-144.92" width="0.1524" layer="91"/>
-<junction x="180" y="-144.92"/>
-<pinref part="C40" gate="G$1" pin="1"/>
-<wire x1="160" y1="-144.92" x2="170" y2="-144.92" width="0.1524" layer="91"/>
-<junction x="170" y="-144.92"/>
-<pinref part="C39" gate="G$1" pin="1"/>
-<wire x1="150" y1="-144.92" x2="160" y2="-144.92" width="0.1524" layer="91"/>
-<junction x="160" y="-144.92"/>
-</segment>
-<segment>
-<pinref part="+3V19" gate="G$1" pin="+3V3"/>
-<wire x1="245" y1="-120.54" x2="245" y2="-123.65" width="0.1524" layer="91"/>
-<pinref part="U7" gate="G$1" pin="RST#"/>
-<wire x1="245" y1="-123.65" x2="237.78" y2="-123.65" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="+3V20" gate="G$1" pin="+3V3"/>
-<wire x1="250" y1="-117.54" x2="250" y2="-119.92" width="0.1524" layer="91"/>
-<pinref part="R21" gate="G$1" pin="2"/>
-</segment>
 </net>
 <net name="N$17" class="0">
 <segment>
@@ -11262,7 +11108,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 </net>
 <net name="SPI_CLK" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA2"/>
+<pinref part="U1" gate="G$1" pin="SPI_CLK"/>
 <wire x1="-127" y1="-30.48" x2="-132.08" y2="-30.48" width="0.1524" layer="91"/>
 <label x="-132.08" y="-30.48" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
@@ -11271,15 +11117,10 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <wire x1="144.78" y1="66.04" x2="142.24" y2="66.04" width="0.1524" layer="91"/>
 <label x="142.24" y="66.04" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
-<segment>
-<pinref part="U7" gate="G$1" pin="SCLK"/>
-<wire x1="237.78" y1="-128.73" x2="245" y2="-128.73" width="0.1524" layer="91"/>
-<label x="245" y="-128.73" size="2.1844" layer="94" xref="yes"/>
-</segment>
 </net>
 <net name="SPI_IN" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA0"/>
+<pinref part="U1" gate="G$1" pin="SPI_IN"/>
 <wire x1="-127" y1="-20.32" x2="-132.08" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-132.08" y="-20.32" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
@@ -11288,15 +11129,10 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <wire x1="144.78" y1="50.8" x2="142.24" y2="50.8" width="0.1524" layer="91"/>
 <label x="142.24" y="50.8" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
-<segment>
-<pinref part="U7" gate="G$1" pin="MISO"/>
-<wire x1="237.78" y1="-136.35" x2="245" y2="-136.35" width="0.1524" layer="91"/>
-<label x="245" y="-136.35" size="2.1844" layer="94" xref="yes"/>
-</segment>
 </net>
 <net name="SPI_OUT" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA1"/>
+<pinref part="U1" gate="G$1" pin="SPI_OUT"/>
 <wire x1="-127" y1="-25.4" x2="-132.08" y2="-25.4" width="0.1524" layer="91"/>
 <label x="-132.08" y="-25.4" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
@@ -11309,11 +11145,6 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <pinref part="U$6" gate="G$1" pin="P$2"/>
 <wire x1="266.7" y1="53.34" x2="269.24" y2="53.34" width="0.1524" layer="91"/>
 <label x="269.24" y="53.34" size="2.1844" layer="94" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U7" gate="G$1" pin="MOSI"/>
-<wire x1="237.78" y1="-133.81" x2="245" y2="-133.81" width="0.1524" layer="91"/>
-<label x="245" y="-133.81" size="2.1844" layer="94" xref="yes"/>
 </segment>
 </net>
 <net name="VMOT" class="0">
@@ -11432,7 +11263,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <net name="CLK-8MHZ" class="0">
 <segment>
 <pinref part="U$100" gate="G$1" pin="OUT"/>
-<pinref part="U1" gate="G$1" pin="PF0-OSC_IN"/>
+<pinref part="U1" gate="G$1" pin="EXTAL"/>
 <wire x1="-127" y1="-5.08" x2="-154.94" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-154.94" y1="-5.08" x2="-154.94" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="0" x2="-170.18" y2="2.54" width="0.1524" layer="91"/>
@@ -11442,7 +11273,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <net name="VDDA-FILTRADO" class="0">
 <segment>
 <pinref part="B1" gate="G$1" pin="1"/>
-<pinref part="U1" gate="G$1" pin="VDDA/VREF+"/>
+<pinref part="U1" gate="G$1" pin="VDDA"/>
 <wire x1="-165.1" y1="-20.32" x2="-162.56" y2="-20.32" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="-162.56" y1="-20.32" x2="-154.94" y2="-20.32" width="0.1524" layer="91"/>
@@ -11460,7 +11291,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <label x="15.24" y="157.48" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA4"/>
+<pinref part="U1" gate="G$1" pin="LED_GREEN"/>
 <wire x1="-119.38" y1="-43.18" x2="-119.38" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-119.38" y="-45.72" size="2.1844" layer="94" rot="R270" xref="yes"/>
 </segment>
@@ -11473,14 +11304,14 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <label x="15.24" y="162.56" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA3"/>
+<pinref part="U1" gate="G$1" pin="LED_RED"/>
 <wire x1="-127" y1="-35.56" x2="-132.08" y2="-35.56" width="0.1524" layer="91"/>
 <label x="-132.08" y="-35.56" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LED_BLUE" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA5"/>
+<pinref part="U1" gate="G$1" pin="LED_BLUE"/>
 <wire x1="-114.3" y1="-43.18" x2="-114.3" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-114.3" y="-45.72" size="2.1844" layer="94" rot="R270" xref="yes"/>
 </segment>
@@ -11493,7 +11324,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 </net>
 <net name="V_TEMP" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA6"/>
+<pinref part="U1" gate="G$1" pin="V_TEMP"/>
 <wire x1="-109.22" y1="-43.18" x2="-109.22" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-109.22" y="-45.72" size="2.1844" layer="94" rot="R270" xref="yes"/>
 </segment>
@@ -11509,7 +11340,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 </net>
 <net name="V_BAT" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB0"/>
+<pinref part="U1" gate="G$1" pin="V_BAT"/>
 <wire x1="-99.06" y1="-43.18" x2="-99.06" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-99.06" y="-45.72" size="2.1844" layer="94" rot="R270" xref="yes"/>
 </segment>
@@ -11525,7 +11356,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 </net>
 <net name="PWM-1" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA8"/>
+<pinref part="U1" gate="G$1" pin="PWM-1"/>
 <wire x1="-76.2" y1="-30.48" x2="-71.12" y2="-30.48" width="0.1524" layer="91"/>
 <label x="-71.12" y="-30.48" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11542,7 +11373,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <label x="134.62" y="124.46" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PB4"/>
+<pinref part="U1" gate="G$1" pin="PWM-2"/>
 <wire x1="-93.98" y1="7.62" x2="-93.98" y2="12.7" width="0.1524" layer="91"/>
 <label x="-93.98" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
@@ -11554,7 +11385,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <label x="134.62" y="157.48" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA9"/>
+<pinref part="U1" gate="G$1" pin="PWM-3"/>
 <wire x1="-76.2" y1="-25.4" x2="-71.12" y2="-25.4" width="0.1524" layer="91"/>
 <label x="-71.12" y="-25.4" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11566,14 +11397,14 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <label x="134.62" y="167.64" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PB3"/>
+<pinref part="U1" gate="G$1" pin="PWM-4"/>
 <wire x1="-88.9" y1="7.62" x2="-88.9" y2="12.7" width="0.1524" layer="91"/>
 <label x="-88.9" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="FDCAN1_RX" class="0">
+<net name="CAN0_RX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA11"/>
+<pinref part="U1" gate="G$1" pin="CAN0_RX"/>
 <wire x1="-76.2" y1="-15.24" x2="-71.12" y2="-15.24" width="0.1524" layer="91"/>
 <label x="-71.12" y="-15.24" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11584,9 +11415,9 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <wire x1="35.56" y1="-139.7" x2="20.32" y2="-139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="FDCAN1_TX" class="0">
+<net name="CAN0_TX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA12"/>
+<pinref part="U1" gate="G$1" pin="CAN0_TX"/>
 <wire x1="-76.2" y1="-10.16" x2="-71.12" y2="-10.16" width="0.1524" layer="91"/>
 <label x="-71.12" y="-10.16" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11597,9 +11428,9 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <wire x1="35.56" y1="-144.78" x2="20.32" y2="-144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="USART1_RX" class="0">
+<net name="LPUART1_RX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB7"/>
+<pinref part="U1" gate="G$1" pin="LPUART1_RX"/>
 <wire x1="-109.22" y1="7.62" x2="-109.22" y2="12.7" width="0.1524" layer="91"/>
 <label x="-109.22" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
@@ -11609,9 +11440,9 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <label x="15.24" y="-49.53" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="USART1_TX" class="0">
+<net name="LPUART1_TX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB6"/>
+<pinref part="U1" gate="G$1" pin="LPUART1_TX"/>
 <wire x1="-104.14" y1="7.62" x2="-104.14" y2="12.7" width="0.1524" layer="91"/>
 <label x="-104.14" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
@@ -11651,7 +11482,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <label x="144.78" y="137.16" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA10"/>
+<pinref part="U1" gate="G$1" pin="EN-Q"/>
 <wire x1="-76.2" y1="-20.32" x2="-71.12" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-71.12" y="-20.32" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11730,7 +11561,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 </net>
 <net name="SEL_SERIAL" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PB5"/>
+<pinref part="U1" gate="G$1" pin="SEL_SERIAL"/>
 <wire x1="-99.06" y1="7.62" x2="-99.06" y2="12.7" width="0.1524" layer="91"/>
 <label x="-99.06" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
@@ -11750,7 +11581,7 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 </net>
 <net name="V_CORRIENTE" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA7"/>
+<pinref part="U1" gate="G$1" pin="V_CORRIENTE"/>
 <wire x1="-104.14" y1="-43.18" x2="-104.14" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-104.14" y="-45.72" size="2.1844" layer="94" rot="R270" xref="yes"/>
 </segment>
@@ -12095,53 +11926,39 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <wire x1="149.86" y1="-27.94" x2="149.86" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SWDIO" class="0">
+<net name="SWD_DIO" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="P$4"/>
 <wire x1="-43.18" y1="35.56" x2="-40.64" y2="35.56" width="0.1524" layer="91"/>
 <label x="-40.64" y="35.56" size="2.1844" layer="94" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA13"/>
+<pinref part="U1" gate="G$1" pin="SWD_DIO"/>
 <wire x1="-76.2" y1="-5.08" x2="-71.12" y2="-5.08" width="0.1524" layer="91"/>
 <label x="-71.12" y="-5.08" size="2.1844" layer="94" xref="yes"/>
 </segment>
 </net>
-<net name="SWCLK" class="0">
+<net name="SWD_CLK" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="P$2"/>
 <wire x1="-43.18" y1="25.4" x2="-40.64" y2="25.4" width="0.1524" layer="91"/>
 <label x="-40.64" y="25.4" size="2.1844" layer="94" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PA14"/>
+<pinref part="U1" gate="G$1" pin="SWD_CLK"/>
 <wire x1="-76.2" y1="0" x2="-71.12" y2="0" width="0.1524" layer="91"/>
 <label x="-71.12" y="0" size="2.1844" layer="94" xref="yes"/>
 </segment>
 </net>
-<net name="TPM_CS#" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PA15"/>
-<wire x1="-83.82" y1="7.62" x2="-83.82" y2="12.7" width="0.1524" layer="91"/>
-<label x="-83.82" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
-</segment>
-<segment>
-<pinref part="U7" gate="G$1" pin="CS#"/>
-<wire x1="237.78" y1="-131.27" x2="250" y2="-131.27" width="0.1524" layer="91"/>
-<wire x1="250" y1="-131.27" x2="250" y2="-130.08" width="0.1524" layer="91"/>
-<pinref part="R21" gate="G$1" pin="1"/>
-<label x="250" y="-131.27" size="2.1844" layer="94" xref="yes"/>
-</segment>
-</net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PF1-OSC_OUT"/>
+<pinref part="U1" gate="G$1" pin="XTAL"/>
 <pinref part="U$15" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PG10-NRST"/>
+<pinref part="U1" gate="G$1" pin="RESET_b"/>
 <pinref part="U$16" gate="G$1" pin="P$1"/>
 </segment>
 </net>
@@ -12215,42 +12032,6 @@ See PCB/RS485-CANFD-TPM-upgrade.md.</text>
 <segment>
 <pinref part="U6" gate="G$1" pin="AUXOUT"/>
 <pinref part="U$25" gate="G$1" pin="P$1"/>
-</segment>
-</net>
-<net name="N$22" class="0">
-<segment>
-<pinref part="U7" gate="G$1" pin="NC"/>
-<pinref part="U$26" gate="G$1" pin="P$1"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="U7" gate="G$1" pin="NCI"/>
-<pinref part="U$27" gate="G$1" pin="P$1"/>
-</segment>
-</net>
-<net name="N$24" class="0">
-<segment>
-<pinref part="U7" gate="G$1" pin="PIRQ#"/>
-<pinref part="U$28" gate="G$1" pin="P$1"/>
-</segment>
-</net>
-<net name="N$25" class="0">
-<segment>
-<pinref part="U7" gate="G$1" pin="GPIO_00"/>
-<pinref part="U$29" gate="G$1" pin="P$1"/>
-</segment>
-</net>
-<net name="N$26" class="0">
-<segment>
-<pinref part="U7" gate="G$1" pin="GPIO_01"/>
-<pinref part="U$30" gate="G$1" pin="P$1"/>
-</segment>
-</net>
-<net name="N$27" class="0">
-<segment>
-<pinref part="U7" gate="G$1" pin="GPIO_02"/>
-<pinref part="U$31" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="+5V_ISO_CANFD" class="1">

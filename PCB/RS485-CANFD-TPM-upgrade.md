@@ -1,5 +1,7 @@
 # Hardware upgrade notes: isolated RS-485, isolated CAN-FD, TPM (SLB9672), MCU swap to STM32G431
 
+**Superseded in part**: the STM32G431 (`U1`) and the SLB9672 TPM (`U7`) described in §4/§5 below have since been replaced — `U1` is now an NXP S32K144, and `U7`/SLB9672 has been removed in favor of the S32K144's on-chip CSEc. See [`S32K144-MCU-swap.md`](S32K144-MCU-swap.md) for that pass. The isolated RS-485 (§2, `U5`/ADM2587E) and isolated CAN-FD (§3, `U6`/ADM3055E) content below is still current.
+
 Engineering analysis and part recommendations for the LibreServo v2.3.1 board (`PCB/LibreServo-v2.3.1.sch`, MCU `U1`). This is a decision record and BOM proposal, not yet reflected in the EAGLE `.sch`/`.brd` files — see "Status / next steps" at the bottom for why, and what's needed to finish the layout.
 
 **Decision: MCU is being swapped to STM32G431** (native FDCAN) — see §5. This is the bigger of the two alternatives originally laid out, chosen over adding an external MCP2518FD controller to the existing STM32F302K8U6.
