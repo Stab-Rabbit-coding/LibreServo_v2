@@ -1588,38 +1588,40 @@
 <text x="16.51" y="-5.715" size="1.6764" layer="94">GNDISO</text>
 <text x="16.51" y="-8.255" size="1.6764" layer="94">VISOOUT</text>
 </symbol>
-<symbol name="S32K144">
-<pin name="VDD_1" x="-25.4" y="17.78" visible="off" length="middle" direction="pwr"/>
-<pin name="EXTAL" x="-25.4" y="12.7" visible="off" length="middle" direction="in"/>
-<pin name="XTAL" x="-25.4" y="7.62" visible="off" length="middle" direction="pas"/>
-<pin name="RESET_b" x="-25.4" y="2.54" visible="off" length="middle" direction="in"/>
-<pin name="SPI_IN" x="-25.4" y="-2.54" visible="off" length="middle"/>
-<pin name="SPI_OUT" x="-25.4" y="-7.62" visible="off" length="middle"/>
-<pin name="SPI_CLK" x="-25.4" y="-12.7" visible="off" length="middle"/>
-<pin name="LED_RED" x="-25.4" y="-17.78" visible="off" length="middle"/>
-<pin name="LED_GREEN" x="-17.78" y="-25.4" visible="off" length="middle" rot="R90"/>
-<pin name="LED_BLUE" x="-12.7" y="-25.4" visible="off" length="middle" rot="R90"/>
-<pin name="V_TEMP" x="-7.62" y="-25.4" visible="off" length="middle" rot="R90"/>
-<pin name="V_CORRIENTE" x="-2.54" y="-25.4" visible="off" length="middle" rot="R90"/>
-<pin name="V_BAT" x="2.54" y="-25.4" visible="off" length="middle" rot="R90"/>
-<pin name="VSS_A" x="7.62" y="-25.4" visible="off" length="middle" direction="pwr" rot="R90"/>
-<pin name="VDDA" x="12.7" y="-25.4" visible="off" length="middle" direction="pas" rot="R90"/>
-<pin name="VSS_1" x="17.78" y="-25.4" visible="off" length="middle" direction="pwr" rot="R90"/>
-<pin name="VDD_2" x="25.4" y="-17.78" visible="off" length="middle" direction="pwr" rot="R180"/>
-<pin name="PWM-1" x="25.4" y="-12.7" visible="off" length="middle" rot="R180"/>
-<pin name="PWM-3" x="25.4" y="-7.62" visible="off" length="middle" rot="R180"/>
-<pin name="EN-Q" x="25.4" y="-2.54" visible="off" length="middle" rot="R180"/>
-<pin name="CAN0_RX" x="25.4" y="2.54" visible="off" length="middle" rot="R180"/>
-<pin name="CAN0_TX" x="25.4" y="7.62" visible="off" length="middle" rot="R180"/>
-<pin name="SWD_DIO" x="25.4" y="12.7" visible="off" length="middle" rot="R180"/>
-<pin name="SWD_CLK" x="25.4" y="17.78" visible="off" length="middle" rot="R180"/>
-<pin name="PWM-4" x="12.7" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="PWM-2" x="7.62" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="SEL_SERIAL" x="2.54" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="LPUART1_TX" x="-2.54" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="LPUART1_RX" x="-7.62" y="25.4" visible="off" length="middle" rot="R270"/>
-<pin name="VSS_2" x="-17.78" y="25.4" visible="off" length="middle" direction="pwr" rot="R270"/>
-<pin name="EP" x="0" y="-5.08" visible="off" length="point" direction="pwr"/>
+<symbol name="MSPM0G3507">
+<pin name="VDD" x="-25.4" y="17.78" visible="off" length="middle" direction="pwr"/>
+<pin name="PA6/HFCLK_IN" x="-25.4" y="12.7" visible="off" length="middle" direction="in"/>
+<pin name="VCORE" x="-25.4" y="7.62" visible="off" length="middle" direction="pwr"/>
+<pin name="NRST" x="-25.4" y="2.54" visible="off" length="middle" direction="in"/>
+<pin name="PA16/SPI1_POCI" x="-25.4" y="-2.54" visible="off" length="middle"/>
+<pin name="PA18/SPI1_PICO" x="-25.4" y="-7.62" visible="off" length="middle"/>
+<pin name="PA17/SPI1_SCK" x="-25.4" y="-12.7" visible="off" length="middle"/>
+<pin name="PA0/LED_RED" x="-25.4" y="-17.78" visible="off" length="middle"/>
+<pin name="PA3/LED_GREEN" x="-17.78" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="PA7/LED_BLUE" x="-12.7" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="PA26/A0_1" x="-7.62" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="PA15/A1_0" x="-2.54" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="PA27/A0_0" x="2.54" y="-25.4" visible="off" length="middle" rot="R90"/>
+<pin name="PA21/VREF-" x="7.62" y="-25.4" visible="off" length="middle" direction="pwr" rot="R90"/>
+<pin name="PA23/VREF+" x="12.7" y="-25.4" visible="off" length="middle" direction="pas" rot="R90"/>
+<pin name="VSS" x="17.78" y="-25.4" visible="off" length="middle" direction="pwr" rot="R90"/>
+<pin name="PA1" x="25.4" y="-17.78" visible="off" length="middle" rot="R180"/>
+<pin name="PA25/TIMA0_C1N" x="25.4" y="-12.7" visible="off" length="middle" rot="R180"/>
+<pin name="PA24/TIMA0_C3N" x="25.4" y="-7.62" visible="off" length="middle" rot="R180"/>
+<pin name="PA5" x="25.4" y="-2.54" visible="off" length="middle" rot="R180"/>
+<pin name="PA13/CAN_RX" x="25.4" y="2.54" visible="off" length="middle" rot="R180"/>
+<pin name="PA12/CAN_TX" x="25.4" y="7.62" visible="off" length="middle" rot="R180"/>
+<pin name="PA19/SWDIO" x="25.4" y="12.7" visible="off" length="middle" rot="R180"/>
+<pin name="PA20/SWCLK" x="25.4" y="17.78" visible="off" length="middle" rot="R180"/>
+<pin name="PA8" x="17.78" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PA4/TIMA0_C3" x="12.7" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PA22/TIMA0_C1" x="7.62" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PA9" x="2.54" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PA10/UART0_TX" x="-2.54" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PA11/UART0_RX" x="-7.62" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PA14" x="-12.7" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PA2/ROSC" x="-17.78" y="25.4" visible="off" length="middle" rot="R270"/>
+<pin name="PAD" x="0" y="-5.08" visible="off" length="point" direction="pwr"/>
 <wire x1="-20.32" y1="-20.32" x2="-20.32" y2="20.32" width="0.6096" layer="94"/>
 <wire x1="-20.32" y1="20.32" x2="20.32" y2="20.32" width="0.6096" layer="94"/>
 <wire x1="20.32" y1="20.32" x2="20.32" y2="-20.32" width="0.6096" layer="94"/>
@@ -1627,39 +1629,41 @@
 <wire x1="-2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="-2.54" x2="0" y2="-5.08" width="0.254" layer="94"/>
-<text x="0.635" y="-5.08" size="1.778" layer="94">EP</text>
+<text x="0.635" y="-5.08" size="1.778" layer="94">PAD</text>
 <text x="-20.32" y="30.48" size="1.778" layer="95">&gt;NAME</text>
 <text x="-20.32" y="-33.02" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-21.59" y="18.415" size="1.6764" layer="94" rot="R180">VDD_1</text>
-<text x="-21.59" y="13.335" size="1.6764" layer="94" rot="R180">EXTAL</text>
-<text x="-21.59" y="8.255" size="1.6764" layer="94" rot="R180">XTAL</text>
-<text x="-21.59" y="3.175" size="1.6764" layer="94" rot="R180">RESET_b</text>
-<text x="-21.59" y="-1.905" size="1.6764" layer="94" rot="R180">SPI_IN</text>
-<text x="-21.59" y="-6.985" size="1.6764" layer="94" rot="R180">SPI_OUT</text>
-<text x="-21.59" y="-12.065" size="1.6764" layer="94" rot="R180">SPI_CLK</text>
-<text x="-21.59" y="-17.145" size="1.6764" layer="94" rot="R180">LED_RED</text>
-<text x="-18.415" y="-21.59" size="1.6764" layer="94" rot="R90">LED_GREEN</text>
-<text x="-13.335" y="-21.59" size="1.6764" layer="94" rot="R90">LED_BLUE</text>
-<text x="-8.255" y="-21.59" size="1.6764" layer="94" rot="R90">V_TEMP</text>
-<text x="-3.175" y="-21.59" size="1.6764" layer="94" rot="R90">V_CORRIENTE</text>
-<text x="1.905" y="-21.59" size="1.6764" layer="94" rot="R90">V_BAT</text>
-<text x="6.985" y="-21.59" size="1.6764" layer="94" rot="R90">VSS_A</text>
-<text x="12.065" y="-21.59" size="1.6764" layer="94" rot="R90">VDDA</text>
-<text x="17.145" y="-21.59" size="1.6764" layer="94" rot="R90">VSS_1</text>
-<text x="21.59" y="-17.145" size="1.6764" layer="94">VDD_2</text>
-<text x="21.59" y="-12.065" size="1.6764" layer="94">PWM-1</text>
-<text x="21.59" y="-6.985" size="1.6764" layer="94">PWM-3</text>
-<text x="21.59" y="-1.905" size="1.6764" layer="94">EN-Q</text>
-<text x="21.59" y="3.175" size="1.6764" layer="94">CAN0_RX</text>
-<text x="21.59" y="8.255" size="1.6764" layer="94">CAN0_TX</text>
-<text x="21.59" y="13.335" size="1.6764" layer="94">SWD_DIO</text>
-<text x="21.59" y="18.415" size="1.6764" layer="94">SWD_CLK</text>
-<text x="12.065" y="21.59" size="1.6764" layer="94" rot="R90">PWM-4</text>
-<text x="6.985" y="21.59" size="1.6764" layer="94" rot="R90">PWM-2</text>
-<text x="1.905" y="21.59" size="1.6764" layer="94" rot="R90">SEL_SERIAL</text>
-<text x="-3.175" y="21.59" size="1.6764" layer="94" rot="R90">LPUART1_TX</text>
-<text x="-8.255" y="21.59" size="1.6764" layer="94" rot="R90">LPUART1_RX</text>
-<text x="-18.415" y="21.59" size="1.6764" layer="94" rot="R90">VSS_2</text>
+<text x="-21.59" y="17.145" size="1.6764" layer="94" rot="R180">VDD</text>
+<text x="-21.59" y="12.065" size="1.6764" layer="94" rot="R180">PA6/HFCLK_IN</text>
+<text x="-21.59" y="6.985" size="1.6764" layer="94" rot="R180">VCORE</text>
+<text x="-21.59" y="1.905" size="1.6764" layer="94" rot="R180">NRST</text>
+<text x="-21.59" y="-3.175" size="1.6764" layer="94" rot="R180">PA16/SPI1_POCI</text>
+<text x="-21.59" y="-8.255" size="1.6764" layer="94" rot="R180">PA18/SPI1_PICO</text>
+<text x="-21.59" y="-13.335" size="1.6764" layer="94" rot="R180">PA17/SPI1_SCK</text>
+<text x="-21.59" y="-18.415" size="1.6764" layer="94" rot="R180">PA0/LED_RED</text>
+<text x="-17.145" y="-21.59" size="1.6764" layer="94" rot="R90">PA3/LED_GREEN</text>
+<text x="-12.065" y="-21.59" size="1.6764" layer="94" rot="R90">PA7/LED_BLUE</text>
+<text x="-6.985" y="-21.59" size="1.6764" layer="94" rot="R90">PA26/A0_1</text>
+<text x="-1.905" y="-21.59" size="1.6764" layer="94" rot="R90">PA15/A1_0</text>
+<text x="3.175" y="-21.59" size="1.6764" layer="94" rot="R90">PA27/A0_0</text>
+<text x="8.255" y="-21.59" size="1.6764" layer="94" rot="R90">PA21/VREF-</text>
+<text x="13.335" y="-21.59" size="1.6764" layer="94" rot="R90">PA23/VREF+</text>
+<text x="18.415" y="-21.59" size="1.6764" layer="94" rot="R90">VSS</text>
+<text x="21.59" y="-18.415" size="1.6764" layer="94">PA1</text>
+<text x="21.59" y="-13.335" size="1.6764" layer="94">PA25/TIMA0_C1N</text>
+<text x="21.59" y="-8.255" size="1.6764" layer="94">PA24/TIMA0_C3N</text>
+<text x="21.59" y="-3.175" size="1.6764" layer="94">PA5</text>
+<text x="21.59" y="1.905" size="1.6764" layer="94">PA13/CAN_RX</text>
+<text x="21.59" y="6.985" size="1.6764" layer="94">PA12/CAN_TX</text>
+<text x="21.59" y="12.065" size="1.6764" layer="94">PA19/SWDIO</text>
+<text x="21.59" y="17.145" size="1.6764" layer="94">PA20/SWCLK</text>
+<text x="18.415" y="21.59" size="1.6764" layer="94" rot="R90">PA8</text>
+<text x="13.335" y="21.59" size="1.6764" layer="94" rot="R90">PA4/TIMA0_C3</text>
+<text x="8.255" y="21.59" size="1.6764" layer="94" rot="R90">PA22/TIMA0_C1</text>
+<text x="3.175" y="21.59" size="1.6764" layer="94" rot="R90">PA9</text>
+<text x="-1.905" y="21.59" size="1.6764" layer="94" rot="R90">PA10/UART0_TX</text>
+<text x="-6.985" y="21.59" size="1.6764" layer="94" rot="R90">PA11/UART0_RX</text>
+<text x="-12.065" y="21.59" size="1.6764" layer="94" rot="R90">PA14</text>
+<text x="-17.145" y="21.59" size="1.6764" layer="94" rot="R90">PA2/ROSC</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -2017,10 +2021,10 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="S32K144">
-<description>&lt;b&gt;NXP S32K144 (LQFP48)&lt;/b&gt;, Arm Cortex-M4F, native FlexCAN0 (CAN-FD) and on-chip CSEc (SHE-compliant hardware crypto/secure-boot engine) replacing the external SLB9672 TPM. Symbol-only placeholder: footprint/package and physical pin numbers not yet defined -- the S32K1xx Data Sheet in PCB/datasheets/S32K1xx.pdf explicitly defers package pinouts to the Reference Manual's IO Signal Description Input Multiplexing spreadsheet, which is not available in this repo. Pin names on this symbol are functional/net labels, not verified physical port assignments. See PCB/S32K144-MCU-swap.md.</description>
+<deviceset name="MSPM0G3507">
+<description>&lt;b&gt;TI MSPM0G3507-Q1 (VQFN-32, RHB, 5x5mm)&lt;/b&gt;, Arm Cortex-M0+ @ 80MHz, 128KB flash (ECC) / 32KB SRAM (parity), native CAN-FD, 2x 12-bit 4Msps ADC, AES-128/256 + TRNG + CRC. AEC-Q100 Grade 1. Replaces the NXP S32K144 (and its CSEc HSM -- see the security note in PCB/MSPM0G3507-MCU-swap.md, the MSPM0 has no SHE-class key store or hardware secure boot). Pin names carry the physical port and the selected IOMUX function, both taken from the local datasheet copy PCB/datasheets/mspm0g3507-q1.pdf (SLASF88C), Table 6-2 'Pin Attributes', column '32 VQFN'. Symbol-only deviceset: no footprint yet. The existing Propio QFN32 land pattern is NOT reusable -- its pad numbering starts on the bottom row (TI RHB0032E starts on the left column, a 90-degree difference) and its pad span is 5.5mm vs TI's 4.8mm. TI's recommended land pattern (datasheet section 12, drawing 4223442/B): 32x pads 0.6 x 0.25mm on 0.5mm pitch, 4.8mm row-to-row span, 3.45 x 3.45mm exposed thermal pad (pad 33). See PCB/MSPM0G3507-MCU-swap.md.</description>
 <gates>
-<gate name="G$1" symbol="S32K144" x="0" y="0"/>
+<gate name="G$1" symbol="MSPM0G3507" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -10037,7 +10041,13 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
 <part name="B2" library="Propio" deviceset="FERRITE_BEAD_0603" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device="" value="Vmot"/>
-<part name="U1" library="Propio" deviceset="S32K144" device="" value="S32K144 (LQFP48)"/>
+<part name="U1" library="Propio" deviceset="MSPM0G3507" device="" value="M0G3507QRHBRQ1"/>
+<part name="C39" library="Propio" deviceset="C-EU" device="0402" value="470n"/>
+<part name="C40" library="Propio" deviceset="C-EU" device="0402" value="10n"/>
+<part name="R21" library="Propio" deviceset="R-US" device="0402" value="47K"/>
+<part name="SUPPLY48" library="supply2" deviceset="GND" device=""/>
+<part name="SUPPLY49" library="supply2" deviceset="GND" device=""/>
+<part name="+3V18" library="supply1" deviceset="+3V3" device=""/>
 <part name="SUPPLY24" library="supply2" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="U$100" library="Propio" deviceset="OSCILATOR" device=""/>
@@ -10147,8 +10157,6 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="SUPPLY43" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY44" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY45" library="supply2" deviceset="GND" device=""/>
-<part name="U$15" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
-<part name="U$16" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="U$7" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="U$10" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
 <part name="U$11" library="NC_MARKER" deviceset="NC_MARKER" device=""/>
@@ -10196,7 +10204,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="-60.96" y1="45.72" x2="-60.96" y2="12.7" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-60.96" y1="12.7" x2="-15.24" y2="12.7" width="0.8128" layer="94" style="shortdash"/>
 <text x="-58.42" y="40.64" size="3.81" layer="94">SWD HEADER</text>
-<text x="-195.58" y="38.1" size="5.08" layer="94">S32K144 (LQFP48) @ 80MHz RUN / 112MHz HSRUN, CSEc security</text>
+<text x="-195.58" y="38.1" size="5.08" layer="94">MSPM0G3507-Q1 (VQFN-32 RHB, 5x5mm) @ 80MHz Cortex-M0+, AEC-Q100 Grade 1</text>
 <wire x1="-198.12" y1="53.34" x2="-198.12" y2="149.86" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-198.12" y1="149.86" x2="-198.12" y2="215.9" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-198.12" y1="215.9" x2="-142.24" y2="215.9" width="0.8128" layer="94" style="shortdash"/>
@@ -10343,9 +10351,12 @@ JTCK -&gt; SWCLK</text>
 <text x="40.64" y="-207.01" size="1.778" layer="94">NEEDS: footprint/package, board placement, CANH/CANL bus connector,
 and a new 5V regulator for VCC (+5V_ISO_CANFD net) -- board has no 5V rail today.
 See PCB/RS485-CANFD-TPM-upgrade.md.</text>
-<text x="-195.58" y="-58.42" size="1.778" layer="94">TPM (SLB9672, U7) removed. Security now uses the S32K144's on-die
-CSEc (SHE-compliant hardware crypto engine) -- no external pins/bus needed.
-See PCB/S32K144-MCU-swap.md.</text>
+<text x="-195.58" y="-58.42" size="1.778" layer="94">MCU is now TI M0G3507QRHBRQ1 (MSPM0G3507-Q1). NRST MUST be pulled to VDD (R21/C40) -- unlike the
+parts it replaces, this device will not leave reset otherwise. VCORE needs its own 0.47uF
+tank cap (C39) and must not be connected to anything else. VREF+ is fed from VDDA-FILTRADO
+(C4 = 1uF is the required VREF decoupling). Security: AES-128/256 + TRNG + CRC on-die, but
+NO SHE-class key store and NO hardware secure boot -- a regression vs the S32K144 CSEc it
+replaces. See PCB/MSPM0G3507-MCU-swap.md.</text>
 </plain>
 <instances>
 <instance part="M1" gate="G$1" x="-132.08" y="160.02"/>
@@ -10396,6 +10407,12 @@ See PCB/S32K144-MCU-swap.md.</text>
 <attribute name="NAME" x="-101.6" y="-15.24" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-101.6" y="-12.7" size="1.778" layer="96"/>
 </instance>
+<instance part="C39" gate="G$1" x="-137.16" y="-15.24"/>
+<instance part="SUPPLY48" gate="GND" x="-137.16" y="-20.32"/>
+<instance part="C40" gate="G$1" x="-142.24" y="-50.8"/>
+<instance part="SUPPLY49" gate="GND" x="-142.24" y="-55.88"/>
+<instance part="R21" gate="G$1" x="-157.48" y="-45.72"/>
+<instance part="+3V18" gate="G$1" x="-162.56" y="-40.64"/>
 <instance part="SUPPLY24" gate="GND" x="-134.62" y="17.78"/>
 <instance part="+3V6" gate="G$1" x="-172.72" y="20.32" smashed="yes">
 <attribute name="VALUE" x="-175.26" y="21.59" size="1.778" layer="96"/>
@@ -10601,8 +10618,6 @@ See PCB/S32K144-MCU-swap.md.</text>
 <instance part="SUPPLY43" gate="GND" x="-101.6" y="-27.94"/>
 <instance part="SUPPLY44" gate="GND" x="157.48" y="160.02"/>
 <instance part="SUPPLY45" gate="GND" x="157.48" y="116.84"/>
-<instance part="U$15" gate="G$1" x="-129.54" y="-10.16"/>
-<instance part="U$16" gate="G$1" x="-129.54" y="-15.24"/>
 <instance part="U$7" gate="G$1" x="-160.02" y="86.36"/>
 <instance part="U$10" gate="G$1" x="-144.78" y="114.3" rot="R270"/>
 <instance part="U$11" gate="G$1" x="-114.3" y="86.36" rot="R180"/>
@@ -10650,6 +10665,14 @@ See PCB/S32K144-MCU-swap.md.</text>
 <nets>
 <net name="GND" class="0">
 <segment>
+<pinref part="C39" gate="G$1" pin="2"/>
+<pinref part="SUPPLY48" gate="GND" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C40" gate="G$1" pin="2"/>
+<pinref part="SUPPLY49" gate="GND" pin="GND"/>
+</segment>
+<segment>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 <pinref part="M1" gate="G$1" pin="G"/>
 <wire x1="-142.24" y1="157.48" x2="-142.24" y2="160.02" width="0.1524" layer="91"/>
@@ -10695,10 +10718,6 @@ See PCB/S32K144-MCU-swap.md.</text>
 <wire x1="-134.62" y1="22.86" x2="-134.62" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-149.86" y1="20.32" x2="-149.86" y2="22.86" width="0.1524" layer="91"/>
 <junction x="-149.86" y="22.86"/>
-<pinref part="U1" gate="G$1" pin="VSS_2"/>
-<wire x1="-119.38" y1="7.62" x2="-119.38" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="-119.38" y1="22.86" x2="-134.62" y2="22.86" width="0.1524" layer="91"/>
-<junction x="-134.62" y="22.86"/>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 </segment>
@@ -10715,7 +10734,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 <wire x1="-190.5" y1="-10.16" x2="-170.18" y2="-10.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="VSS_1"/>
+<pinref part="U1" gate="G$1" pin="VSS"/>
 <wire x1="-83.82" y1="-43.18" x2="-83.82" y2="-45.72" width="0.1524" layer="91"/>
 <wire x1="-83.82" y1="-45.72" x2="-76.2" y2="-45.72" width="0.1524" layer="91"/>
 <pinref part="SUPPLY27" gate="GND" pin="GND"/>
@@ -10829,7 +10848,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 </segment>
 <segment>
 <wire x1="-147.32" y1="-27.94" x2="-147.32" y2="-25.4" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="VSS_A"/>
+<pinref part="U1" gate="G$1" pin="PA21/VREF-"/>
 <wire x1="-147.32" y1="-25.4" x2="-93.98" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="SUPPLY26" gate="GND" pin="GND"/>
 <wire x1="-162.56" y1="-30.48" x2="-162.56" y2="-27.94" width="0.1524" layer="91"/>
@@ -10915,7 +10934,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 </segment>
 <segment>
 <pinref part="SUPPLY43" gate="GND" pin="GND"/>
-<pinref part="U1" gate="G$1" pin="EP"/>
+<pinref part="U1" gate="G$1" pin="PAD"/>
 <wire x1="-101.6" y1="-25.4" x2="-101.6" y2="-22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -10973,6 +10992,11 @@ See PCB/S32K144-MCU-swap.md.</text>
 </net>
 <net name="+3V3" class="0">
 <segment>
+<pinref part="R21" gate="G$1" pin="1"/>
+<wire x1="-162.56" y1="-45.72" x2="-162.56" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="+3V18" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <wire x1="30.48" y1="43.18" x2="30.48" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="R9" gate="G$1" pin="2"/>
@@ -10983,7 +11007,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 <wire x1="-165.1" y1="10.16" x2="-149.86" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-149.86" y1="10.16" x2="-149.86" y2="12.7" width="0.1524" layer="91"/>
 <junction x="-165.1" y="10.16"/>
-<pinref part="U1" gate="G$1" pin="VDD_1"/>
+<pinref part="U1" gate="G$1" pin="VDD"/>
 <wire x1="-127" y1="0" x2="-149.86" y2="0" width="0.1524" layer="91"/>
 <wire x1="-149.86" y1="0" x2="-149.86" y2="10.16" width="0.1524" layer="91"/>
 <junction x="-149.86" y="10.16"/>
@@ -11013,11 +11037,8 @@ See PCB/S32K144-MCU-swap.md.</text>
 <wire x1="-187.96" y1="-20.32" x2="-187.96" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="VDD_2"/>
-<wire x1="-76.2" y1="-35.56" x2="-71.12" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="-71.12" y1="-35.56" x2="-71.12" y2="-38.1" width="0.1524" layer="91"/>
 <pinref part="+3V14" gate="G$1" pin="+3V3"/>
-<junction x="-71.12" y="-35.56"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="-71.12" y1="-35.56" x2="-50.8" y2="-35.56" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="-35.56" x2="-50.8" y2="-33.02" width="0.1524" layer="91"/>
@@ -11108,7 +11129,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 </net>
 <net name="SPI_CLK" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="SPI_CLK"/>
+<pinref part="U1" gate="G$1" pin="PA17/SPI1_SCK"/>
 <wire x1="-127" y1="-30.48" x2="-132.08" y2="-30.48" width="0.1524" layer="91"/>
 <label x="-132.08" y="-30.48" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
@@ -11120,7 +11141,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 </net>
 <net name="SPI_IN" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="SPI_IN"/>
+<pinref part="U1" gate="G$1" pin="PA16/SPI1_POCI"/>
 <wire x1="-127" y1="-20.32" x2="-132.08" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-132.08" y="-20.32" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
@@ -11132,7 +11153,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 </net>
 <net name="SPI_OUT" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="SPI_OUT"/>
+<pinref part="U1" gate="G$1" pin="PA18/SPI1_PICO"/>
 <wire x1="-127" y1="-25.4" x2="-132.08" y2="-25.4" width="0.1524" layer="91"/>
 <label x="-132.08" y="-25.4" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
@@ -11263,7 +11284,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 <net name="CLK-8MHZ" class="0">
 <segment>
 <pinref part="U$100" gate="G$1" pin="OUT"/>
-<pinref part="U1" gate="G$1" pin="EXTAL"/>
+<pinref part="U1" gate="G$1" pin="PA6/HFCLK_IN"/>
 <wire x1="-127" y1="-5.08" x2="-154.94" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="-154.94" y1="-5.08" x2="-154.94" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="0" x2="-170.18" y2="2.54" width="0.1524" layer="91"/>
@@ -11273,7 +11294,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 <net name="VDDA-FILTRADO" class="0">
 <segment>
 <pinref part="B1" gate="G$1" pin="1"/>
-<pinref part="U1" gate="G$1" pin="VDDA"/>
+<pinref part="U1" gate="G$1" pin="PA23/VREF+"/>
 <wire x1="-165.1" y1="-20.32" x2="-162.56" y2="-20.32" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="-162.56" y1="-20.32" x2="-154.94" y2="-20.32" width="0.1524" layer="91"/>
@@ -11291,7 +11312,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 <label x="15.24" y="157.48" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="LED_GREEN"/>
+<pinref part="U1" gate="G$1" pin="PA3/LED_GREEN"/>
 <wire x1="-119.38" y1="-43.18" x2="-119.38" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-119.38" y="-45.72" size="2.1844" layer="94" rot="R270" xref="yes"/>
 </segment>
@@ -11304,14 +11325,14 @@ See PCB/S32K144-MCU-swap.md.</text>
 <label x="15.24" y="162.56" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="LED_RED"/>
+<pinref part="U1" gate="G$1" pin="PA0/LED_RED"/>
 <wire x1="-127" y1="-35.56" x2="-132.08" y2="-35.56" width="0.1524" layer="91"/>
 <label x="-132.08" y="-35.56" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="LED_BLUE" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="LED_BLUE"/>
+<pinref part="U1" gate="G$1" pin="PA7/LED_BLUE"/>
 <wire x1="-114.3" y1="-43.18" x2="-114.3" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-114.3" y="-45.72" size="2.1844" layer="94" rot="R270" xref="yes"/>
 </segment>
@@ -11324,7 +11345,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 </net>
 <net name="V_TEMP" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="V_TEMP"/>
+<pinref part="U1" gate="G$1" pin="PA26/A0_1"/>
 <wire x1="-109.22" y1="-43.18" x2="-109.22" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-109.22" y="-45.72" size="2.1844" layer="94" rot="R270" xref="yes"/>
 </segment>
@@ -11340,7 +11361,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 </net>
 <net name="V_BAT" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="V_BAT"/>
+<pinref part="U1" gate="G$1" pin="PA27/A0_0"/>
 <wire x1="-99.06" y1="-43.18" x2="-99.06" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-99.06" y="-45.72" size="2.1844" layer="94" rot="R270" xref="yes"/>
 </segment>
@@ -11356,7 +11377,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 </net>
 <net name="PWM-1" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PWM-1"/>
+<pinref part="U1" gate="G$1" pin="PA25/TIMA0_C1N"/>
 <wire x1="-76.2" y1="-30.48" x2="-71.12" y2="-30.48" width="0.1524" layer="91"/>
 <label x="-71.12" y="-30.48" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11373,7 +11394,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 <label x="134.62" y="124.46" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PWM-2"/>
+<pinref part="U1" gate="G$1" pin="PA22/TIMA0_C1"/>
 <wire x1="-93.98" y1="7.62" x2="-93.98" y2="12.7" width="0.1524" layer="91"/>
 <label x="-93.98" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
@@ -11385,7 +11406,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 <label x="134.62" y="157.48" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PWM-3"/>
+<pinref part="U1" gate="G$1" pin="PA24/TIMA0_C3N"/>
 <wire x1="-76.2" y1="-25.4" x2="-71.12" y2="-25.4" width="0.1524" layer="91"/>
 <label x="-71.12" y="-25.4" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11397,14 +11418,14 @@ See PCB/S32K144-MCU-swap.md.</text>
 <label x="134.62" y="167.64" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="PWM-4"/>
+<pinref part="U1" gate="G$1" pin="PA4/TIMA0_C3"/>
 <wire x1="-88.9" y1="7.62" x2="-88.9" y2="12.7" width="0.1524" layer="91"/>
 <label x="-88.9" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="CAN0_RX" class="0">
+<net name="CAN_RX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="CAN0_RX"/>
+<pinref part="U1" gate="G$1" pin="PA13/CAN_RX"/>
 <wire x1="-76.2" y1="-15.24" x2="-71.12" y2="-15.24" width="0.1524" layer="91"/>
 <label x="-71.12" y="-15.24" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11415,9 +11436,9 @@ See PCB/S32K144-MCU-swap.md.</text>
 <wire x1="35.56" y1="-139.7" x2="20.32" y2="-139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="CAN0_TX" class="0">
+<net name="CAN_TX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="CAN0_TX"/>
+<pinref part="U1" gate="G$1" pin="PA12/CAN_TX"/>
 <wire x1="-76.2" y1="-10.16" x2="-71.12" y2="-10.16" width="0.1524" layer="91"/>
 <label x="-71.12" y="-10.16" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11428,9 +11449,9 @@ See PCB/S32K144-MCU-swap.md.</text>
 <wire x1="35.56" y1="-144.78" x2="20.32" y2="-144.78" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="LPUART1_RX" class="0">
+<net name="UART0_RX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="LPUART1_RX"/>
+<pinref part="U1" gate="G$1" pin="PA11/UART0_RX"/>
 <wire x1="-109.22" y1="7.62" x2="-109.22" y2="12.7" width="0.1524" layer="91"/>
 <label x="-109.22" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
@@ -11440,9 +11461,9 @@ See PCB/S32K144-MCU-swap.md.</text>
 <label x="15.24" y="-49.53" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="LPUART1_TX" class="0">
+<net name="UART0_TX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="LPUART1_TX"/>
+<pinref part="U1" gate="G$1" pin="PA10/UART0_TX"/>
 <wire x1="-104.14" y1="7.62" x2="-104.14" y2="12.7" width="0.1524" layer="91"/>
 <label x="-104.14" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
@@ -11482,7 +11503,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 <label x="144.78" y="137.16" size="2.1844" layer="94" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="EN-Q"/>
+<pinref part="U1" gate="G$1" pin="PA5"/>
 <wire x1="-76.2" y1="-20.32" x2="-71.12" y2="-20.32" width="0.1524" layer="91"/>
 <label x="-71.12" y="-20.32" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11561,7 +11582,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 </net>
 <net name="SEL_SERIAL" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="SEL_SERIAL"/>
+<pinref part="U1" gate="G$1" pin="PA9"/>
 <wire x1="-99.06" y1="7.62" x2="-99.06" y2="12.7" width="0.1524" layer="91"/>
 <label x="-99.06" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
@@ -11581,7 +11602,7 @@ See PCB/S32K144-MCU-swap.md.</text>
 </net>
 <net name="V_CORRIENTE" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="V_CORRIENTE"/>
+<pinref part="U1" gate="G$1" pin="PA15/A1_0"/>
 <wire x1="-104.14" y1="-43.18" x2="-104.14" y2="-45.72" width="0.1524" layer="91"/>
 <label x="-104.14" y="-45.72" size="2.1844" layer="94" rot="R270" xref="yes"/>
 </segment>
@@ -11926,40 +11947,28 @@ See PCB/S32K144-MCU-swap.md.</text>
 <wire x1="149.86" y1="-27.94" x2="149.86" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SWD_DIO" class="0">
+<net name="SWDIO" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="P$4"/>
 <wire x1="-43.18" y1="35.56" x2="-40.64" y2="35.56" width="0.1524" layer="91"/>
 <label x="-40.64" y="35.56" size="2.1844" layer="94" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="SWD_DIO"/>
+<pinref part="U1" gate="G$1" pin="PA19/SWDIO"/>
 <wire x1="-76.2" y1="-5.08" x2="-71.12" y2="-5.08" width="0.1524" layer="91"/>
 <label x="-71.12" y="-5.08" size="2.1844" layer="94" xref="yes"/>
 </segment>
 </net>
-<net name="SWD_CLK" class="0">
+<net name="SWCLK" class="0">
 <segment>
 <pinref part="U$5" gate="G$1" pin="P$2"/>
 <wire x1="-43.18" y1="25.4" x2="-40.64" y2="25.4" width="0.1524" layer="91"/>
 <label x="-40.64" y="25.4" size="2.1844" layer="94" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="SWD_CLK"/>
+<pinref part="U1" gate="G$1" pin="PA20/SWCLK"/>
 <wire x1="-76.2" y1="0" x2="-71.12" y2="0" width="0.1524" layer="91"/>
 <label x="-71.12" y="0" size="2.1844" layer="94" xref="yes"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="XTAL"/>
-<pinref part="U$15" gate="G$1" pin="P$1"/>
-</segment>
-</net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="RESET_b"/>
-<pinref part="U$16" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -12137,6 +12146,25 @@ See PCB/S32K144-MCU-swap.md.</text>
 <pinref part="U6" gate="G$1" pin="CANL"/>
 <wire x1="81.28" y1="-137.16" x2="90" y2="-137.16" width="0.1524" layer="91"/>
 <label x="90" y="-137.16" size="2.1844" layer="94" xref="yes"/>
+</segment>
+</net>
+<net name="VCORE" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="VCORE"/>
+<wire x1="-127" y1="-10.16" x2="-137.16" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="C39" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="NRST" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="NRST"/>
+<wire x1="-127" y1="-15.24" x2="-134.62" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="-15.24" x2="-134.62" y2="-45.72" width="0.1524" layer="91"/>
+<wire x1="-134.62" y1="-45.72" x2="-142.24" y2="-45.72" width="0.1524" layer="91"/>
+<pinref part="C40" gate="G$1" pin="1"/>
+<junction x="-142.24" y="-45.72"/>
+<wire x1="-142.24" y1="-45.72" x2="-152.4" y2="-45.72" width="0.1524" layer="91"/>
+<pinref part="R21" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>

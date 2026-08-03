@@ -1,5 +1,19 @@
 # Hardware upgrade notes: MCU swap to NXP S32K144, TPM (SLB9672) dropped in favor of on-chip CSEc
 
+> **SUPERSEDED.** `U1` is no longer an S32K144 — it is now a TI **MSPM0G3507-Q1 (VQFN-32,
+> `M0G3507QRHBRQ1`)**. See [`MSPM0G3507-MCU-swap.md`](MSPM0G3507-MCU-swap.md) for the current
+> design. Everything below is retained as the decision record for the S32K144 pass only.
+>
+> Three points below are now resolved or reversed:
+>
+> - The "no verified pin-to-package-pad table" problem in §3/§4 is **gone** — the MSPM0
+>   datasheet (SLASF88C §6.2) carries the full per-package pin table, so the new symbol has
+>   real, cited silicon pin numbers rather than net labels.
+> - The 48-pin LQFP body-size concern in §1/§4 is **moot** — the MSPM0 replacement is a
+>   5 × 5 mm VQFN-32, matching the original UFQFPN-32 envelope.
+> - The CSEc capability discussion in §2 is **still relevant but now understates the gap**: the
+>   MSPM0G3507 has AES + TRNG but no SHE-class HSM at all. See §1 of the new document.
+
 Follow-up to [`RS485-CANFD-TPM-upgrade.md`](RS485-CANFD-TPM-upgrade.md), which took the board from STM32F302K8U6 to STM32G431 and added the Infineon SLB9672 TPM 2.0 as `U7`. This pass replaces the STM32G431 (`U1`) with an **NXP S32K144** and removes `U7` entirely, using the S32K144's built-in **CSEc** (Cryptographic Services Engine) instead of an external TPM. Local datasheet copy: [`datasheets/S32K1xx.pdf`](datasheets/S32K1xx.pdf).
 
 ## 1. Why S32K144
