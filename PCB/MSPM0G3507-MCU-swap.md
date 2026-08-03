@@ -263,17 +263,27 @@ It is **not** a supply input — it must never be tied to `+3V3`.
 
 ### Verification performed
 
-Machine-checked against the edited file, not eyeballed:
+Machine-checked against the edited file with a purpose-written connectivity checker that
+applies EAGLE's own rules (wires join at shared endpoints; a junction or a pin lying on a wire
+also joins it), not eyeballed:
 
-- **XML well-formed** (`xml.etree` parse).
-- **All 29 connected `U1` pins land on the intended net**, and every one of the 33 symbol pins
-  resolves to a real package pad; the 4 unconnected pins are exactly the intended spares.
-- **Zero shared connection points between different nets** across the entire sheet — every wire
-  endpoint, junction and pin coordinate on the whole schematic was resolved (including instance
-  rotation) and checked for collisions. This is the check that catches a new wire accidentally
-  landing on a foreign net; the new `NRST` trunk in particular crosses the two pre-existing
-  long diagonal wires (`GND` and `VDDA-FILTRADO`) without a junction, which is correct.
-- **No dangling references:** every `pinref` resolves to an existing instance and symbol pin.
+1. **XML well-formed** (`xml.etree` parse).
+2. **All 29 connected `U1` pins land on the intended net**, every one of the 33 symbol pins
+   resolves to a real package pad, and the 4 unconnected pins are exactly the intended spares.
+3. **Zero coincident connection points between different nets**, across the entire sheet —
+   every wire endpoint, junction and pin coordinate resolved, including instance rotation.
+4. **Zero pins lying on a foreign net's wire.** This is the check that catches a rail drawn
+   straight through a component pin; it found 18 such defects on entry and all are now fixed
+   (§10).
+5. **Zero net segments split into disconnected fragments.**
+6. **Zero unresolved `pinref`s** — every one maps to an existing instance and symbol pin.
+
+Crossings *without* a shared point are left alone: they are normal schematic practice and carry
+no connectivity meaning. The `NRST` trunk, for instance, deliberately crosses the two long
+pre-existing diagonal wires (`GND` and `VDDA-FILTRADO`).
+
+The geometry-only repairs in §10 were additionally proved safe by extracting the full
+`part.pin → net` list before and after: **all 399 connections are byte-identical.**
 
 ## 6. Security: corrected assessment
 
@@ -474,24 +484,35 @@ Carried forward, plus new items from this pass.
       split termination; `RS485_P`/`RS485_N` have nothing). Decide whether end-of-chain servos
       need a fitted or switchable 120 Ω across the RS-485 pair.
 
-**Pre-existing schematic-geometry defects found by this pass — NOT fixed, see below:**
+**Pre-existing schematic-geometry defects — found and FIXED by this pass:**
 
-- [ ] **14 places where a pin sits on top of a foreign net's wire.** These are drawing defects
-      inherited from the `RS485-CANFD-TPM-upgrade.md` pass, in three clusters:
-      1. the `GND` wire `(33.02,-44.45)→(33.02,-60.96)` runs straight down `U5`'s **entire
-         logic-side pin column**, passing through `VCC`, `RxD`, `RE`, `DE`, `TxD` and `R20.1`;
-      2. the `RS485_VISOOUT` and `RS485_VISOIN` rails at `y=-88.9` run through the pin 1 of
-         `C25`/`C26` (`+3V3`) and `C27`/`C28` — **bridging the isolation barrier** on the
-         drawing;
-      3. `C37`/`C38`'s pin-2 risers pass through their own pin 1, shorting those capacitors.
+A connectivity checker written for this work found **14 places where a pin sat on top of a
+foreign net's wire**, plus **3 net-connectivity breaks**, all inherited from the
+`RS485-CANFD-TPM-upgrade.md` pass. All are now repaired. What they were, and how each was fixed:
 
-      **These do not corrupt the exported netlist today** — EAGLE's `<nets>` section is the
-      netlist and it declares the correct connectivity (verified: zero coincident connection
-      points between different nets). They are still serious: they read as shorts to a human,
-      EAGLE ERC will flag them, and any GUI edit that makes EAGLE re-derive geometry can
-      silently merge these nets. Fixing them means redrawing the `U5` logic side and both
-      isoPower capacitor banks — deliberately left alone rather than bundled into an unrelated
-      commit.
+| # | Defect | Fix |
+|---:|---|---|
+| 1–6 | The `GND` wire `(33.02,-44.45)→(33.02,-60.96)` ran straight down `U5`'s **entire logic-side pin column**, passing through `VCC`, `RxD`, `RE`, `R20.1`, `DE` and `TxD` | `GND` is a supply net joined by name, so the wire was unnecessary. Deleted it and placed `SUPPLY37` directly on `U5.GND1` |
+| 7–8 | `RS485_VISOOUT`'s cap feed ran along `y=-88.9` from `x=86.36`, straight through `C25.1` and `C26.1` (`+3V3`) — **bridging the isolation barrier** on the drawing | Rerouted: drops at `x=104.14`, i.e. to the right of the `+3V3` pair, and spans only `C27.1`–`C28.1` |
+| 9–11 | `RS485_VISOIN`'s cap feed ran along `y=-88.9` from `x=93.98` through `C26.1`, `C27.1` and `C28.1`, and its riser passed through `+3V15`'s pin at `(93.98,-86.36)` | Rerouted along `y=-73.66`, dropping at `x=124.46`, spanning only `C29.1`–`C30.1` |
+| 12–13 | `C37`/`C38`'s pin-2 risers ran **up** to the `y=-183.51` ground trunk, passing straight through their own pin 1 — shorting both capacitors | Ground now approaches from **below** via `x=144.78` and `y=-200.66`, the same pattern already used correctly for `C33`/`C34` |
+| 14 | `+3V15`'s pin sat on the `RS485_VISOIN` riser | resolved by the same reroute as 9–11 |
+| — | `CANFD_ISO_GND` was split into **two disconnected fragments** by a 2.54 mm gap at `y=-183.51` (`U6.GND2`+`B5.2` isolated from `U6.RS` and the caps) | gap closed |
+| — | NC markers `U$24`/`U$25` sat **7.62 mm away** from `U6.AUXIN`/`AUXOUT`, leaving both `N$20` and `N$21` as two fragments | markers moved onto their pins |
+
+**The declared netlist is provably unchanged by this cleanup:** all 399 `part.pin → net`
+connections are byte-identical before and after. These were geometry-only repairs.
+
+The schematic now passes all four structural checks with zero findings — see §5.
+
+**Still open in this area:**
+
+- [ ] **`U6.AUXIN` (pad 9) is left floating.** ADM3055E Table 10 documents internal pull-downs
+      for `SILENT` and `STBY` but **not** for `AUXIN`, so the "may be left unconnected"
+      assumption carried over from the previous pass is not supported by the datasheet. A
+      floating CMOS input should be tied — recommend `AUXIN` → `GND1`. Not changed here because
+      it alters the netlist rather than the drawing, and the auxiliary channel's intended use
+      (if any) is a design decision. `AUXOUT` is an output and is fine left open.
 
 **Carried over, still unresolved:**
 

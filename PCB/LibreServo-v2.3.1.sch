@@ -1601,7 +1601,7 @@
 <text x="16.51" y="-5.715" size="1.6764" layer="94">GNDISO</text>
 <text x="16.51" y="-8.255" size="1.6764" layer="94">VISOOUT</text>
 </symbol>
-<symbol name="MSPM0G3507">
+<symbol name="MSPM0G3519">
 <pin name="VDD" x="-25.4" y="17.78" visible="off" length="middle" direction="pwr"/>
 <pin name="PA6/HFCLK_IN" x="-25.4" y="12.7" visible="off" length="middle" direction="in"/>
 <pin name="VCORE" x="-25.4" y="7.62" visible="off" length="middle" direction="pwr"/>
@@ -1622,8 +1622,8 @@
 <pin name="PA25/TIMA0_C1N" x="25.4" y="-12.7" visible="off" length="middle" rot="R180"/>
 <pin name="PA24/TIMA0_C3N" x="25.4" y="-7.62" visible="off" length="middle" rot="R180"/>
 <pin name="PA5" x="25.4" y="-2.54" visible="off" length="middle" rot="R180"/>
-<pin name="PA13/CAN_RX" x="25.4" y="2.54" visible="off" length="middle" rot="R180"/>
-<pin name="PA12/CAN_TX" x="25.4" y="7.62" visible="off" length="middle" rot="R180"/>
+<pin name="PA13/CAN0_RX" x="25.4" y="2.54" visible="off" length="middle" rot="R180"/>
+<pin name="PA12/CAN0_TX" x="25.4" y="7.62" visible="off" length="middle" rot="R180"/>
 <pin name="PA19/SWDIO" x="25.4" y="12.7" visible="off" length="middle" rot="R180"/>
 <pin name="PA20/SWCLK" x="25.4" y="17.78" visible="off" length="middle" rot="R180"/>
 <pin name="PA8" x="17.78" y="25.4" visible="off" length="middle" rot="R270"/>
@@ -1665,8 +1665,8 @@
 <text x="21.59" y="-13.335" size="1.6764" layer="94">PA25/TIMA0_C1N</text>
 <text x="21.59" y="-8.255" size="1.6764" layer="94">PA24/TIMA0_C3N</text>
 <text x="21.59" y="-3.175" size="1.6764" layer="94">PA5</text>
-<text x="21.59" y="1.905" size="1.6764" layer="94">PA13/CAN_RX</text>
-<text x="21.59" y="6.985" size="1.6764" layer="94">PA12/CAN_TX</text>
+<text x="21.59" y="1.905" size="1.6764" layer="94">PA13/CAN0_RX</text>
+<text x="21.59" y="6.985" size="1.6764" layer="94">PA12/CAN0_TX</text>
 <text x="21.59" y="12.065" size="1.6764" layer="94">PA19/SWDIO</text>
 <text x="21.59" y="17.145" size="1.6764" layer="94">PA20/SWCLK</text>
 <text x="18.415" y="21.59" size="1.6764" layer="94" rot="R90">PA8</text>
@@ -2034,10 +2034,10 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="MSPM0G3507">
-<description>&lt;b&gt;TI MSPM0G3507-Q1 (VQFN-32, RHB, 5x5mm)&lt;/b&gt;, Arm Cortex-M0+ @ 80MHz, 128KB flash (ECC) / 32KB SRAM (parity), native CAN-FD, 2x 12-bit 4Msps ADC, AES-128/256 + TRNG + CRC. AEC-Q100 Grade 1. Replaces the NXP S32K144. Security differs rather than simply regressing: it gains asymmetric ECDSA P-256 secure boot (BIM) which CSEc could not do, and loses the protected key store and hardware rollback counter -- see PCB/MSPM0G3507-MCU-swap.md section 6. Pin names carry the physical port and the selected IOMUX function, both taken from the local datasheet copy PCB/datasheets/mspm0g3507-q1.pdf (SLASF88C), Table 6-2 'Pin Attributes', column '32 VQFN'. Symbol-only deviceset: no footprint yet. The existing Propio QFN32 land pattern is NOT reusable -- its pad numbering starts on the bottom row (TI RHB0032E starts on the left column, a 90-degree difference) and its pad span is 5.5mm vs TI's 4.8mm. TI's recommended land pattern (datasheet section 12, drawing 4223442/B): 32x pads 0.6 x 0.25mm on 0.5mm pitch, 4.8mm row-to-row span, 3.45 x 3.45mm exposed thermal pad (pad 33). See PCB/MSPM0G3507-MCU-swap.md.</description>
+<deviceset name="MSPM0G3519">
+<description>&lt;b&gt;TI MSPM0G3519-Q1 (VQFN-32, RHB, 5x5mm)&lt;/b&gt;, Arm Cortex-M0+ @ 80MHz, 512KB flash (ECC, dual-bank with address swap for OTA) + 16KB data flash, 128KB SRAM (64KB with ECC/parity), native CAN-FD, 2x 12-bit 4Msps ADC (16 ch on this package), 12-bit DAC, 3x COMP, MATHACL, 12-ch DMA. AEC-Q100 Grade 1, wettable flank. Security stack (datasheet section 8.18 + TI SLAAE29A Table 1-2, column M0Gx5 1x): AESADV 128/256-bit with GCM/GMAC, CCM/CBC-MAC, CMAC, CBC, CTR; KEYSTORE secure key storage for up to 4 AES keys (write-only to the application, private bus to the AES engine); Customer Secure Code (CSC) secure boot with both hardware AES-CMAC and software ECDSA P-256 image authentication; flash write/read-execute/IP-protection firewalls; SRAM W^X; hardware monotonic counter for rollback protection; TRNG with health tests; CRC-16/32. PSA-L1 targeted, EVITA-Light. Pin names carry the physical port and the selected IOMUX function, both taken from the local datasheet copy Open-Secure-ESC/docs/datasheets/mspm0g3519-q1.pdf (SLASFA6B), Table 6-2 'Pin Attributes', column 'RHB PIN'. Symbol-only deviceset: no footprint yet. The existing Propio QFN32 land pattern is NOT reusable -- its pad numbering starts on the bottom row (TI RHB0032T starts on the left column, a 90-degree difference) and its pad span is 5.5mm vs TI's 4.78mm. TI's recommended land pattern (datasheet section 12, drawing 4224744/A): 32x pads 0.62 x 0.25mm on 0.5mm pitch, 4.78mm row-to-row span, 3.45 x 3.45mm exposed thermal pad (pad 33). See PCB/MSPM0G3519-MCU-swap.md.</description>
 <gates>
-<gate name="G$1" symbol="MSPM0G3507" x="0" y="0"/>
+<gate name="G$1" symbol="MSPM0G3519" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -10067,7 +10067,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
 <part name="B2" library="Propio" deviceset="FERRITE_BEAD_0603" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device="" value="Vmot"/>
-<part name="U1" library="Propio" deviceset="MSPM0G3507" device="" value="M0G3507QRHBRQ1"/>
+<part name="U1" library="Propio" deviceset="MSPM0G3519" device="" value="M0G3519QRHBRQ1"/>
 <part name="B7" library="Propio" deviceset="FERRITE_BEAD_0603" device=""/>
 <part name="R22" library="Propio" deviceset="R-US" device="0402" value="60R4 DNP"/>
 <part name="R23" library="Propio" deviceset="R-US" device="0402" value="60R4 DNP"/>
@@ -10236,7 +10236,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="-60.96" y1="45.72" x2="-60.96" y2="12.7" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-60.96" y1="12.7" x2="-15.24" y2="12.7" width="0.8128" layer="94" style="shortdash"/>
 <text x="-58.42" y="40.64" size="3.81" layer="94">SWD HEADER</text>
-<text x="-195.58" y="38.1" size="5.08" layer="94">MSPM0G3507-Q1 (VQFN-32 RHB, 5x5mm) @ 80MHz Cortex-M0+, AEC-Q100 Grade 1</text>
+<text x="-195.58" y="38.1" size="5.08" layer="94">MSPM0G3519-Q1 (VQFN-32 RHB, 5x5mm) @ 80MHz Cortex-M0+, 512KB/128KB, AEC-Q100 Grade 1</text>
 <wire x1="-198.12" y1="53.34" x2="-198.12" y2="149.86" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-198.12" y1="149.86" x2="-198.12" y2="215.9" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-198.12" y1="215.9" x2="-142.24" y2="215.9" width="0.8128" layer="94" style="shortdash"/>
@@ -10386,14 +10386,12 @@ CAN-FD bus connectors ARE now on-sheet: U$26/U$27, JST-PH-3, deliberately 3-way 
 cannot cross-mate with the 4-way RS-485 connectors (which carry +7V).
 R22/R23/C41 are a split termination, DO NOT POPULATE except on an end-of-bus node.
 See PCB/MSPM0G3507-MCU-swap.md.</text>
-<text x="-195.58" y="-58.42" size="1.778" layer="94">MCU is now TI M0G3507QRHBRQ1 (MSPM0G3507-Q1). NRST MUST be pulled to VDD (R21/C40) -- unlike
-the parts it replaces, this device will not leave reset otherwise. VCORE needs its own 0.47uF
-tank cap (C39) and must not be connected to anything else. VREF+ is fed from VDDA-FILTRADO
-(C4 = 1uF is the required VREF decoupling).
-Security (TI SLAAE29A, M0G3x0x column): ROM root of trust + BIM secure boot with ECDSA P-256
-+ SHA-256 image authentication, AES-128/256, TRNG with self-test, permanent SWD disable.
-NO protected key store and NO hardware monotonic counter (both need CSC, absent on this die).
-See PCB/MSPM0G3507-MCU-swap.md section 6.</text>
+<text x="-195.58" y="-58.42" size="1.778" layer="94">MCU is now TI M0G3519QRHBRQ1 (MSPM0G3519-Q1). NRST MUST be pulled to VDD (R21/C40) --
+unlike the parts it replaces, this device will not leave reset otherwise. VCORE needs its own
+0.47uF tank cap (C39) and must not be connected to anything else. VREF+ is fed from
+VDDA-FILTRADO (C4 = 1uF is the required VREF decoupling). Security: AESADV-256 (GCM/CMAC),
+KEYSTORE (4 keys), CSC secure boot, flash firewalls, monotonic counter, TRNG -- this fully
+replaces the S32K144 CSEc that was dropped. See PCB/MSPM0G3519-MCU-swap.md.</text>
 </plain>
 <instances>
 <instance part="M1" gate="G$1" x="-132.08" y="160.02"/>
@@ -10507,7 +10505,7 @@ See PCB/MSPM0G3507-MCU-swap.md section 6.</text>
 <attribute name="NAME" x="43.18" y="-39.37" size="1.778" layer="95"/>
 <attribute name="VALUE" x="43.18" y="-36.83" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY37" gate="GND" x="66.04" y="-63.5"/>
+<instance part="SUPPLY37" gate="GND" x="30.48" y="-44.45" rot="R270"/>
 <instance part="+3V12" gate="G$1" x="66.04" y="-15.24" smashed="yes">
 <attribute name="VALUE" x="68.58" y="-12.7" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -10692,8 +10690,8 @@ See PCB/MSPM0G3507-MCU-swap.md section 6.</text>
 <instance part="C36" gate="G$1" x="139.7" y="-194.31"/>
 <instance part="C37" gate="G$1" x="149.86" y="-194.31"/>
 <instance part="C38" gate="G$1" x="160.02" y="-194.31"/>
-<instance part="U$24" gate="G$1" x="30.48" y="-149.86"/>
-<instance part="U$25" gate="G$1" x="91.44" y="-144.78" rot="R180"/>
+<instance part="U$24" gate="G$1" x="38.1" y="-149.86"/>
+<instance part="U$25" gate="G$1" x="83.82" y="-144.78" rot="R180"/>
 <instance part="+3V15" gate="G$1" x="93.98" y="-83.82" smashed="yes">
 <attribute name="VALUE" x="96.52" y="-81.28" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -10835,8 +10833,6 @@ See PCB/MSPM0G3507-MCU-swap.md section 6.</text>
 <segment>
 <pinref part="U5" gate="G$1" pin="GND1"/>
 <pinref part="SUPPLY37" gate="GND" pin="GND"/>
-<wire x1="33.02" y1="-44.45" x2="33.02" y2="-60.96" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="-60.96" x2="66.04" y2="-60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY38" gate="GND" pin="GND"/>
@@ -11466,9 +11462,9 @@ See PCB/MSPM0G3507-MCU-swap.md section 6.</text>
 <label x="-88.9" y="12.7" size="2.1844" layer="94" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="CAN_RX" class="0">
+<net name="CAN0_RX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA13/CAN_RX"/>
+<pinref part="U1" gate="G$1" pin="PA13/CAN0_RX"/>
 <wire x1="-76.2" y1="-15.24" x2="-71.12" y2="-15.24" width="0.1524" layer="91"/>
 <label x="-71.12" y="-15.24" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11479,9 +11475,9 @@ See PCB/MSPM0G3507-MCU-swap.md section 6.</text>
 <wire x1="35.56" y1="-139.7" x2="20.32" y2="-139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="CAN_TX" class="0">
+<net name="CAN0_TX" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="PA12/CAN_TX"/>
+<pinref part="U1" gate="G$1" pin="PA12/CAN0_TX"/>
 <wire x1="-76.2" y1="-10.16" x2="-71.12" y2="-10.16" width="0.1524" layer="91"/>
 <label x="-71.12" y="-10.16" size="2.1844" layer="94" xref="yes"/>
 </segment>
@@ -11859,13 +11855,14 @@ See PCB/MSPM0G3507-MCU-swap.md section 6.</text>
 <wire x1="86.36" y1="-76.2" x2="38.1" y2="-76.2" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="-76.2" x2="38.1" y2="-90.17" width="0.1524" layer="91"/>
 <pinref part="B4" gate="G$1" pin="1"/>
-<pinref part="C27" gate="G$1" pin="1"/>
-<wire x1="109.22" y1="-88.9" x2="86.36" y2="-88.9" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="-88.9" x2="86.36" y2="-76.2" width="0.1524" layer="91"/>
 <junction x="86.36" y="-76.2"/>
-<pinref part="C28" gate="G$1" pin="1"/>
-<wire x1="119.38" y1="-88.9" x2="109.22" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="-76.2" x2="104.14" y2="-76.2" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="-76.2" x2="104.14" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="-88.9" x2="109.22" y2="-88.9" width="0.1524" layer="91"/>
+<pinref part="C27" gate="G$1" pin="1"/>
 <junction x="109.22" y="-88.9"/>
+<wire x1="109.22" y1="-88.9" x2="119.38" y2="-88.9" width="0.1524" layer="91"/>
+<pinref part="C28" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="RS485_VISOIN" class="1">
@@ -11876,13 +11873,14 @@ See PCB/MSPM0G3507-MCU-swap.md section 6.</text>
 <wire x1="93.98" y1="-73.66" x2="22.86" y2="-73.66" width="0.1524" layer="91"/>
 <wire x1="22.86" y1="-73.66" x2="22.86" y2="-90.17" width="0.1524" layer="91"/>
 <pinref part="B4" gate="G$1" pin="2"/>
-<pinref part="C29" gate="G$1" pin="1"/>
-<wire x1="129.54" y1="-88.9" x2="93.98" y2="-88.9" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="-88.9" x2="93.98" y2="-73.66" width="0.1524" layer="91"/>
 <junction x="93.98" y="-73.66"/>
-<pinref part="C30" gate="G$1" pin="1"/>
-<wire x1="139.7" y1="-88.9" x2="129.54" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="-73.66" x2="124.46" y2="-73.66" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-73.66" x2="124.46" y2="-88.9" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="-88.9" x2="129.54" y2="-88.9" width="0.1524" layer="91"/>
+<pinref part="C29" gate="G$1" pin="1"/>
 <junction x="129.54" y="-88.9"/>
+<wire x1="129.54" y1="-88.9" x2="139.7" y2="-88.9" width="0.1524" layer="91"/>
+<pinref part="C30" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="SPI_OUT_2" class="0">
@@ -12160,14 +12158,15 @@ See PCB/MSPM0G3507-MCU-swap.md section 6.</text>
 <wire x1="81.28" y1="-134.62" x2="97.79" y2="-134.62" width="0.1524" layer="91"/>
 <wire x1="97.79" y1="-134.62" x2="97.79" y2="-183.51" width="0.1524" layer="91"/>
 <junction x="97.79" y="-183.51"/>
-<wire x1="97.79" y1="-183.51" x2="139.7" y2="-183.51" width="0.1524" layer="91"/>
+<wire x1="97.79" y1="-183.51" x2="144.78" y2="-183.51" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="-183.51" x2="144.78" y2="-200.66" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="-200.66" x2="149.86" y2="-200.66" width="0.1524" layer="91"/>
+<junction x="149.86" y="-200.66"/>
+<wire x1="149.86" y1="-200.66" x2="149.86" y2="-196.85" width="0.1524" layer="91"/>
 <pinref part="C37" gate="G$1" pin="2"/>
-<wire x1="149.86" y1="-196.85" x2="149.86" y2="-183.51" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="-183.51" x2="139.7" y2="-183.51" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="-200.66" x2="160.02" y2="-200.66" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="-200.66" x2="160.02" y2="-196.85" width="0.1524" layer="91"/>
 <pinref part="C38" gate="G$1" pin="2"/>
-<wire x1="160.02" y1="-196.85" x2="160.02" y2="-183.51" width="0.1524" layer="91"/>
-<wire x1="160.02" y1="-183.51" x2="149.86" y2="-183.51" width="0.1524" layer="91"/>
-<junction x="149.86" y="-183.51"/>
 </segment>
 </net>
 <net name="CANFD_VISOOUT" class="1">
