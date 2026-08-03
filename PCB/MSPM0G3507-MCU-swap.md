@@ -43,21 +43,12 @@ against the STM32F302K8U6 the board was originally laid out for:
    supporting DIV, SQRT, MAC and TRIG** (§8 block diagram, `MATHACL` on the CPU-only PD1 bus),
    which is the intended substitute — but taking advantage of it means **reworking the control
    loop in fixed-point**, not recompiling. Budget for that explicitly.
-2. **The hardware security module is gone.** CSEc was a SHE-compliant HSM with protected key
-   slots and hardware AES-CMAC secure boot. The MSPM0G3507 has an **AES-128/256 accelerator, a
-   TRNG and CRC-16/32** (SLASF88C §1 "Data integrity and encryption"; AES appears as NVIC IRQ
-   28 and TRNG as IRQ 1/IIDX 5 in Table 8-7) — real crypto primitives, but **no protected key
-   store, no SHE `M1`–`M5` provisioning, and no ROM-enforced secure boot**. What the device
-   *does* offer defensively: flash **ECC** with single-bit correct / double-bit detect (§8.8),
-   SRAM **hardware parity** and a **write-execute mutual exclusion** partition scheme (§8.9),
-   and a **BSL protected by a 256-bit user-defined password that can be permanently disabled**
-   (§8.33). Keys would live in ordinary flash, protected by debug lock and BSL lockout rather
-   than by a hardware key store.
-
-   This is the *second* consecutive reduction in the security story: the README's
-   "post-quantum Trusted Platform Module" claim was already invalid after the SLB9672 was
-   dropped, and symmetric-HSM secure boot is now gone too. **The README security claims need
-   to be rewritten to match what the board actually is.** See §7.
+2. **The hardware key store is gone — but secure boot is not.** See §6 for the full,
+   corrected treatment. In short: the MSPM0G3507 *does* have a ROM-anchored secure boot with
+   **asymmetric ECDSA P-256** image authentication, which is something CSEc (symmetric-only
+   SHE) could never do. What it genuinely loses versus CSEc is the **protected key store**, the
+   **hardware monotonic counter** (so no hardware rollback protection), and **hardware
+   AES-CMAC**.
 
 Against that, the wins that motivate the swap are real: it is the only candidate so far that
 **fits the existing 5 × 5 mm board footprint envelope** (the S32K144's smallest package was
@@ -284,7 +275,155 @@ Machine-checked against the edited file, not eyeballed:
   long diagonal wires (`GND` and `VDDA-FILTRADO`) without a junction, which is correct.
 - **No dangling references:** every `pinref` resolves to an existing instance and symbol pin.
 
-## 6. Firmware impact
+## 6. Security: corrected assessment
+
+An earlier revision of this document claimed the MSPM0G3507 had "no ROM-enforced secure boot".
+**That was wrong.** The authoritative source is TI application note **SLAAE29A**, *Cybersecurity
+Enablers in MSPM0 MCUs* (January 2023, revised December 2025), local copy at
+`../../Open-Secure-ESC/docs/datasheets/slaae29a.pdf`. The MSPM0G3507 sits in that document's
+**`M0G3x0x/M0G150x`** column of Table 1-2, "MSPM0 MCU Platform Security Enablers".
+
+### 6.1 What this device actually has
+
+| Capability | MSPM0G3507 | Source |
+|---|---|---|
+| Immutable ROM root of trust (BCR) | **Yes** | SLAAE29A §2.3 |
+| Single point of entry to main flash at boot | **Yes** | Table 1-2 |
+| CRC-32 verified main flash region | **Yes** | Table 1-2 |
+| **Asymmetric image auth (ECDSA P-256 + SHA2-256, software)** | **Yes** | Table 1-2 |
+| Secure boot solution | **BIM** (Boot Image Manager, MCUboot-based) | §3.3 |
+| Permanently lockable main flash | **Yes** | Table 1-2 |
+| SRAM write-execute mutual exclusion (W^X) | **Yes** | Table 1-2, §4.6 |
+| Password-authenticated debug / BSL / mass erase / factory reset | **Yes** | Table 1-2 |
+| Complete hardware disable of SWD | **Yes** | Table 1-2 |
+| TRNG with power-on and continuous self-test | **Yes** | Table 1-2, §5.2 |
+| AES accelerator (basic) | **Yes** — ECB, CBC, OFB, CFB, CTR, CBC-MAC | Table 5-1 |
+| 96-bit unique device identifier | **Yes** | Table 1-2, §2.1 |
+| EVITA capability | **EVITA-Light** | Table 1-2 |
+| Customer Secure Code (CSC) / INITDONE | No | Table 1-2 |
+| **Protected key store (KEYSTORE)** | **No** — requires CSC | Table 1-2, §4.5 |
+| Flash firewalls (write / read-execute / IP protection) | No — require CSC | Table 1-2 |
+| **Hardware monotonic counter** (rollback protection) | **No** | Table 1-2, §4.7 |
+| Hardware AES-CMAC / CCM / GCM (AESADV) | No | Table 5-1 |
+| Passwords stored hashed (SHA2-256) | No — stored in NONMAIN | Table 1-2 |
+
+AES throughput, for firmware budgeting (Table 5-2, at 80 MHz): 128-bit key 168 cycles
+(2.10 µs) per block encrypt or decrypt; 256-bit key 234 cycles (2.93 µs).
+
+### 6.2 Secure boot via BIM
+
+Because this die has no CSC, the applicable secure boot solution is **BIM**, supplied in the
+MSPM0 SDK (SLAAE29A §3.3). It is MCUboot-derived: two application image slots (primary and
+secondary) at fixed flash addresses, images signed with MCUboot's `imgtool`, and at each boot
+the BIM verifies the candidate slot with **SHA-256 + ECDSA**; on failure it erases that slot
+and falls back to the other, failing closed if neither verifies (§3.3.1, Figure 3-13).
+
+Provisioning, per §3.3.1, requires all of: the BIM firmware and its authentication keys placed
+in MAIN flash with the reset vector at `0x0000.0004` pointing at BIM; those sectors and the
+NONMAIN sector set **static write protected**; mass erase and factory reset **password
+protected or disabled**; and the MAIN flash memory integrity check enabled over the BIM and key
+region. Note §3.3.1(c): disabling factory reset alongside those settings makes the NONMAIN
+configuration **permanently locked** — a genuine one-way door on a production unit.
+
+### 6.3 Honest comparison with the S32K144 CSEc it replaces
+
+| | S32K144 CSEc | MSPM0G3507 |
+|---|---|---|
+| Secure boot | Hardware AES-CMAC over image | ROM-anchored BIM, SHA-256 + ECDSA P-256 |
+| **Asymmetric signing / verification** | **No** (SHE is symmetric-only) | **Yes — ECDSA P-256** |
+| Protected key store | **Yes** (SHE key slots) | **No** |
+| Rollback protection | SHE counters | **No** hardware monotonic counter |
+| Hardware CMAC | Yes | No (CBC-MAC only) |
+| TRNG | Yes | Yes, with self-test |
+| Debug lockdown | Yes | Yes, incl. permanent SWD disable |
+
+So this is **not** a straight downgrade. The MSPM0 *gains* public-key image authentication,
+which is the capability the README's "cryptographic authentication and message signing" claim
+actually needs and which CSEc could not provide. It *loses* hardware key protection and
+rollback protection: signing keys are public keys (fine in flash), but any **private** key or
+shared secret the application holds lives in ordinary flash, protected only by static write
+protection, debug lock and BSL lockout — not by a key store the CPU cannot read.
+
+**README claims still needing correction:** "post-quantum" remains unsupportable (P-256 is
+classical ECC, and there is no PQC support anywhere in this part). "Trusted Platform Module" is
+also gone as of the S32K144 pass. "Cryptographic authentication and message signing" is now
+defensible in software.
+
+## 7. Isolated transceivers: verified pin maps and the `GND2`/`GNDISO` split
+
+Verified pin maps for both isolated transceivers were supplied from the sibling `Open-Secure-ESC`
+project (`symbols/specs/ADM2582E_ADM2587E.json`, `symbols/specs/ADM3055E_ADM3057E.json`). Both
+were **re-checked here against the local ADI datasheets** rather than taken on trust:
+
+- ADM2582E/ADM2587E Rev. H, p.8, Table 10 — matches the JSON exactly.
+- ADM3055E/ADM3057E Rev. D, p.15, Table 10 — matches the JSON exactly.
+
+The existing hand-authored EAGLE symbols for `U5` and `U6` were checked against those maps and
+**every distinct pin name is correct**. The only modelling defect was on the ADM2587E, below.
+
+### 7.1 ADM2587E `GND2` was one pin where the silicon has two grounds
+
+`U5`'s symbol collapsed all four `GND2` pads (11, 14, 16, 20) onto a single schematic pin.
+That is not merely cosmetic: Table 10 says of **pin 16** — *"Ground, Bus Side. **Do not connect
+this pin to Pin 14 and Pin 11.**"* — while pins 11 and 14 are the isolated DC-DC converter
+ground, which Table 10 says to *"connect ... together through one ferrite bead to PCB ground"*.
+With one collapsed pin, that separation could not be expressed in the netlist at all.
+
+The ADM3055E gives the same two nodes distinct mnemonics (`GND2` for pads 11/15, `GNDISO` for
+pads 18/20), and `U6` was already wired correctly with ferrite `B5` between them. `U5` is now
+modelled the same way:
+
+- symbol pin `GND2` → pads **16, 20** (bus side) → net `RS485_ISO_GND`
+- new symbol pin `GNDISO` → pads **11, 14** (converter side) → new net `RS485_GNDISO`
+- new ferrite **`B7`** bridges the two, mirroring `B5` on the CAN side
+
+### 7.2 isoPower reservoir capacitors re-referenced
+
+Both datasheets are explicit about *which* ground the `VISOOUT` reservoir pair returns to, and
+both boards had it wrong — the ripple was returning through the ferrite instead of locally to
+the converter ground, which defeats the point of fitting the ferrite:
+
+| Cap pair | Was | Now | Datasheet |
+|---|---|---|---|
+| `C27` 10 µF + `C28` 100 nF (`U5` VISOOUT) | `RS485_ISO_GND` | **`RS485_GNDISO`** | ADM2587E Table 10 pin 12: *"a reservoir capacitor of 10 µF and a decoupling capacitor of 0.1 µF be fitted between Pin 12 and Pin 11"* |
+| `C35` 220 nF + `C36` 10 µF (`U6` VISOOUT) | `CANFD_ISO_GND` | **`CANFD_GNDISO`** | ADM3055E Table 10 pin 19: *"requires 0.22 µF and 10 µF capacitors to GND_ISO"* |
+
+`C29`/`C30` (`U5` VISOIN) and `C37`/`C38` (`U6` VISOIN) were already correct on the bus-side
+ground, per ADM2587E Table 10 pin 19 (*"between Pin 19 and Pin 20"*).
+
+## 8. CAN-FD bus connectors
+
+The CAN-FD bus connector decision, open since the `RS485-CANFD-TPM-upgrade.md` pass, is now
+resolved and on-sheet. `CANH`/`CANL` were previously labelled but unterminated and went nowhere.
+
+**`U$26` (CAN-FD IN) and `U$27` (CAN-FD OUT)** — a daisy-chain pair mirroring the RS-485
+connectors `U$8`/`U$9`, on a new `JST_PH-3_HOLE` deviceset:
+
+| Pin | Net | Rationale |
+|---|---|---|
+| `P$1` | `CANFD_ISO_GND` | ISO 11898-2 bus reference. An isolated node whose bus side floats has an undefined common-mode voltage relative to other nodes; the CAN_GND conductor is what bounds it. This is why CANopen/DeviceNet cabling carries CAN_GND. |
+| `P$2` | `CANL` | kept adjacent to `CANH` for twisted-pair continuity up to the shell |
+| `P$3` | `CANH` | |
+
+**Why 3-way and not 4-way.** The obvious move was to reuse the existing `JST_PH-4_HOLE`, which
+already has a footprint and is already in the BOM. It was rejected deliberately: the RS-485
+daisy-chain connectors are 4-way JST-PH **carrying `+7V` on `P$1`**. A 4-way CAN port would be
+physically cross-mateable with them, and plugging an RS-485 cable into a CAN port would drive
+`+7V` straight onto the isolated CAN bus and its ground reference. A 3-way shell makes that
+mistake impossible by construction, which is worth more than connector-family commonality on a
+board whose whole reason for using isolated transceivers is fault tolerance.
+
+**Termination.** `R22`/`R23` (60.4 Ω) and `C41` (4.7 nF) form a **split termination** from
+`CANH` to `CANL` with the midpoint (`CAN_SPLIT`) bypassed to `CANFD_ISO_GND` — the standard
+arrangement, which damps common-mode as well as differential energy. All three are marked
+**`DNP` (do not populate)** in their value fields: CAN is a linear bus and only the two
+physical **end** nodes may be terminated. A mid-chain servo with termination fitted will load
+the bus and break it. Populate on end nodes only.
+
+Note the RS-485 side has **no** termination provision at all, which is a pre-existing gap — see
+§10.
+
+## 9. Firmware impact
 
 The port is again a full rewrite, and larger than the S32K144 estimate implied:
 
@@ -305,7 +444,7 @@ The port is again a full rewrite, and larger than the S32K144 estimate implied:
   passes about what else lives on that bus is **still open** and still gates using it.
 - **Fixed-point rework of the control loop** — see §1.
 
-## 7. Still open
+## 10. Still open
 
 Carried forward, plus new items from this pass.
 
@@ -321,9 +460,38 @@ Carried forward, plus new items from this pass.
       **4.7 µF** in an 0402. Raising it to 10 µF in 0402 is possible but severely
       derated at 3.3 V — this is a real BOM/footprint decision (larger case size vs. accepting
       4.7 µF), deliberately not changed silently here.
-- [ ] **Rewrite the README security claims** — see §1. They currently describe a TPM that is
-      two revisions gone, and the CSEc that replaced it is now gone too.
+- [ ] **Rewrite the README security claims** — see §6.3 for exactly which claims are now
+      defensible and which are not.
 - [ ] Confirm the FPU loss and the fixed-point rework are acceptable, or reconsider the part.
+- [ ] **Footprint for the new `JST_PH-3_HOLE` CAN connectors** (`U$26`/`U$27`) — symbol-only
+      deviceset; the land pattern is a one-position derivative of the existing
+      `JST_PH-4_HOLE_B`. Silkscreen must clearly distinguish the CAN ports from the RS-485
+      ports (see §8).
+- [ ] **BIM secure-boot provisioning plan** — key generation and custody, `imgtool` signing in
+      the build, and the NONMAIN static-write-protect / factory-reset-disable step, which is
+      **permanent** (SLAAE29A §3.3.1c). Needed before anything ships beyond a bench prototype.
+- [ ] **No RS-485 termination provision exists** on this board (the CAN side now has a DNP
+      split termination; `RS485_P`/`RS485_N` have nothing). Decide whether end-of-chain servos
+      need a fitted or switchable 120 Ω across the RS-485 pair.
+
+**Pre-existing schematic-geometry defects found by this pass — NOT fixed, see below:**
+
+- [ ] **14 places where a pin sits on top of a foreign net's wire.** These are drawing defects
+      inherited from the `RS485-CANFD-TPM-upgrade.md` pass, in three clusters:
+      1. the `GND` wire `(33.02,-44.45)→(33.02,-60.96)` runs straight down `U5`'s **entire
+         logic-side pin column**, passing through `VCC`, `RxD`, `RE`, `DE`, `TxD` and `R20.1`;
+      2. the `RS485_VISOOUT` and `RS485_VISOIN` rails at `y=-88.9` run through the pin 1 of
+         `C25`/`C26` (`+3V3`) and `C27`/`C28` — **bridging the isolation barrier** on the
+         drawing;
+      3. `C37`/`C38`'s pin-2 risers pass through their own pin 1, shorting those capacitors.
+
+      **These do not corrupt the exported netlist today** — EAGLE's `<nets>` section is the
+      netlist and it declares the correct connectivity (verified: zero coincident connection
+      points between different nets). They are still serious: they read as shorts to a human,
+      EAGLE ERC will flag them, and any GUI edit that makes EAGLE re-derive geometry can
+      silently merge these nets. Fixing them means redrawing the `U5` logic side and both
+      isoPower capacitor banks — deliberately left alone rather than bundled into an unrelated
+      commit.
 
 **Carried over, still unresolved:**
 
@@ -331,12 +499,11 @@ Carried forward, plus new items from this pass.
       `ADM3055E` (`U6`).
 - [ ] **5 V rail for `U6`'s isoPower `VCC`** (`+5V_ISO_CANFD`) — nothing on the board produces
       5 V; a regulator must be selected and added.
-- [ ] CAN-FD bus connector strategy; `CANH`/`CANL` are currently unterminated labelled nets.
 - [ ] Confirm what else is live on the shared `SPI_CLK`/`SPI_IN`/`SPI_OUT` bus (`U$4`, `U$6`)
       before enabling hardware SPI1 on it.
-- [ ] `ADM2587E` `GND2` copper-separation caveat (datasheet calls out pin 16 vs pins 11/14) —
-      a layout-time constraint the symbol cannot express.
 - [ ] Isolation creepage/clearance for the two SOIC-20 isolated parts against the board outline.
+- [ ] At layout, keep `U5` pad 16 off the same copper as pads 11/14 — now expressible in the
+      netlist (§7.1), but the physical separation is still a layout obligation.
 - [ ] Whether the shared `Vmot`/`GND` on the daisy-chain connector undermines the RS-485
       isolation (see `RS485-CANFD-TPM-upgrade.md` §2).
 
