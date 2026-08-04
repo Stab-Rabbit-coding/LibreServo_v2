@@ -1,8 +1,10 @@
 # Hardware upgrade notes: MCU swap to NXP S32K144, TPM (SLB9672) dropped in favor of on-chip CSEc
 
-> **SUPERSEDED.** `U1` is no longer an S32K144 — it is now a TI **MSPM0G3507-Q1 (VQFN-32,
-> `M0G3507QRHBRQ1`)**. See [`MSPM0G3507-MCU-swap.md`](MSPM0G3507-MCU-swap.md) for the current
-> design. Everything below is retained as the decision record for the S32K144 pass only.
+> **SUPERSEDED.** `U1` is no longer an S32K144 — it is now a TI **MSPM0G3518-Q1 (VQFN-32,
+> `M0G3518QRHBRQ1`)**. See [`MSPM0G3518-MCU-swap.md`](MSPM0G3518-MCU-swap.md) for the current
+> design, by way of [`MSPM0G3507-MCU-swap.md`](MSPM0G3507-MCU-swap.md) (an intermediate pass on
+> the smaller MSPM0G350x die). Everything below is retained as the decision record for the
+> S32K144 pass only.
 >
 > Three points below are now resolved or reversed:
 >

@@ -1601,7 +1601,7 @@
 <text x="16.51" y="-5.715" size="1.6764" layer="94">GNDISO</text>
 <text x="16.51" y="-8.255" size="1.6764" layer="94">VISOOUT</text>
 </symbol>
-<symbol name="MSPM0G3519">
+<symbol name="MSPM0G3518">
 <pin name="VDD" x="-25.4" y="17.78" visible="off" length="middle" direction="pwr"/>
 <pin name="PA6/HFCLK_IN" x="-25.4" y="12.7" visible="off" length="middle" direction="in"/>
 <pin name="VCORE" x="-25.4" y="7.62" visible="off" length="middle" direction="pwr"/>
@@ -2034,10 +2034,10 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="MSPM0G3519">
-<description>&lt;b&gt;TI MSPM0G3519-Q1 (VQFN-32, RHB, 5x5mm)&lt;/b&gt;, Arm Cortex-M0+ @ 80MHz, 512KB flash (ECC, dual-bank with address swap for OTA) + 16KB data flash, 128KB SRAM (64KB with ECC/parity), native CAN-FD, 2x 12-bit 4Msps ADC (16 ch on this package), 12-bit DAC, 3x COMP, MATHACL, 12-ch DMA. AEC-Q100 Grade 1, wettable flank. Security stack (datasheet section 8.18 + TI SLAAE29A Table 1-2, column M0Gx5 1x): AESADV 128/256-bit with GCM/GMAC, CCM/CBC-MAC, CMAC, CBC, CTR; KEYSTORE secure key storage for up to 4 AES keys (write-only to the application, private bus to the AES engine); Customer Secure Code (CSC) secure boot with both hardware AES-CMAC and software ECDSA P-256 image authentication; flash write/read-execute/IP-protection firewalls; SRAM W^X; hardware monotonic counter for rollback protection; TRNG with health tests; CRC-16/32. PSA-L1 targeted, EVITA-Light. Pin names carry the physical port and the selected IOMUX function, both taken from the local datasheet copy Open-Secure-ESC/docs/datasheets/mspm0g3519-q1.pdf (SLASFA6B), Table 6-2 'Pin Attributes', column 'RHB PIN'. Symbol-only deviceset: no footprint yet. The existing Propio QFN32 land pattern is NOT reusable -- its pad numbering starts on the bottom row (TI RHB0032T starts on the left column, a 90-degree difference) and its pad span is 5.5mm vs TI's 4.78mm. TI's recommended land pattern (datasheet section 12, drawing 4224744/A): 32x pads 0.62 x 0.25mm on 0.5mm pitch, 4.78mm row-to-row span, 3.45 x 3.45mm exposed thermal pad (pad 33). See PCB/MSPM0G3519-MCU-swap.md.</description>
+<deviceset name="MSPM0G3518">
+<description>&lt;b&gt;TI MSPM0G3518-Q1 (VQFN-32, RHB, 5x5mm)&lt;/b&gt;, Arm Cortex-M0+ @ 80MHz, 256KB flash (ECC, dual-bank 2x128KB with address swap for OTA) + 16KB data flash, 128KB SRAM (64KB with ECC/parity), native CAN-FD, 2x 12-bit 4Msps ADC (16 ch on this package), 12-bit DAC, 3x COMP, MATHACL, 12-ch DMA. AEC-Q100 Grade 1, wettable flank. Security stack (datasheet section 8.18 + TI SLAAE29A Table 1-2, column M0Gx5 1x): AESADV 128/256-bit with GCM/GMAC, CCM/CBC-MAC, CMAC, CBC, CTR; KEYSTORE secure key storage for up to 4 AES keys (write-only to the application, private bus to the AES engine); Customer Secure Code (CSC) secure boot with both hardware AES-CMAC and software ECDSA P-256 image authentication; flash write/read-execute/IP-protection firewalls; SRAM W^X; hardware monotonic counter for rollback protection; TRNG with health tests; CRC-16/32. PSA-L1 targeted, EVITA-Light. Pin names carry the physical port and the selected IOMUX function, both taken from the local datasheet copy Open-Secure-ESC/docs/datasheets/mspm0g3519-q1.pdf (SLASFA6B), Table 6-2 'Pin Attributes', column 'RHB PIN'. Symbol-only deviceset: no footprint yet. The existing Propio QFN32 land pattern is NOT reusable -- its pad numbering starts on the bottom row (TI RHB0032T starts on the left column, a 90-degree difference) and its pad span is 5.5mm vs TI's 4.78mm. TI's recommended land pattern (datasheet section 12, drawing 4224744/A): 32x pads 0.62 x 0.25mm on 0.5mm pitch, 4.78mm row-to-row span, 3.45 x 3.45mm exposed thermal pad (pad 33). See PCB/MSPM0G3518-MCU-swap.md.</description>
 <gates>
-<gate name="G$1" symbol="MSPM0G3519" x="0" y="0"/>
+<gate name="G$1" symbol="MSPM0G3518" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -10067,7 +10067,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
 <part name="B2" library="Propio" deviceset="FERRITE_BEAD_0603" device=""/>
 <part name="P+5" library="supply1" deviceset="+5V" device="" value="Vmot"/>
-<part name="U1" library="Propio" deviceset="MSPM0G3519" device="" value="M0G3519QRHBRQ1"/>
+<part name="U1" library="Propio" deviceset="MSPM0G3518" device="" value="M0G3518QRHBRQ1"/>
 <part name="B7" library="Propio" deviceset="FERRITE_BEAD_0603" device=""/>
 <part name="R22" library="Propio" deviceset="R-US" device="0402" value="60R4 DNP"/>
 <part name="R23" library="Propio" deviceset="R-US" device="0402" value="60R4 DNP"/>
@@ -10236,7 +10236,7 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <wire x1="-60.96" y1="45.72" x2="-60.96" y2="12.7" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-60.96" y1="12.7" x2="-15.24" y2="12.7" width="0.8128" layer="94" style="shortdash"/>
 <text x="-58.42" y="40.64" size="3.81" layer="94">SWD HEADER</text>
-<text x="-195.58" y="38.1" size="5.08" layer="94">MSPM0G3519-Q1 (VQFN-32 RHB, 5x5mm) @ 80MHz Cortex-M0+, 512KB/128KB, AEC-Q100 Grade 1</text>
+<text x="-195.58" y="38.1" size="5.08" layer="94">MSPM0G3518-Q1 (VQFN-32 RHB, 5x5mm) @ 80MHz Cortex-M0+, 256KB/128KB, AEC-Q100 Grade 1</text>
 <wire x1="-198.12" y1="53.34" x2="-198.12" y2="149.86" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-198.12" y1="149.86" x2="-198.12" y2="215.9" width="0.8128" layer="94" style="shortdash"/>
 <wire x1="-198.12" y1="215.9" x2="-142.24" y2="215.9" width="0.8128" layer="94" style="shortdash"/>
@@ -10386,12 +10386,12 @@ CAN-FD bus connectors ARE now on-sheet: U$26/U$27, JST-PH-3, deliberately 3-way 
 cannot cross-mate with the 4-way RS-485 connectors (which carry +7V).
 R22/R23/C41 are a split termination, DO NOT POPULATE except on an end-of-bus node.
 See PCB/MSPM0G3507-MCU-swap.md.</text>
-<text x="-195.58" y="-58.42" size="1.778" layer="94">MCU is now TI M0G3519QRHBRQ1 (MSPM0G3519-Q1). NRST MUST be pulled to VDD (R21/C40) --
+<text x="-195.58" y="-58.42" size="1.778" layer="94">MCU is now TI M0G3518QRHBRQ1 (MSPM0G3518-Q1). NRST MUST be pulled to VDD (R21/C40) --
 unlike the parts it replaces, this device will not leave reset otherwise. VCORE needs its own
 0.47uF tank cap (C39) and must not be connected to anything else. VREF+ is fed from
 VDDA-FILTRADO (C4 = 1uF is the required VREF decoupling). Security: AESADV-256 (GCM/CMAC),
 KEYSTORE (4 keys), CSC secure boot, flash firewalls, monotonic counter, TRNG -- this fully
-replaces the S32K144 CSEc that was dropped. See PCB/MSPM0G3519-MCU-swap.md.</text>
+replaces the S32K144 CSEc that was dropped. See PCB/MSPM0G3518-MCU-swap.md.</text>
 </plain>
 <instances>
 <instance part="M1" gate="G$1" x="-132.08" y="160.02"/>

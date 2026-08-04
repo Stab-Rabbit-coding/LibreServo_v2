@@ -1,5 +1,20 @@
 # Hardware upgrade notes: MCU swap to TI MSPM0G3507-Q1 (VQFN-32), S32K144 removed
 
+> **SUPERSEDED.** `U1` is now a TI **MSPM0G3518-Q1 (`M0G3518QRHBRQ1`)** — same MSPM0 platform,
+> same VQFN-32 (RHB) package and same pinout, but the MSPM0G351x die instead of MSPM0G350x.
+> See [`MSPM0G3518-MCU-swap.md`](MSPM0G3518-MCU-swap.md) for the current design.
+>
+> This document remains useful: §2 (package selection), §3.1–§3.5 (the pin-by-pin rationale)
+> and §4 (support components) all carry over unchanged, because the MSPM0G3518's RHB-32 pad map
+> is identical. What the newer part changes:
+>
+> - **Memory:** 128 KB/32 KB → **256 KB (dual-bank, OTA-capable) + 16 KB data flash / 128 KB SRAM**.
+> - **Security:** every gap listed in §6.1 as "No" — Customer Secure Code, protected KEYSTORE,
+>   flash firewalls, hardware monotonic counter, hardware AES-CMAC/CCM/GCM, hashed passwords —
+>   is **present** on the MSPM0G3518. The §6.3 comparison against the S32K144 CSEc no longer
+>   holds and is reversed in the new document.
+> - **ADC channels** on this package: 11 → 16.
+
 Supersedes [`S32K144-MCU-swap.md`](S32K144-MCU-swap.md), which replaced the STM32G431 with an
 NXP S32K144 (LQFP48) and dropped the SLB9672 TPM in favour of the S32K144's on-chip CSEc.
 This pass replaces `U1` again, with a **Texas Instruments MSPM0G3507-Q1 in the 32-pin VQFN
