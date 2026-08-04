@@ -3,6 +3,13 @@
 **Current design.** `U1` is a **Texas Instruments MSPM0G3518-Q1** in the 32-pin VQFN (RHB)
 package, orderable part number **`M0G3518QRHBRQ1`**.
 
+> **Status: schematic complete, NOT upstream-submittable.** EAGLE is the standard for this
+> project and the final product must be in EAGLE for submission to the upstream LibreServo
+> repository. `MSPM0G3518` is currently a **symbol-only deviceset** — no package, no
+> pin-to-pad `<connects>` — so `U1` cannot be placed or routed on the `.brd`, and the same is
+> true of `ADM2587E` (`U5`) and `ADM3055E` (`U6`). **See §6.1 for the blocker and what closes
+> it.**
+
 Supersedes [`MSPM0G3507-MCU-swap.md`](MSPM0G3507-MCU-swap.md) (same MSPM0 platform and package,
 smaller die), which superseded [`S32K144-MCU-swap.md`](S32K144-MCU-swap.md) and
 [`RS485-CANFD-TPM-upgrade.md`](RS485-CANFD-TPM-upgrade.md).
@@ -252,25 +259,62 @@ Machine-checked against the edited file:
 
 ## 6. Still open
 
-**Footprint and layout:**
+### 6.1 BLOCKER: incomplete EAGLE library entries gate upstream submission
 
-- [ ] **Footprint for `RHB0032T`** — deviceset is still symbol-only. Note the '3518/'3519
+**EAGLE is the standard for this project and the final product must be in EAGLE, because it is
+intended for submission to the upstream LibreServo repository.** That makes the current state of
+the library a hard blocker rather than a deferred nicety.
+
+`MSPM0G3518` is a **symbol-only deviceset**: its `<device>` has an empty `package` attribute and
+no `<connects>` block, so no symbol pin is bound to any physical pad. The consequences:
+
+- The part **cannot be placed or routed on the `.brd`** at all.
+- A netlist/BOM export produces a part with no footprint.
+- It would land upstream as an unbuildable library entry, so **the schematic work in this
+  document is not upstream-submittable on its own.**
+
+This is not unique to `U1`. **None of the four parts added across the last three upgrade passes
+has a footprint** — `MSPM0G3518` (`U1`), `ADM2587E` (`U5`), `ADM3055E` (`U6`), and the
+now-removed `SLB9672` before them were all merged as symbol-only placeholders. Closing this is
+the critical path to a submittable board.
+
+For `U1` specifically, the two inputs are already settled and verified, so the remaining work is
+mechanical rather than investigative:
+
+1. **Package `RHB0032T`** — TI's dimensioned land pattern is in SLASFA6B §12 (drawing
+   4224744/A) and is reproduced under "Footprint and layout" below.
+2. **Deviceset `<connects>`** — the complete pin-to-pad mapping for all 33 symbol pins is the
+   table in §3.1 of this document, already cross-checked against Table 6-2's `RHB PIN` column.
+
+**Caveat on how to build it, carried over from
+[`RS485-CANFD-TPM-upgrade.md`](RS485-CANFD-TPM-upgrade.md) "Still missing":** footprint pad
+geometry *"can look 'done' in an XML diff while being wrong on the board"*. A hand-authored
+package from the dimensions below should still be **opened in EAGLE and visually verified
+against the SLASFA6B §12 mechanical drawing** before it is fabricated or submitted — pad 1
+orientation in particular, since the existing `QFN32` numbers from a different corner (§6.2).
+
+### 6.2 Footprint and layout
+
+- [ ] **Footprint for `RHB0032T`** — deviceset is still symbol-only (§6.1). Note the '3518/'3519
       datasheet gives package drawing **`RHB0032T` (4224744/A)**, a different revision from the
       '3507's `RHB0032E` (4223442/B); dimensions are equivalent within rounding. TI's
       recommended land pattern (SLASFA6B §12): **32 pads 0.62 × 0.25 mm on 0.5 mm pitch,
       4.78 mm row-to-row span, 3.45 × 3.45 mm exposed thermal pad (pad 33)**, body 4.85–5.15 mm
       square, 1 mm max height.
+- [ ] **Deviceset `<connects>`** binding the 33 symbol pins to pads 1–32 plus the thermal pad,
+      per the table in §3.1.
 - [ ] **The existing Propio `QFN32` footprint is still NOT reusable** — its pad 1 is on the
       bottom row where TI's is on the left column (90° apart), and its span is 5.5 mm against
       TI's 4.78 mm. Only the 3.45 mm thermal pad matches.
 - [ ] `.brd` placement for `U1` — the element still references package `QFN32` at
-      `x=4.78 y=8.4 rot=R270`. Body size is unchanged at 5 × 5 mm so the envelope fits.
+      `x=4.78 y=8.4 rot=R270`. Body size is unchanged at 5 × 5 mm so the envelope fits, but
+      pad 1 moves to a different corner.
 - [ ] **`C1` bulk decoupling is below spec** — §7.3 lists C<sub>VDD</sub> = 10 µF and §9.1
       recommends 10 µF + 0.1 µF within a few millimetres. `C1` is **4.7 µF** in an 0402.
       Raising it to 10 µF in 0402 is severely derated at 3.3 V; this is a real case-size vs.
       capacitance decision, deliberately not changed silently.
 
-**Firmware:**
+### 6.3 Firmware
 
 - [ ] Fixed-point rework of the PID/curve-generation loop (§1), using MATHACL.
 - [ ] Full port to the MSPM0 SDK / SysConfig; `Test_LibreServo_v2.ioc` and
@@ -281,7 +325,7 @@ Machine-checked against the edited file:
 - [ ] Confirm what else is live on the shared `SPI_CLK`/`SPI_IN`/`SPI_OUT` bus (`U$4`, `U$6`)
       before enabling hardware SPI1 on it.
 
-**Board-level, carried over and still unresolved:**
+### 6.4 Board-level, carried over and still unresolved
 
 - [ ] Footprints/devicesets/3D models and `.brd` placement for `ADM2587E` (`U5`) and
       `ADM3055E` (`U6`).
@@ -291,7 +335,7 @@ Machine-checked against the edited file:
       board outline for the two SOIC-20 isolated parts.
 - [ ] Whether the shared `Vmot`/`GND` on the daisy-chain connector undermines RS-485 isolation.
 
-**Documentation:**
+### 6.5 Documentation
 
 - [ ] **Rewrite the README security claims.** They still describe a "post-quantum Trusted
       Platform Module". That was never accurate for the SLB9672, and the part is three
