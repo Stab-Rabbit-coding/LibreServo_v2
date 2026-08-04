@@ -16,9 +16,10 @@ A few characteristics of LibreServo:
 
     Compatible with standard servo motors (No need to change the bottom cover of them!)
     Voltage: From 4.5V up to 18V (Recommended: 5-14V)
-    Communications: RS-485 half-duplex. Max Speed 9Mbps. Daisy chained. CRC-16
+    Communications: Isolated RS-485 and CAN-FD. Max Speed 9Mbps. Daisy chained. CRC-16
     Amp: Up to 16A continuous (WSD3069DN56) (Version >2.3)
     Micro-Controller (this fork): TI MSPM0G3518-Q1 (cortex-M0+@80MHz, 256KB flash, 128KB SRAM, CAN-FD + 5 UART, AES-256 with CMAC/GCM, key store, CSC secure boot). Upstream uses an STM32F301k8 (cortex-M4@72MHz).
+    Trusted Platform Module: SLB9672
     Position sensor: Magnetic encoder, 16 bits of resolution! 360 degrees (AEAT-8800). Using the servo motor potentiometer will be possible to lower the cost but will lost precision and some characteristics.
     For the encoder I have designed 3D parts to substitute the potentiometer and used the same hole/space than the original.
     LibreServo will generate their own curves (sine ramps, trapezoidal ramps, hermitian curves...)
