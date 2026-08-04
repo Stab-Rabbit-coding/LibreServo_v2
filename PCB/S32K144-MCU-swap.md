@@ -45,7 +45,7 @@ NXP (USA, HQ Austin TX / Eindhoven NL, automotive-grade fabs) — S32K1xx is NXP
 **This is a real capability trade-off, not a drop-in replacement, and is worth flagging explicitly**: the project README describes the TPM addition as adding "a post-quantum Trusted Platform Module allowing cryptographic authentication and message signing." CSEc is a **symmetric-only** SHE-class HSM:
 
 | | SLB9672 (TPM 2.0) | S32K144 CSEc |
-|---|---|---|
+| --- | --- | --- |
 | Symmetric crypto (AES, MAC) | Yes | Yes, hardware-accelerated |
 | Asymmetric crypto (RSA/ECC) — signing, key exchange | Yes (TPM 2.0 command set) | **No** |
 | Post-quantum algorithms | No (TPM 2.0 spec predates NIST PQC standardization; SLB9672 doesn't claim PQC either) | **No** |
@@ -63,7 +63,7 @@ Unlike the STM32F302→STM32G431 pass, this repo does **not** have a verified ph
 To avoid re-touching every wire in the schematic (high risk of breakage for a "which pins are free" mapping I can't fully verify anyway), the new symbol keeps every retained pin at the **same x/y position** it had on the STM32G431 symbol, just relabeled. Net connectivity is therefore unchanged for every signal below — only the symbol pin's name (and, for a few nets, the net's own name) changed:
 
 | Function | Net name (before → after) | Notes |
-|---|---|---|
+| --- | --- | --- |
 | Core power | `+3V3` | `VDD_1`, `VDD_2` unchanged |
 | Core ground | `GND` | `VSS_1`, `VSS_2` unchanged |
 | Analog supply | `VDDA-FILTRADO` | pin renamed `VDDA/VREF+` → `VDDA` |

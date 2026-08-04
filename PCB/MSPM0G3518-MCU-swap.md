@@ -3,12 +3,21 @@
 **Current design.** `U1` is a **Texas Instruments MSPM0G3518-Q1** in the 32-pin VQFN (RHB)
 package, orderable part number **`M0G3518QRHBRQ1`**.
 
-> **Status: schematic complete, NOT upstream-submittable.** EAGLE is the standard for this
-> project and the final product must be in EAGLE for submission to the upstream LibreServo
-> repository. `MSPM0G3518` is currently a **symbol-only deviceset** — no package, no
-> pin-to-pad `<connects>` — so `U1` cannot be placed or routed on the `.brd`, and the same is
-> true of `ADM2587E` (`U5`) and `ADM3055E` (`U6`). **See §6.1 for the blocker and what closes
-> it.**
+> **Status: schematic complete; layout outstanding.** As of 2026-08-04 **KiCad is the primary
+> EDA tool for this fork** (EAGLE is end-of-life; the `.sch`/`.brd` pair is frozen for
+> backward compatibility only — see [`ReadMe.md`](ReadMe.md)). The former EAGLE-library
+> blocker described in earlier revisions of this document is therefore **retired**: stock
+> KiCad ships usable land patterns for `U1`, `U5` and `U6`. What remains is real layout work
+> — `U1` still carries the old `QFN32` footprint at the STM32 placement, and `U5`/`U6` are
+> unplaced. **See §6.1 and §6.2.**
+>
+> Sections below that describe EAGLE devicesets, `<connects>` blocks or `.brd` placement
+> record how the design got here. Apply their *content* (pin mapping, land-pattern
+> dimensions) in KiCad; do not edit the EAGLE files.
+>
+> **Version:** the fork is **v4.0.0** as of 2026-08-04, and the KiCad project is
+> `kicad/LibreServo-v4.0.0.*`. Where this document says v2.3.1 it means the frozen EAGLE
+> artefacts, which keep the upstream number.
 
 Supersedes [`MSPM0G3507-MCU-swap.md`](MSPM0G3507-MCU-swap.md) (same MSPM0 platform and package,
 smaller die), which superseded [`S32K144-MCU-swap.md`](S32K144-MCU-swap.md) and
@@ -35,7 +44,7 @@ Moving to the **MSPM0G351x** die closes both while keeping the identical VQFN-32
 and, as shown in §3, **the identical pinout**.
 
 | | S32K144 (superseded) | MSPM0G3507 (superseded) | **MSPM0G3518-Q1 (this pass)** |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Core | Cortex-M4F @ 80/112 MHz | Cortex-M0+ @ 80 MHz | Cortex-M0+ @ 80 MHz, MPU |
 | Main flash | 512 KB (ECC) | 128 KB (ECC) | **256 KB (ECC), dual-bank 2 × 128 KB with address swap for OTA** |
 | Data flash | 4 KB FlexRAM (EEPROM emu.) | — | **16 KB dedicated data flash bank, ECC** |
@@ -81,7 +90,7 @@ update"*; *"secure key storage for up to four AES keys"*; *"customer secure code
 ### 2.1 Against the S32K144 CSEc that was dropped two passes ago
 
 | | S32K144 CSEc (SHE-class HSM) | **MSPM0G3518** |
-|---|---|---|
+| --- | --- | --- |
 | Symmetric engine | AES-128, ECB/CBC/CMAC | **AES-128/256 (AESADV): CBC, CFB, OFB, CTR/ICM, CBC-MAC, CMAC, CCM, GCM** |
 | Protected key store | Yes, SHE key slots | **Yes — KEYSTORE, up to 4 keys (128-bit ×4 or 256-bit ×2, plus a session key)** |
 | Secure boot | Hardware AES-CMAC over image | **Yes — CSC, with hardware AES-CMAC *and* software ECDSA P-256 / SHA2-256** |
@@ -137,7 +146,7 @@ What *did* change is the **IOMUX `PINCM.PF` function codes** — a firmware conc
 must be right in the pin-mux configuration:
 
 | Net | Pin | Pad | Function | PF on '3507 | **PF on '3518** |
-|---|---|---:|---|---:|---:|
+| --- | --- | ---: | --- | ---: | ---: |
 | `CLK-8MHZ` | `PA6` | 10 | `HFCLK_IN` | 7 | **6** |
 | `PWM-4` | `PA4` | 8 | `TIMA0_C3` | 5 | **8** |
 | `PWM-2` | `PA22` | 26 | `TIMA0_C1` | 5 | **7** |
@@ -156,7 +165,7 @@ Analog functions are non-IOMUX (set `PINCM.PF` = 0). Spares are terminated per T
 output low or input with internal pullup/pulldown resistor enabled"*).
 
 | Pad | Pin | Net | Function (PF) | IO type | Notes |
-|---:|---|---|---|---|---|
+| ---: | --- | --- | --- | --- | --- |
 | 1 | `PA0` | `LED_RED` | GPIO [1] | **ODIO, 5 V-tol** | 20 mA sink — §3.2 |
 | 2 | `PA1` | — | *(spare)* | ODIO, 5 V-tol | |
 | 3 | `NRST` | `NRST` | reset | Reset | **must be pulled high** — §4 |
@@ -222,7 +231,7 @@ SDIO 6 mA, HSIO 6 mA, **HDIO 20 mA, ODIO 20 mA sink**):
 SLASFA6B §7.3 and §9.1 specify exactly the same values as the '3507, so **no BOM change**:
 
 | Ref | Value | Net | Requirement |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `R21` | 47 kΩ 0402 | `NRST` → `+3V3` | §9.1: *"NRST **must** be pulled to VDD for the device to start"*; Table 6-20 repeats it. 47 kΩ is TI's recommended value. |
 | `C40` | 10 nF 0402 | `NRST` → `GND` | TI-recommended `NRST` filter (§9.1). |
 | `C39` | 470 nF 0402 | `VCORE` → `GND` | §7.3 C<sub>VCORE</sub> = 470 nF; §9.1: *"Do not connect other circuits to the VCORE pin."* |
@@ -259,56 +268,78 @@ Machine-checked against the edited file:
 
 ## 6. Still open
 
-### 6.1 BLOCKER: incomplete EAGLE library entries gate upstream submission
+### 6.1 RETIRED: the EAGLE symbol-only-deviceset blocker
 
-**EAGLE is the standard for this project and the final product must be in EAGLE, because it is
-intended for submission to the upstream LibreServo repository.** That makes the current state of
-the library a hard blocker rather than a deferred nicety.
+**Superseded 2026-08-04 by the move to KiCad.** This subsection previously recorded a hard
+blocker: `MSPM0G3518` (`U1`), `ADM2587E` (`U5`) and `ADM3055E` (`U6`) were all merged into the
+EAGLE library as **symbol-only devicesets** — empty `package` attribute, no pin-to-pad
+`<connects>` — so none of them could be placed or routed on the `.brd`, and the schematic was
+not submittable upstream. Hand-authoring three EAGLE packages plus their `<connects>` tables
+was the critical path.
 
-`MSPM0G3518` is a **symbol-only deviceset**: its `<device>` has an empty `package` attribute and
-no `<connects>` block, so no symbol pin is bound to any physical pad. The consequences:
+That path is abandoned. The EAGLE files are frozen (see [`ReadMe.md`](ReadMe.md)), and stock
+KiCad 9 already ships correct, KLC-reviewed land patterns for all three parts:
 
-- The part **cannot be placed or routed on the `.brd`** at all.
-- A netlist/BOM export produces a part with no footprint.
-- It would land upstream as an unbuildable library entry, so **the schematic work in this
-  document is not upstream-submittable on its own.**
+| Ref | Part | Stock KiCad footprint |
+| --- | --- | --- |
+| `U1` | MSPM0G3518-Q1, VQFN-32 RHB | `Package_DFN_QFN:Texas_RHB0032E_VQFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm` |
+| `U5` | ADM2587E, SOIC-20W | `Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm` |
+| `U6` | ADM3055E, SOIC-20W | `Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm` |
 
-This is not unique to `U1`. **None of the four parts added across the last three upgrade passes
-has a footprint** — `MSPM0G3518` (`U1`), `ADM2587E` (`U5`), `ADM3055E` (`U6`), and the
-now-removed `SLB9672` before them were all merged as symbol-only placeholders. Closing this is
-the critical path to a submittable board.
+Two things to check rather than assume about the `U1` footprint:
 
-For `U1` specifically, the two inputs are already settled and verified, so the remaining work is
-mechanical rather than investigative:
+1. **It is `RHB0032E`, not `RHB0032T`.** KiCad's library is named for the '3507-era drawing
+   revision; the '3518/'3519 datasheet gives `RHB0032T` (4224744/A). Per §6.2 the two are
+   equivalent within rounding, but confirm against SLASFA6B §12 before fabrication.
+2. **It is not TI's literal recommended pattern.** KiCad's pads are 0.875 × 0.25 mm where
+   SLASFA6B §12 specifies 0.62 × 0.25 mm — the KLC pattern extends the pads outward for
+   inspectability and hand-rework. Exposed pad (3.45 × 3.45 mm) and 0.5 mm pitch match.
+   Pad 1 is in the **left column**, which is the correct orientation for TI's numbering.
 
-1. **Package `RHB0032T`** — TI's dimensioned land pattern is in SLASFA6B §12 (drawing
-   4224744/A) and is reproduced under "Footprint and layout" below.
-2. **Deviceset `<connects>`** — the complete pin-to-pad mapping for all 33 symbol pins is the
-   table in §3.1 of this document, already cross-checked against Table 6-2's `RHB PIN` column.
+The verification caveat carried over from
+[`RS485-CANFD-TPM-upgrade.md`](RS485-CANFD-TPM-upgrade.md) "Still missing" still applies in
+KiCad: footprint pad geometry *"can look 'done' in an XML diff while being wrong on the
+board"*. Open the footprint in the KiCad footprint editor and compare it against the
+SLASFA6B §12 mechanical drawing before fabricating — pad 1 orientation above all, because the
+legacy Propio `QFN32` numbers from a different corner (§6.2).
 
-**Caveat on how to build it, carried over from
-[`RS485-CANFD-TPM-upgrade.md`](RS485-CANFD-TPM-upgrade.md) "Still missing":** footprint pad
-geometry *"can look 'done' in an XML diff while being wrong on the board"*. A hand-authored
-package from the dimensions below should still be **opened in EAGLE and visually verified
-against the SLASFA6B §12 mechanical drawing** before it is fabricated or submitted — pad 1
-orientation in particular, since the existing `QFN32` numbers from a different corner (§6.2).
+The pin-to-pad mapping in §3.1 is unaffected by the tool change and remains the authority for
+binding symbol pins to pads, cross-checked against SLASFA6B Table 6-2's `RHB PIN` column.
 
 ### 6.2 Footprint and layout
 
-- [ ] **Footprint for `RHB0032T`** — deviceset is still symbol-only (§6.1). Note the '3518/'3519
-      datasheet gives package drawing **`RHB0032T` (4224744/A)**, a different revision from the
-      '3507's `RHB0032E` (4223442/B); dimensions are equivalent within rounding. TI's
-      recommended land pattern (SLASFA6B §12): **32 pads 0.62 × 0.25 mm on 0.5 mm pitch,
-      4.78 mm row-to-row span, 3.45 × 3.45 mm exposed thermal pad (pad 33)**, body 4.85–5.15 mm
-      square, 1 mm max height.
-- [ ] **Deviceset `<connects>`** binding the 33 symbol pins to pads 1–32 plus the thermal pad,
-      per the table in §3.1.
-- [ ] **The existing Propio `QFN32` footprint is still NOT reusable** — its pad 1 is on the
+- [x] **Footprint for the RHB package** — resolved by the KiCad move (§6.1): use stock
+      `Package_DFN_QFN:Texas_RHB0032E_VQFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm`. Reference
+      dimensions retained here for verification. The '3518/'3519 datasheet gives package
+      drawing **`RHB0032T` (4224744/A)**, a different revision from the '3507's `RHB0032E`
+      (4223442/B); dimensions are equivalent within rounding. TI's recommended land pattern
+      (SLASFA6B §12): **32 pads 0.62 × 0.25 mm on 0.5 mm pitch, 4.78 mm row-to-row span,
+      3.45 × 3.45 mm exposed thermal pad (pad 33)**, body 4.85–5.15 mm square, 1 mm max
+      height. KiCad's pads are 0.875 mm long rather than 0.62 mm — see §6.1 note 2.
+- [x] **Pin-to-pad binding** — superseded as an EAGLE `<connects>` task. In KiCad the
+      binding is made by assigning the footprint to the symbol; the mapping itself is the
+      table in §3.1 and is unchanged.
+- [ ] **Promote `#U1` to a real component.** The KiCad EAGLE import turned every
+      package-less EAGLE part into a `#`-prefixed pseudo-component — the class KiCad reserves
+      for power flags — so `kicad/LibreServo-v4.0.0.kicad_sch` holds `#U1`, `#U5` and `#U6`,
+      and no others. Until the `#` is dropped they will not annotate, net-list or reach the
+      BOM as real parts.
+- [ ] **Correct `U1`'s part number in the KiCad file.** The import predates the '3519 → '3518
+      correction: the symbol is `LibreServo-v4.0.0-eagle-import:MSPM0G3519` and the value is
+      `M0G3519QRHBRQ1`. The fitted part is the **MSPM0G3518-Q1, `M0G3518QRHBRQ1`** — the
+      '3519 is not offered in RHB-32. Rename the symbol and fix the value. (The rest of the
+      import is current with the frozen EAGLE master, including the `CAN0_TX`/`CAN0_RX`
+      rename from §5.)
+- [ ] **Assign the footprint to `U1` in `kicad/LibreServo-v4.0.0.kicad_sch`** and update the
+      board. **The legacy Propio `QFN32` footprint is NOT reusable** — its pad 1 is on the
       bottom row where TI's is on the left column (90° apart), and its span is 5.5 mm against
       TI's 4.78 mm. Only the 3.45 mm thermal pad matches.
-- [ ] `.brd` placement for `U1` — the element still references package `QFN32` at
-      `x=4.78 y=8.4 rot=R270`. Body size is unchanged at 5 × 5 mm so the envelope fits, but
-      pad 1 moves to a different corner.
+- [ ] **`U1` placement in `kicad/LibreServo-v4.0.0.kicad_pcb`** — the footprint there is
+      still `LibreServo-v2.3.1:QFN32` at the inherited STM32 location (EAGLE
+      `x=4.78 y=8.4 rot=R270`). Body size is unchanged at 5 × 5 mm so the envelope fits, but
+      pad 1 moves to a different corner, so the escape routing must be redone.
+- [ ] **Thermal vias under the exposed pad** — the `_ThermalVias` variant of the stock
+      footprint exists; decide between it and the plain variant before routing.
 - [ ] **`C1` bulk decoupling is below spec** — §7.3 lists C<sub>VDD</sub> = 10 µF and §9.1
       recommends 10 µF + 0.1 µF within a few millimetres. `C1` is **4.7 µF** in an 0402.
       Raising it to 10 µF in 0402 is severely derated at 3.3 V; this is a real case-size vs.
@@ -327,8 +358,9 @@ orientation in particular, since the existing `QFN32` numbers from a different c
 
 ### 6.4 Board-level, carried over and still unresolved
 
-- [ ] Footprints/devicesets/3D models and `.brd` placement for `ADM2587E` (`U5`) and
-      `ADM3055E` (`U6`).
+- [ ] Footprint assignment (`Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm`, §6.1), 3D models and
+      `.kicad_pcb` placement for `ADM2587E` (`U5`) and `ADM3055E` (`U6`) — both are still
+      unplaced.
 - [ ] **5 V rail for `U6`'s isoPower `VCC`** (`+5V_ISO_CANFD`) — nothing on the board makes 5 V.
 - [ ] CAN-FD bus connector strategy; `CANH`/`CANL` are unterminated labelled nets.
 - [ ] `ADM2587E` `GND2` copper-separation caveat; isolation creepage/clearance against the
@@ -355,6 +387,10 @@ orientation in particular, since the existing `QFN32` numbers from a different c
 
 Schematic edits, pin assignment, package selection and this document produced by
 **Claude Opus 5** (Anthropic), working from the local TI documents SLASFA6B and SLAAE29A.
+
+The 2026-08-04 revision — status banner, §6.1 retirement, and the KiCad items in §6.2/§6.4 —
+was also written by **Claude Opus 5**. The decision to make KiCad the primary EDA tool and to
+freeze the EAGLE artefacts for backward compatibility was made by the human maintainer.
 Device selection (MSPM0G3518-Q1 over MSPM0G3507-Q1, and the VQFN-32 package) was made by the
 human maintainer, who also corrected the secure-boot assessment in
 [`MSPM0G3507-MCU-swap.md`](MSPM0G3507-MCU-swap.md) §6.

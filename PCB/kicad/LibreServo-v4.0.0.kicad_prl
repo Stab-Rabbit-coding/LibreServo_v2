@@ -1,7 +1,7 @@
 {
   "board": {
-    "active_layer": 0,
-    "active_layer_preset": "",
+    "active_layer": 5,
+    "active_layer_preset": "Front Assembly View",
     "auto_track_width": true,
     "hidden_netclasses": [],
     "hidden_nets": [],
@@ -48,7 +48,7 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_ffffffff_ffffffff",
+    "visible_layers": "00000000_00000000_00000008_82000022",
     "zone_display_mode": 0
   },
   "git": {
@@ -57,7 +57,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "LibreServo-v2.3.1.kicad_prl",
+    "filename": "LibreServo-v4.0.0.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {

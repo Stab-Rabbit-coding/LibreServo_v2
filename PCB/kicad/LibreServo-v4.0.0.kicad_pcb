@@ -7,6 +7,14 @@
 		(legacy_teardrops no)
 	)
 	(paper "A4")
+	(title_block
+		(title "LibreServo v4.0.0 — Griffing.tech security fork")
+		(date "2026-08-04")
+		(rev "4.0.0")
+		(company "Griffing.tech")
+		(comment 1 "Fork of LibreServo v2.3.1 (CC BY-SA 4.0), https://www.libreservo.com/en")
+		(comment 2 "MCU: TI MSPM0G3518-Q1 (M0G3518QRHBRQ1), VQFN-32 RHB")
+	)
 	(layers
 		(0 "F.Cu" signal)
 		(4 "In1.Cu" signal)
@@ -151,7 +159,7 @@
 	(net 67 "N$16")
 	(net 68 "N$18")
 	(net 69 "N$19")
-	(footprint "LibreServo-v2.3.1:0603"
+	(footprint "LibreServo-v4.0.0:0603"
 		(layer "F.Cu")
 		(uuid "0f498127-a5cf-4663-82f6-dfd3f65b0977")
 		(at 142.7887 118.4274 -90)
@@ -273,7 +281,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "132ed503-7fd6-442d-b777-20a0322713ed")
 		(at 137.2971 117.8202 90)
@@ -396,7 +404,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp8"
+	(footprint "LibreServo-v4.0.0:dummyfp8"
 		(layer "F.Cu")
 		(uuid "14a26898-bf00-412d-8f99-6691fd9eb585")
 		(at 143.4511 96.0036)
@@ -456,7 +464,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:MLP8"
+	(footprint "LibreServo-v4.0.0:MLP8"
 		(layer "F.Cu")
 		(uuid "19a5e886-bca6-4e22-b76d-0139f9d7cb9d")
 		(at 149.1361 105.6908)
@@ -615,7 +623,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp15"
+	(footprint "LibreServo-v4.0.0:dummyfp15"
 		(layer "F.Cu")
 		(uuid "1c83a135-5573-4ec4-bbac-f08cbfc345e5")
 		(at 144.2511 94.0036)
@@ -675,7 +683,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "1f4fdc04-bdfe-41fd-a565-8fd9ff87ea25")
 		(at 140.2659 114.463)
@@ -798,7 +806,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "20962e7c-1e6d-45a5-9f1a-11e51edc2446")
 		(at 159.4641 119.0284 180)
@@ -921,7 +929,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "251eeffa-0488-498a-8108-6ff27fb0b506")
 		(at 154.7495 115.4028 180)
@@ -1044,7 +1052,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "287ab365-48de-4889-808a-94827974d5de")
 		(at 141.6907 118.0154 90)
@@ -1167,7 +1175,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:SOT25"
+	(footprint "LibreServo-v4.0.0:SOT25"
 		(layer "F.Cu")
 		(uuid "30615a12-74b1-46f6-ab0f-53bd058376da")
 		(at 139.4731 117.7386 90)
@@ -1444,7 +1452,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp12"
+	(footprint "LibreServo-v4.0.0:dummyfp12"
 		(layer "F.Cu")
 		(uuid "3b7ccc7a-7a76-43fc-8cf8-6afc3d32f2fa")
 		(at 141.8511 94.0036)
@@ -1504,7 +1512,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "3c43487a-61af-4166-ace7-a2fb2421791e")
 		(at 133.8877 106.4774 180)
@@ -1627,7 +1635,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp1"
+	(footprint "LibreServo-v4.0.0:dummyfp1"
 		(layer "F.Cu")
 		(uuid "41999ec5-93d8-4d85-9fa5-c6fb5afcba24")
 		(at 138.1161 84.9506)
@@ -1687,7 +1695,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp13"
+	(footprint "LibreServo-v4.0.0:dummyfp13"
 		(layer "F.Cu")
 		(uuid "44d5754d-25cb-4057-8502-c74e2ba549f1")
 		(at 142.6511 94.0036)
@@ -1747,7 +1755,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp0"
+	(footprint "LibreServo-v4.0.0:dummyfp0"
 		(layer "F.Cu")
 		(uuid "45e0ede5-8123-4071-81bc-46f39eb7bd6a")
 		(at 138.1161 92.342)
@@ -1807,7 +1815,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "47207422-980e-44cf-9605-48f0c2e53fb4")
 		(at 144.4657 112.8536)
@@ -1930,7 +1938,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:JST_PH-4_HOLE_B"
+	(footprint "LibreServo-v4.0.0:JST_PH-4_HOLE_B"
 		(layer "F.Cu")
 		(uuid "4b6f005b-ca51-4593-9424-fdcc197fc47b")
 		(at 142.1511 123.4036 180)
@@ -2101,7 +2109,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:SERVO_SLOT"
+	(footprint "LibreServo-v4.0.0:SERVO_SLOT"
 		(layer "F.Cu")
 		(uuid "4e619521-e8d6-4b22-82b7-0453ecf815b7")
 		(at 158.7511 111.2536 180)
@@ -2354,7 +2362,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "4f7417fd-98d9-46d1-a505-ab01bb214ceb")
 		(at 146.2133 113.0314 180)
@@ -2477,7 +2485,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp2"
+	(footprint "LibreServo-v4.0.0:dummyfp2"
 		(layer "F.Cu")
 		(uuid "557c14f1-a5a5-4a73-8a0d-50ffd6b90970")
 		(at 146.2441 84.9506)
@@ -2537,7 +2545,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "5b04a4b7-64b5-4507-bb13-ffba7528c56b")
 		(at 134.3781 115.5536 -90)
@@ -2660,7 +2668,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "5cd258c7-ea65-42df-ad71-0cf3b76cc784")
 		(at 133.4067 115.4774 -90)
@@ -2783,7 +2791,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0603"
+	(footprint "LibreServo-v4.0.0:0603"
 		(layer "F.Cu")
 		(uuid "600c9570-c5ee-42e7-8944-14aaf7434a6e")
 		(at 154.3709 118.3422 180)
@@ -2906,7 +2914,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:SERVO_SLOT"
+	(footprint "LibreServo-v4.0.0:SERVO_SLOT"
 		(layer "F.Cu")
 		(uuid "6392d13f-20e8-44c8-9138-d990e141cb13")
 		(at 158.7511 111.2536)
@@ -3159,7 +3167,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp3"
+	(footprint "LibreServo-v4.0.0:dummyfp3"
 		(layer "F.Cu")
 		(uuid "69e092ef-0bb6-479f-8315-b5864da802d6")
 		(at 146.2695 92.342)
@@ -3219,7 +3227,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp14"
+	(footprint "LibreServo-v4.0.0:dummyfp14"
 		(layer "F.Cu")
 		(uuid "70947121-b3bb-46bd-bcee-6b06d838fe8e")
 		(at 143.4511 94.0036)
@@ -3279,7 +3287,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "7d6e7c0a-c4a7-43a1-96bb-52f275297519")
 		(at 145.5815 103.656 180)
@@ -3402,7 +3410,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp5"
+	(footprint "LibreServo-v4.0.0:dummyfp5"
 		(layer "F.Cu")
 		(uuid "7e2adf11-0be1-4102-9487-58d21bda38fe")
 		(at 141.0511 96.0036)
@@ -3462,7 +3470,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "7f73da27-4cf3-4ef9-bd77-48204601318b")
 		(at 152.1591 104.2584)
@@ -3585,7 +3593,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "81e030f7-dafa-431a-a071-0d7f99a33ef9")
 		(at 142.9371 111.1726 90)
@@ -3708,7 +3716,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:PLCC-4_2.2X2"
+	(footprint "LibreServo-v4.0.0:PLCC-4_2.2X2"
 		(layer "F.Cu")
 		(uuid "84b53e72-dbb7-40f8-a744-417b9313b7a8")
 		(at 135.3111 118.099 180)
@@ -3817,7 +3825,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "87e4a22d-b84a-4783-8bac-64099b55b715")
 		(at 133.2273 107.5028 180)
@@ -3940,7 +3948,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0603"
+	(footprint "LibreServo-v4.0.0:0603"
 		(layer "F.Cu")
 		(uuid "88073bc0-d181-4147-ba42-3b633ca9c1ab")
 		(at 152.2983 112.9718 -90)
@@ -4063,7 +4071,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0603"
+	(footprint "LibreServo-v4.0.0:0603"
 		(layer "F.Cu")
 		(uuid "8995fdca-500e-4752-8924-906350f1573f")
 		(at 152.6165 106.9712 180)
@@ -4186,7 +4194,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:FFC-5-0.5"
+	(footprint "LibreServo-v4.0.0:FFC-5-0.5"
 		(layer "F.Cu")
 		(uuid "8a990ccc-2059-4af7-aedf-849adc93e553")
 		(at 140.3365 88.6642 -90)
@@ -4361,7 +4369,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp10"
+	(footprint "LibreServo-v4.0.0:dummyfp10"
 		(layer "F.Cu")
 		(uuid "96c36186-aa6e-4a5f-8a70-51dd5cb62518")
 		(at 140.2511 94.0036)
@@ -4421,7 +4429,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "9b65d5aa-bf9d-4d20-beac-f67e3e2e3ca7")
 		(at 130.9633 110.679 90)
@@ -4543,7 +4551,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "9c50f860-fea3-4ee6-812e-637b6bdcece3")
 		(at 156.6037 105.1264 180)
@@ -4666,7 +4674,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "a08a9f44-aaa2-429c-b8e0-039d1c66d7d0")
 		(at 137.93 106.353 180)
@@ -4789,7 +4797,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp9"
+	(footprint "LibreServo-v4.0.0:dummyfp9"
 		(layer "F.Cu")
 		(uuid "a08d6fd5-f619-4afe-a489-16cd825bba94")
 		(at 144.2511 96.0036)
@@ -4849,7 +4857,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "a2dab9f4-6912-4abe-bc5b-3e962d883fb1")
 		(at 138.0733 114.3774 -135)
@@ -4972,7 +4980,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "a52c6759-6a0d-4904-8c3f-f84650bc4789")
 		(at 152.6149 105.8614 180)
@@ -5095,7 +5103,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:JST_PH-4_HOLE_B"
+	(footprint "LibreServo-v4.0.0:JST_PH-4_HOLE_B"
 		(layer "F.Cu")
 		(uuid "a904342e-d978-4862-9c07-fe917b9528e0")
 		(at 142.1511 99.3036)
@@ -5266,7 +5274,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "a937ce3a-5330-4f11-9ba2-18b76ec8510b")
 		(at 154.4499 105.5028 90)
@@ -5389,7 +5397,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:SOT23"
+	(footprint "LibreServo-v4.0.0:SOT23"
 		(layer "F.Cu")
 		(uuid "b02fb4f2-b42c-45d1-84de-bd7ee76ec397")
 		(at 145.5735 118.2116 -90)
@@ -5526,7 +5534,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp6"
+	(footprint "LibreServo-v4.0.0:dummyfp6"
 		(layer "F.Cu")
 		(uuid "b0aec733-2829-4b61-a671-a6470092f046")
 		(at 141.8511 96.0036)
@@ -5586,7 +5594,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp11"
+	(footprint "LibreServo-v4.0.0:dummyfp11"
 		(layer "F.Cu")
 		(uuid "b65bacf3-fa81-4e3f-a660-f60741266dae")
 		(at 141.0511 94.0036)
@@ -5646,7 +5654,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:DFN5X6"
+	(footprint "LibreServo-v4.0.0:DFN5X6"
 		(layer "F.Cu")
 		(uuid "c1eb2bf9-039d-43ff-b6ae-4de3191eaaf2")
 		(at 162.1299 113.7264)
@@ -5794,7 +5802,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:ACS711-QFN"
+	(footprint "LibreServo-v4.0.0:ACS711-QFN"
 		(layer "F.Cu")
 		(uuid "c6912e0b-94b1-4e18-8deb-b9deccfc56e9")
 		(at 147.0387 110.379 180)
@@ -6032,7 +6040,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:MSOP-8"
+	(footprint "LibreServo-v4.0.0:MSOP-8"
 		(layer "F.Cu")
 		(uuid "d1584313-1f8e-47b8-804a-0171716f99bb")
 		(at 141.7861 105.0374)
@@ -6200,7 +6208,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:QFN32"
+	(footprint "LibreServo-v4.0.0:QFN32"
 		(layer "F.Cu")
 		(uuid "d3782e02-071d-4e16-a245-410f29331bd3")
 		(at 135.0311 111.3536 -90)
@@ -7141,7 +7149,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "d52ac418-95e6-444c-a65d-86233bffffea")
 		(at 154.4111 114.1618 180)
@@ -7264,7 +7272,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp4"
+	(footprint "LibreServo-v4.0.0:dummyfp4"
 		(layer "F.Cu")
 		(uuid "db374f22-1dcc-4f0e-b9d9-5b8b2450cdcb")
 		(at 140.2511 96.0036)
@@ -7324,7 +7332,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "dd55e258-6a28-4f9d-ae2e-7800c154a85a")
 		(at 131.0145 114.4058 -90)
@@ -7447,7 +7455,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:MLP8"
+	(footprint "LibreServo-v4.0.0:MLP8"
 		(layer "F.Cu")
 		(uuid "e25d8347-cf21-4d0c-8a1b-2618931f96f8")
 		(at 150.5367 116.7464)
@@ -7606,7 +7614,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "e6399c06-9eee-4fb6-b5fb-2e4ced57bdf7")
 		(at 160.6631 117.6092 180)
@@ -7729,7 +7737,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:DFN5X6"
+	(footprint "LibreServo-v4.0.0:DFN5X6"
 		(layer "F.Cu")
 		(uuid "e672166f-17cb-4b88-afc1-fcaea709d373")
 		(at 154.4499 109.2158 -90)
@@ -7877,7 +7885,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:dummyfp7"
+	(footprint "LibreServo-v4.0.0:dummyfp7"
 		(layer "F.Cu")
 		(uuid "e8963f4e-5356-484e-ac80-9afd30258e8e")
 		(at 142.6511 96.0036)
@@ -7937,7 +7945,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "eb732032-1264-479e-97dd-80f6b813b6da")
 		(at 152.5961 114.957)
@@ -8060,7 +8068,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0603"
+	(footprint "LibreServo-v4.0.0:0603"
 		(layer "F.Cu")
 		(uuid "edf3f655-0b6e-4759-8ac5-d9a328b07db4")
 		(at 163.5759 116.4008 -135)
@@ -8183,7 +8191,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "F.Cu")
 		(uuid "fa94fd20-b277-4124-be63-cb5850e5132a")
 		(at 154.1423 117.207 180)
@@ -8306,7 +8314,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "125968d7-679d-4d65-8e92-44c93e8a268c")
 		(at 136.8111 118.1392)
@@ -8431,7 +8439,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "148433f5-ce20-4ce5-8010-e04b3570acd5")
 		(at 134.2139 105.7802 180)
@@ -8556,7 +8564,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:HEADER_4_1.27_0.3"
+	(footprint "LibreServo-v4.0.0:HEADER_4_1.27_0.3"
 		(layer "B.Cu")
 		(uuid "18963695-884c-4961-84bc-1d56abd5ef5e")
 		(at 135.3511 104.4552 180)
@@ -8660,7 +8668,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "328b6a32-71b3-4fcd-96c4-877e1cd8cbd5")
 		(at 145.9055 88.8742 -90)
@@ -8785,7 +8793,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "4b1840ab-81cb-4da9-90c2-8ea9ab480ecb")
 		(at 142.3429 118.3536)
@@ -8910,7 +8918,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:QFN24"
+	(footprint "LibreServo-v4.0.0:QFN24"
 		(layer "B.Cu")
 		(uuid "4bc541a6-3143-4cd1-a1e9-62843561a41a")
 		(at 142.1911 88.6418 90)
@@ -9221,7 +9229,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "6541a59b-46f7-464e-8236-e8e48efb6ecf")
 		(at 140.4921 118.379 180)
@@ -9346,7 +9354,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402_MIN"
+	(footprint "LibreServo-v4.0.0:0402_MIN"
 		(layer "B.Cu")
 		(uuid "66cc8e45-83ba-4415-9377-09513eb10270")
 		(at 151.0905 116.2644 -58)
@@ -9470,7 +9478,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:FFC-5-0.5"
+	(footprint "LibreServo-v4.0.0:FFC-5-0.5"
 		(layer "B.Cu")
 		(uuid "700fd45f-9d23-4d26-a92b-35aedee6ca37")
 		(at 134.3511 111.3536 90)
@@ -9647,7 +9655,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:1206"
+	(footprint "LibreServo-v4.0.0:1206"
 		(layer "B.Cu")
 		(uuid "73a05dc3-45a4-42f3-b12a-39243f06a4ed")
 		(at 136.3661 114.914)
@@ -9772,7 +9780,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "76b6bccb-8824-40a4-b7bd-331d98831312")
 		(at 132.9169 110.7204)
@@ -9897,7 +9905,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "77bbf6af-920e-46e9-a378-7cb1863cf682")
 		(at 135.2691 117.6366 -90)
@@ -10022,7 +10030,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:MPM36XX"
+	(footprint "LibreServo-v4.0.0:MPM36XX"
 		(layer "B.Cu")
 		(uuid "7b1e92e9-6fda-4b16-a3a3-8ffedc3d8794")
 		(at 141.2513 115.7982 90)
@@ -10417,7 +10425,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "853382af-1076-4f38-94f7-685ad3b7b5cb")
 		(at 138.4835 86.9438 -90)
@@ -10542,7 +10550,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0603"
+	(footprint "LibreServo-v4.0.0:0603"
 		(layer "B.Cu")
 		(uuid "88e5ddc4-4c18-4c24-860c-d1806e3da164")
 		(at 143.6461 112.9298 180)
@@ -10667,7 +10675,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:E2,5-6_MIN"
+	(footprint "LibreServo-v4.0.0:E2,5-6_MIN"
 		(layer "B.Cu")
 		(uuid "9e7c7e13-4df0-4a05-93ba-132e47ffe50d")
 		(at 148.4797 112.7696 -110)
@@ -10884,7 +10892,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:POTEN_SERVO"
+	(footprint "LibreServo-v4.0.0:POTEN_SERVO"
 		(layer "B.Cu")
 		(uuid "a646ce62-309d-434e-aace-5bf05bbd5102")
 		(at 136.5757 111.1684 180)
@@ -10972,7 +10980,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:OSC-2X1.6"
+	(footprint "LibreServo-v4.0.0:OSC-2X1.6"
 		(layer "B.Cu")
 		(uuid "b005d1e1-3abf-4f34-8bdb-9b35fe7b7af9")
 		(at 134.2343 107.5944 180)
@@ -11083,7 +11091,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "c4a7e3eb-febc-43cd-b049-6bf8a7fe6e41")
 		(at 138.4783 88.8234 -90)
@@ -11208,7 +11216,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "d1a31d27-9827-4ed8-adbe-8cc1a9a870cc")
 		(at 132.9169 109.8204)
@@ -11333,7 +11341,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "d59725d1-821d-4dc2-b8a5-20d02f0c6d61")
 		(at 140.8615 84.9304 180)
@@ -11458,7 +11466,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "e182fc13-d19d-4763-babf-6e64d37b85bc")
 		(at 144.7905 116.152 90)
@@ -11583,7 +11591,7 @@
 		)
 		(embedded_fonts no)
 	)
-	(footprint "LibreServo-v2.3.1:0402"
+	(footprint "LibreServo-v4.0.0:0402"
 		(layer "B.Cu")
 		(uuid "e2abc672-f6fc-410f-89c7-685ab4333e4c")
 		(at 145.9117 87.0184 -90)

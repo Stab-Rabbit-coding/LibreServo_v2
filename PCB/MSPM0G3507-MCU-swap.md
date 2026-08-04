@@ -39,7 +39,7 @@ Texas Instruments (USA, HQ Dallas TX). Honest scorecard against the S32K144 it r
 against the STM32F302K8U6 the board was originally laid out for:
 
 | | STM32F302K8U6 (original) | S32K144 (superseded) | **MSPM0G3507-Q1 (this pass)** |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Core | Cortex-M4 + FPU @ 72 MHz | Cortex-M4F @ 80/112 MHz | **Cortex-M0+, no FPU, @ 80 MHz** |
 | Flash / SRAM | 64 KB / 16 KB | 512 KB / 64 KB | **128 KB (ECC) / 32 KB (parity)** |
 | CAN | bxCAN, no FD | 3× FlexCAN, 1 FD | 1× CAN 2.0A/B + **CAN-FD** |
@@ -78,7 +78,7 @@ existing 8 MHz oscillator, plus `VREF+` and `VREF-`. Audited against Table 6-2's
 availability columns:
 
 | Package | Body | GPIO (Table 5-1) | Spares | Verdict |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | 28 VSSOP (DGS28) | 7.1 × 3 mm | 24 | **0** | Fits, but every pin committed; no thermal pad; `PA7`/`PA8`/`PA12`/`PA13` not bonded, forcing CAN onto `PA26`/`PA27` and consuming `PA2`/`ROSC` and `PA5`/`HFXIN` as plain GPIO |
 | **32 VQFN (RHB)** | **5 × 5 mm** | **28** | **4** | **Selected** |
 | 32 VSSOP (DGS32) | 8.1 × 4.9 mm | 28 | 4 | Same pin count, larger area, no thermal pad |
@@ -99,7 +99,7 @@ Worth stating explicitly, because both parts are "32-pin, 5 × 5 mm, 0.5 mm pitc
 substitution looks safe:
 
 | | Propio `QFN32` (in use for STM32F301/2) | TI `RHB0032E` (SLASF88C §12, drawing 4223442/B) |
-|---|---|---|
+| --- | --- | --- |
 | Pad 1 location | bottom row, left end | **left column, top** |
 | Numbering | bottom → right → top → left | **left → bottom → right → top** |
 | Pad size | 0.7 × 0.3 mm | **0.6 × 0.25 mm** |
@@ -118,7 +118,7 @@ per Table 6-4 ("PAx and PBx — Open; set corresponding pin functions to GPIO an
 unused pins to output low or input with the internal pullup or pulldown resistor enabled").
 
 | Pad | Pin | Net | Function (PF) | IO type | Notes |
-|---:|---|---|---|---|---|
+| ---: | --- | --- | --- | --- | --- |
 | 1 | `PA0` | `LED_RED` | GPIO [PF1] | **5 V-tol. open drain** | see §3.1 |
 | 2 | `PA1` | — | *(spare)* | 5 V-tol. open drain | |
 | 3 | `NRST` | `NRST` | reset | Reset | **must be pulled high** — §4 |
@@ -237,7 +237,7 @@ Three parts are added. None were needed by the S32K144 or the STM32 parts before
 of them will stop the board booting if omitted.
 
 | Ref | Value | Net | Requirement |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `R21` | 47 kΩ 0402 | `NRST` → `+3V3` | **`NRST` must be pulled to VDD or the device cannot start** (Table 6-4; §9.1: *"NRST **must** be pulled to VDD for the device to start"*). 47 kΩ is TI's recommended value. |
 | `C40` | 10 nF 0402 | `NRST` → `GND` | TI-recommended `NRST` filter (§9.1), keeping the pin controllable by a debug probe. |
 | `C39` | 470 nF 0402 | `VCORE` → `GND` | §9.1: *"A 0.47 µF tank capacitor is required for the VCORE pin and must be placed close to the device with minimum distance to the device ground. **Do not connect other circuits to the VCORE pin.**"* |
@@ -269,7 +269,7 @@ It is **not** a supply input — it must never be tied to `+3V3`.
 - **Nets renamed** to TI peripheral naming — connectivity unchanged, labels follow the net:
 
   | Before | After |
-  |---|---|
+| --- | --- |
   | `LPUART1_TX` / `LPUART1_RX` | `UART0_TX` / `UART0_RX` |
   | `CAN0_TX` / `CAN0_RX` | `CAN_TX` / `CAN_RX` |
   | `SWD_DIO` / `SWD_CLK` | `SWDIO` / `SWCLK` |
@@ -311,7 +311,7 @@ Enablers in MSPM0 MCUs* (January 2023, revised December 2025), local copy at
 ### 6.1 What this device actually has
 
 | Capability | MSPM0G3507 | Source |
-|---|---|---|
+| --- | --- | --- |
 | Immutable ROM root of trust (BCR) | **Yes** | SLAAE29A §2.3 |
 | Single point of entry to main flash at boot | **Yes** | Table 1-2 |
 | CRC-32 verified main flash region | **Yes** | Table 1-2 |
@@ -353,7 +353,7 @@ configuration **permanently locked** — a genuine one-way door on a production 
 ### 6.3 Honest comparison with the S32K144 CSEc it replaces
 
 | | S32K144 CSEc | MSPM0G3507 |
-|---|---|---|
+| --- | --- | --- |
 | Secure boot | Hardware AES-CMAC over image | ROM-anchored BIM, SHA-256 + ECDSA P-256 |
 | **Asymmetric signing / verification** | **No** (SHE is symmetric-only) | **Yes — ECDSA P-256** |
 | Protected key store | **Yes** (SHE key slots) | **No** |
@@ -409,7 +409,7 @@ both boards had it wrong — the ripple was returning through the ferrite instea
 the converter ground, which defeats the point of fitting the ferrite:
 
 | Cap pair | Was | Now | Datasheet |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `C27` 10 µF + `C28` 100 nF (`U5` VISOOUT) | `RS485_ISO_GND` | **`RS485_GNDISO`** | ADM2587E Table 10 pin 12: *"a reservoir capacitor of 10 µF and a decoupling capacitor of 0.1 µF be fitted between Pin 12 and Pin 11"* |
 | `C35` 220 nF + `C36` 10 µF (`U6` VISOOUT) | `CANFD_ISO_GND` | **`CANFD_GNDISO`** | ADM3055E Table 10 pin 19: *"requires 0.22 µF and 10 µF capacitors to GND_ISO"* |
 
@@ -425,7 +425,7 @@ resolved and on-sheet. `CANH`/`CANL` were previously labelled but unterminated a
 connectors `U$8`/`U$9`, on a new `JST_PH-3_HOLE` deviceset:
 
 | Pin | Net | Rationale |
-|---|---|---|
+| --- | --- | --- |
 | `P$1` | `CANFD_ISO_GND` | ISO 11898-2 bus reference. An isolated node whose bus side floats has an undefined common-mode voltage relative to other nodes; the CAN_GND conductor is what bounds it. This is why CANopen/DeviceNet cabling carries CAN_GND. |
 | `P$2` | `CANL` | kept adjacent to `CANH` for twisted-pair continuity up to the shell |
 | `P$3` | `CANH` | |
@@ -506,7 +506,7 @@ foreign net's wire**, plus **3 net-connectivity breaks**, all inherited from the
 `RS485-CANFD-TPM-upgrade.md` pass. All are now repaired. What they were, and how each was fixed:
 
 | # | Defect | Fix |
-|---:|---|---|
+| ---: | --- | --- |
 | 1–6 | The `GND` wire `(33.02,-44.45)→(33.02,-60.96)` ran straight down `U5`'s **entire logic-side pin column**, passing through `VCC`, `RxD`, `RE`, `R20.1`, `DE` and `TxD` | `GND` is a supply net joined by name, so the wire was unnecessary. Deleted it and placed `SUPPLY37` directly on `U5.GND1` |
 | 7–8 | `RS485_VISOOUT`'s cap feed ran along `y=-88.9` from `x=86.36`, straight through `C25.1` and `C26.1` (`+3V3`) — **bridging the isolation barrier** on the drawing | Rerouted: drops at `x=104.14`, i.e. to the right of the `+3V3` pair, and spans only `C27.1`–`C28.1` |
 | 9–11 | `RS485_VISOIN`'s cap feed ran along `y=-88.9` from `x=93.98` through `C26.1`, `C27.1` and `C28.1`, and its riser passed through `+3V15`'s pin at `(93.98,-86.36)` | Rerouted along `y=-73.66`, dropping at `x=124.46`, spanning only `C29.1`–`C30.1` |

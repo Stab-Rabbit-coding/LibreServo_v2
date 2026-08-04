@@ -347,7 +347,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:ACS711-QFN"
+		(property "Footprint" "LibreServo-v4.0.0:ACS711-QFN"
 			(at 0 0 0)
 			(effects
 				(font
@@ -1727,7 +1727,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:QFN24"
+		(property "Footprint" "LibreServo-v4.0.0:QFN24"
 			(at 0 0 0)
 			(effects
 				(font
@@ -2871,7 +2871,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SOT25"
+		(property "Footprint" "LibreServo-v4.0.0:SOT25"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3184,7 +3184,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0201"
+		(property "Footprint" "LibreServo-v4.0.0:0201"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3327,7 +3327,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0402"
+		(property "Footprint" "LibreServo-v4.0.0:0402"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3470,7 +3470,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0402_MIN"
+		(property "Footprint" "LibreServo-v4.0.0:0402_MIN"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3613,7 +3613,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0603"
+		(property "Footprint" "LibreServo-v4.0.0:0603"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3756,7 +3756,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0805"
+		(property "Footprint" "LibreServo-v4.0.0:0805"
 			(at 0 0 0)
 			(effects
 				(font
@@ -3899,7 +3899,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0805_MIN"
+		(property "Footprint" "LibreServo-v4.0.0:0805_MIN"
 			(at 0 0 0)
 			(effects
 				(font
@@ -4042,7 +4042,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:1206"
+		(property "Footprint" "LibreServo-v4.0.0:1206"
 			(at 0 0 0)
 			(effects
 				(font
@@ -4185,7 +4185,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:1206_CORRIENTE"
+		(property "Footprint" "LibreServo-v4.0.0:1206_CORRIENTE"
 			(at 0 0 0)
 			(effects
 				(font
@@ -4328,7 +4328,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:085CS_1AR"
+		(property "Footprint" "LibreServo-v4.0.0:085CS_1AR"
 			(at 0 0 0)
 			(effects
 				(font
@@ -4495,7 +4495,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:085CS_1AW"
+		(property "Footprint" "LibreServo-v4.0.0:085CS_1AW"
 			(at 0 0 0)
 			(effects
 				(font
@@ -4662,7 +4662,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:085CS_1R"
+		(property "Footprint" "LibreServo-v4.0.0:085CS_1R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -4829,7 +4829,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:085CS_1W"
+		(property "Footprint" "LibreServo-v4.0.0:085CS_1W"
 			(at 0 0 0)
 			(effects
 				(font
@@ -4996,7 +4996,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:139CLL-2R"
+		(property "Footprint" "LibreServo-v4.0.0:139CLL-2R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -5163,7 +5163,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:139CLL-2W"
+		(property "Footprint" "LibreServo-v4.0.0:139CLL-2W"
 			(at 0 0 0)
 			(effects
 				(font
@@ -5330,7 +5330,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:139CLL-3R"
+		(property "Footprint" "LibreServo-v4.0.0:139CLL-3R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -5497,7 +5497,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:139CLL-3W"
+		(property "Footprint" "LibreServo-v4.0.0:139CLL-3W"
 			(at 0 0 0)
 			(effects
 				(font
@@ -5664,7 +5664,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:140CLH-0810"
+		(property "Footprint" "LibreServo-v4.0.0:140CLH-0810"
 			(at 0 0 0)
 			(effects
 				(font
@@ -5831,7 +5831,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:140CLH-1010"
+		(property "Footprint" "LibreServo-v4.0.0:140CLH-1010"
 			(at 0 0 0)
 			(effects
 				(font
@@ -5998,7 +5998,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:140CLH-1014"
+		(property "Footprint" "LibreServo-v4.0.0:140CLH-1014"
 			(at 0 0 0)
 			(effects
 				(font
@@ -6165,7 +6165,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:150CLZ-0810"
+		(property "Footprint" "LibreServo-v4.0.0:150CLZ-0810"
 			(at 0 0 0)
 			(effects
 				(font
@@ -6332,7 +6332,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:150CLZ-1010"
+		(property "Footprint" "LibreServo-v4.0.0:150CLZ-1010"
 			(at 0 0 0)
 			(effects
 				(font
@@ -6499,7 +6499,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:150CLZ-1014"
+		(property "Footprint" "LibreServo-v4.0.0:150CLZ-1014"
 			(at 0 0 0)
 			(effects
 				(font
@@ -6666,7 +6666,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:153CLV-0405"
+		(property "Footprint" "LibreServo-v4.0.0:153CLV-0405"
 			(at 0 0 0)
 			(effects
 				(font
@@ -6833,7 +6833,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:153CLV-0505"
+		(property "Footprint" "LibreServo-v4.0.0:153CLV-0505"
 			(at 0 0 0)
 			(effects
 				(font
@@ -7000,7 +7000,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:153CLV-0605"
+		(property "Footprint" "LibreServo-v4.0.0:153CLV-0605"
 			(at 0 0 0)
 			(effects
 				(font
@@ -7167,7 +7167,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:153CLV-0807"
+		(property "Footprint" "LibreServo-v4.0.0:153CLV-0807"
 			(at 0 0 0)
 			(effects
 				(font
@@ -7334,7 +7334,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:153CLV-0810"
+		(property "Footprint" "LibreServo-v4.0.0:153CLV-0810"
 			(at 0 0 0)
 			(effects
 				(font
@@ -7501,7 +7501,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:153CLV-1010"
+		(property "Footprint" "LibreServo-v4.0.0:153CLV-1010"
 			(at 0 0 0)
 			(effects
 				(font
@@ -7668,7 +7668,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:153CLV-1012"
+		(property "Footprint" "LibreServo-v4.0.0:153CLV-1012"
 			(at 0 0 0)
 			(effects
 				(font
@@ -7835,7 +7835,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:153CLV-1014"
+		(property "Footprint" "LibreServo-v4.0.0:153CLV-1014"
 			(at 0 0 0)
 			(effects
 				(font
@@ -8002,7 +8002,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:175TMP-0808"
+		(property "Footprint" "LibreServo-v4.0.0:175TMP-0808"
 			(at 0 0 0)
 			(effects
 				(font
@@ -8169,7 +8169,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:175TMP-0810"
+		(property "Footprint" "LibreServo-v4.0.0:175TMP-0810"
 			(at 0 0 0)
 			(effects
 				(font
@@ -8336,7 +8336,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:PANASONIC_A"
+		(property "Footprint" "LibreServo-v4.0.0:PANASONIC_A"
 			(at 0 0 0)
 			(effects
 				(font
@@ -8503,7 +8503,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:A_3216-18R"
+		(property "Footprint" "LibreServo-v4.0.0:A_3216-18R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -8670,7 +8670,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:A_3216-18W"
+		(property "Footprint" "LibreServo-v4.0.0:A_3216-18W"
 			(at 0 0 0)
 			(effects
 				(font
@@ -8837,7 +8837,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:PANASONIC_B"
+		(property "Footprint" "LibreServo-v4.0.0:PANASONIC_B"
 			(at 0 0 0)
 			(effects
 				(font
@@ -9004,7 +9004,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:B_3528-21R"
+		(property "Footprint" "LibreServo-v4.0.0:B_3528-21R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -9171,7 +9171,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:B_3528-21W"
+		(property "Footprint" "LibreServo-v4.0.0:B_3528-21W"
 			(at 0 0 0)
 			(effects
 				(font
@@ -9338,7 +9338,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:B45181A"
+		(property "Footprint" "LibreServo-v4.0.0:B45181A"
 			(at 0 0 0)
 			(effects
 				(font
@@ -9505,7 +9505,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:B45181B"
+		(property "Footprint" "LibreServo-v4.0.0:B45181B"
 			(at 0 0 0)
 			(effects
 				(font
@@ -9672,7 +9672,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:B45181C"
+		(property "Footprint" "LibreServo-v4.0.0:B45181C"
 			(at 0 0 0)
 			(effects
 				(font
@@ -9839,7 +9839,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:B45181D"
+		(property "Footprint" "LibreServo-v4.0.0:B45181D"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10006,7 +10006,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:PANASONIC_C"
+		(property "Footprint" "LibreServo-v4.0.0:PANASONIC_C"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10173,7 +10173,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:C_6032-28R"
+		(property "Footprint" "LibreServo-v4.0.0:C_6032-28R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10340,7 +10340,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:C_6032-28W"
+		(property "Footprint" "LibreServo-v4.0.0:C_6032-28W"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10507,7 +10507,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:CT3216"
+		(property "Footprint" "LibreServo-v4.0.0:CT3216"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10674,7 +10674,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:CT3528"
+		(property "Footprint" "LibreServo-v4.0.0:CT3528"
 			(at 0 0 0)
 			(effects
 				(font
@@ -10841,7 +10841,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:CT6032"
+		(property "Footprint" "LibreServo-v4.0.0:CT6032"
 			(at 0 0 0)
 			(effects
 				(font
@@ -11008,7 +11008,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:CT7343"
+		(property "Footprint" "LibreServo-v4.0.0:CT7343"
 			(at 0 0 0)
 			(effects
 				(font
@@ -11175,7 +11175,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:PANASONIC_D"
+		(property "Footprint" "LibreServo-v4.0.0:PANASONIC_D"
 			(at 0 0 0)
 			(effects
 				(font
@@ -11342,7 +11342,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:D_7343-31R"
+		(property "Footprint" "LibreServo-v4.0.0:D_7343-31R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -11509,7 +11509,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:D_7343-31W"
+		(property "Footprint" "LibreServo-v4.0.0:D_7343-31W"
 			(at 0 0 0)
 			(effects
 				(font
@@ -11676,7 +11676,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:PANASONIC_E"
+		(property "Footprint" "LibreServo-v4.0.0:PANASONIC_E"
 			(at 0 0 0)
 			(effects
 				(font
@@ -11843,7 +11843,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E_7260-38R"
+		(property "Footprint" "LibreServo-v4.0.0:E_7260-38R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -12010,7 +12010,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E_7260-38W"
+		(property "Footprint" "LibreServo-v4.0.0:E_7260-38W"
 			(at 0 0 0)
 			(effects
 				(font
@@ -12177,7 +12177,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E1,8-4"
+		(property "Footprint" "LibreServo-v4.0.0:E1,8-4"
 			(at 0 0 0)
 			(effects
 				(font
@@ -12344,7 +12344,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:EB20D"
+		(property "Footprint" "LibreServo-v4.0.0:EB20D"
 			(at 0 0 0)
 			(effects
 				(font
@@ -12511,7 +12511,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:EB22,5D"
+		(property "Footprint" "LibreServo-v4.0.0:EB22,5D"
 			(at 0 0 0)
 			(effects
 				(font
@@ -12678,7 +12678,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:EB25D"
+		(property "Footprint" "LibreServo-v4.0.0:EB25D"
 			(at 0 0 0)
 			(effects
 				(font
@@ -12845,7 +12845,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:EB30D"
+		(property "Footprint" "LibreServo-v4.0.0:EB30D"
 			(at 0 0 0)
 			(effects
 				(font
@@ -13012,7 +13012,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:EB35D"
+		(property "Footprint" "LibreServo-v4.0.0:EB35D"
 			(at 0 0 0)
 			(effects
 				(font
@@ -13179,7 +13179,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E15-5"
+		(property "Footprint" "LibreServo-v4.0.0:E15-5"
 			(at 0 0 0)
 			(effects
 				(font
@@ -13346,7 +13346,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E15-6"
+		(property "Footprint" "LibreServo-v4.0.0:E15-6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -13513,7 +13513,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E15-9"
+		(property "Footprint" "LibreServo-v4.0.0:E15-9"
 			(at 0 0 0)
 			(effects
 				(font
@@ -13680,7 +13680,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E2,5-6E"
+		(property "Footprint" "LibreServo-v4.0.0:E2,5-6E"
 			(at 0 0 0)
 			(effects
 				(font
@@ -13847,7 +13847,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E2,5-6_MIN"
+		(property "Footprint" "LibreServo-v4.0.0:E2,5-6_MIN"
 			(at 0 0 0)
 			(effects
 				(font
@@ -14014,7 +14014,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E2-4"
+		(property "Footprint" "LibreServo-v4.0.0:E2-4"
 			(at 0 0 0)
 			(effects
 				(font
@@ -14181,7 +14181,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E2-5"
+		(property "Footprint" "LibreServo-v4.0.0:E2-5"
 			(at 0 0 0)
 			(effects
 				(font
@@ -14348,7 +14348,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E2,5RE"
+		(property "Footprint" "LibreServo-v4.0.0:E2,5RE"
 			(at 0 0 0)
 			(effects
 				(font
@@ -14515,7 +14515,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E2,5-5"
+		(property "Footprint" "LibreServo-v4.0.0:E2,5-5"
 			(at 0 0 0)
 			(effects
 				(font
@@ -14682,7 +14682,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E2,5-4R"
+		(property "Footprint" "LibreServo-v4.0.0:E2,5-4R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -14849,7 +14849,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E2,5-6"
+		(property "Footprint" "LibreServo-v4.0.0:E2,5-6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -15016,7 +15016,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E2,5-7"
+		(property "Footprint" "LibreServo-v4.0.0:E2,5-7"
 			(at 0 0 0)
 			(effects
 				(font
@@ -15183,7 +15183,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E22-10"
+		(property "Footprint" "LibreServo-v4.0.0:E22-10"
 			(at 0 0 0)
 			(effects
 				(font
@@ -15350,7 +15350,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E22-6"
+		(property "Footprint" "LibreServo-v4.0.0:E22-6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -15517,7 +15517,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E22-9"
+		(property "Footprint" "LibreServo-v4.0.0:E22-9"
 			(at 0 0 0)
 			(effects
 				(font
@@ -15684,7 +15684,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E25-10"
+		(property "Footprint" "LibreServo-v4.0.0:E25-10"
 			(at 0 0 0)
 			(effects
 				(font
@@ -15851,7 +15851,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E25-9"
+		(property "Footprint" "LibreServo-v4.0.0:E25-9"
 			(at 0 0 0)
 			(effects
 				(font
@@ -16018,7 +16018,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E3,5-10"
+		(property "Footprint" "LibreServo-v4.0.0:E3,5-10"
 			(at 0 0 0)
 			(effects
 				(font
@@ -16185,7 +16185,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E3,5-8"
+		(property "Footprint" "LibreServo-v4.0.0:E3,5-8"
 			(at 0 0 0)
 			(effects
 				(font
@@ -16352,7 +16352,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E30-10"
+		(property "Footprint" "LibreServo-v4.0.0:E30-10"
 			(at 0 0 0)
 			(effects
 				(font
@@ -16519,7 +16519,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E30-12"
+		(property "Footprint" "LibreServo-v4.0.0:E30-12"
 			(at 0 0 0)
 			(effects
 				(font
@@ -16686,7 +16686,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E30-16"
+		(property "Footprint" "LibreServo-v4.0.0:E30-16"
 			(at 0 0 0)
 			(effects
 				(font
@@ -16853,7 +16853,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E35-12"
+		(property "Footprint" "LibreServo-v4.0.0:E35-12"
 			(at 0 0 0)
 			(effects
 				(font
@@ -17020,7 +17020,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E35-14"
+		(property "Footprint" "LibreServo-v4.0.0:E35-14"
 			(at 0 0 0)
 			(effects
 				(font
@@ -17187,7 +17187,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E35-16"
+		(property "Footprint" "LibreServo-v4.0.0:E35-16"
 			(at 0 0 0)
 			(effects
 				(font
@@ -17354,7 +17354,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E35-18"
+		(property "Footprint" "LibreServo-v4.0.0:E35-18"
 			(at 0 0 0)
 			(effects
 				(font
@@ -17521,7 +17521,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E45-16"
+		(property "Footprint" "LibreServo-v4.0.0:E45-16"
 			(at 0 0 0)
 			(effects
 				(font
@@ -17688,7 +17688,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E45-18"
+		(property "Footprint" "LibreServo-v4.0.0:E45-18"
 			(at 0 0 0)
 			(effects
 				(font
@@ -17855,7 +17855,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E45-21"
+		(property "Footprint" "LibreServo-v4.0.0:E45-21"
 			(at 0 0 0)
 			(effects
 				(font
@@ -18022,7 +18022,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E45-22"
+		(property "Footprint" "LibreServo-v4.0.0:E45-22"
 			(at 0 0 0)
 			(effects
 				(font
@@ -18189,7 +18189,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E45-25"
+		(property "Footprint" "LibreServo-v4.0.0:E45-25"
 			(at 0 0 0)
 			(effects
 				(font
@@ -18356,7 +18356,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E5-10,5"
+		(property "Footprint" "LibreServo-v4.0.0:E5-10,5"
 			(at 0 0 0)
 			(effects
 				(font
@@ -18523,7 +18523,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E5-13"
+		(property "Footprint" "LibreServo-v4.0.0:E5-13"
 			(at 0 0 0)
 			(effects
 				(font
@@ -18690,7 +18690,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E5-4"
+		(property "Footprint" "LibreServo-v4.0.0:E5-4"
 			(at 0 0 0)
 			(effects
 				(font
@@ -18857,7 +18857,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E5-5"
+		(property "Footprint" "LibreServo-v4.0.0:E5-5"
 			(at 0 0 0)
 			(effects
 				(font
@@ -19024,7 +19024,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E5-6"
+		(property "Footprint" "LibreServo-v4.0.0:E5-6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -19191,7 +19191,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E5-8,5"
+		(property "Footprint" "LibreServo-v4.0.0:E5-8,5"
 			(at 0 0 0)
 			(effects
 				(font
@@ -19358,7 +19358,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E5R"
+		(property "Footprint" "LibreServo-v4.0.0:E5R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -19525,7 +19525,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E50-25"
+		(property "Footprint" "LibreServo-v4.0.0:E50-25"
 			(at 0 0 0)
 			(effects
 				(font
@@ -19692,7 +19692,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E50-30"
+		(property "Footprint" "LibreServo-v4.0.0:E50-30"
 			(at 0 0 0)
 			(effects
 				(font
@@ -19859,7 +19859,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E55-25"
+		(property "Footprint" "LibreServo-v4.0.0:E55-25"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20026,7 +20026,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E55-30"
+		(property "Footprint" "LibreServo-v4.0.0:E55-30"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20193,7 +20193,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E7,5-16"
+		(property "Footprint" "LibreServo-v4.0.0:E7,5-16"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20360,7 +20360,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:E7,5-18"
+		(property "Footprint" "LibreServo-v4.0.0:E7,5-18"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20527,7 +20527,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:ETR1"
+		(property "Footprint" "LibreServo-v4.0.0:ETR1"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20694,7 +20694,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:ETR2"
+		(property "Footprint" "LibreServo-v4.0.0:ETR2"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20861,7 +20861,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:ETR3"
+		(property "Footprint" "LibreServo-v4.0.0:ETR3"
 			(at 0 0 0)
 			(effects
 				(font
@@ -21028,7 +21028,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:ETR4"
+		(property "Footprint" "LibreServo-v4.0.0:ETR4"
 			(at 0 0 0)
 			(effects
 				(font
@@ -21195,7 +21195,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:ETR5"
+		(property "Footprint" "LibreServo-v4.0.0:ETR5"
 			(at 0 0 0)
 			(effects
 				(font
@@ -21362,7 +21362,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:PANASONIC_F"
+		(property "Footprint" "LibreServo-v4.0.0:PANASONIC_F"
 			(at 0 0 0)
 			(effects
 				(font
@@ -21529,7 +21529,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:PANASONIC_G"
+		(property "Footprint" "LibreServo-v4.0.0:PANASONIC_G"
 			(at 0 0 0)
 			(effects
 				(font
@@ -21696,7 +21696,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:P128-35"
+		(property "Footprint" "LibreServo-v4.0.0:P128-35"
 			(at 0 0 0)
 			(effects
 				(font
@@ -21863,7 +21863,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:P128-40"
+		(property "Footprint" "LibreServo-v4.0.0:P128-40"
 			(at 0 0 0)
 			(effects
 				(font
@@ -22030,7 +22030,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:P128-50"
+		(property "Footprint" "LibreServo-v4.0.0:P128-50"
 			(at 0 0 0)
 			(effects
 				(font
@@ -22197,7 +22197,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:P128-60"
+		(property "Footprint" "LibreServo-v4.0.0:P128-60"
 			(at 0 0 0)
 			(effects
 				(font
@@ -22364,7 +22364,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:R_2012-12R"
+		(property "Footprint" "LibreServo-v4.0.0:R_2012-12R"
 			(at 0 0 0)
 			(effects
 				(font
@@ -22531,7 +22531,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:R_2012-12W"
+		(property "Footprint" "LibreServo-v4.0.0:R_2012-12W"
 			(at 0 0 0)
 			(effects
 				(font
@@ -22698,7 +22698,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_9E"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_9E"
 			(at 0 0 0)
 			(effects
 				(font
@@ -22865,7 +22865,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_9F"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_9F"
 			(at 0 0 0)
 			(effects
 				(font
@@ -23032,7 +23032,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_A"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_A"
 			(at 0 0 0)
 			(effects
 				(font
@@ -23199,7 +23199,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_A'"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_A'"
 			(at 0 0 0)
 			(effects
 				(font
@@ -23366,7 +23366,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_B"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_B"
 			(at 0 0 0)
 			(effects
 				(font
@@ -23533,7 +23533,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_B'"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_B'"
 			(at 0 0 0)
 			(effects
 				(font
@@ -23700,7 +23700,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_C"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_C"
 			(at 0 0 0)
 			(effects
 				(font
@@ -23867,7 +23867,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_C'"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_C'"
 			(at 0 0 0)
 			(effects
 				(font
@@ -24034,7 +24034,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_C6"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_C6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -24201,7 +24201,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_D"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_D"
 			(at 0 0 0)
 			(effects
 				(font
@@ -24368,7 +24368,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_E"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_E"
 			(at 0 0 0)
 			(effects
 				(font
@@ -24535,7 +24535,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_E'"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_E'"
 			(at 0 0 0)
 			(effects
 				(font
@@ -24702,7 +24702,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_E1"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_E1"
 			(at 0 0 0)
 			(effects
 				(font
@@ -24869,7 +24869,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_E12"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_E12"
 			(at 0 0 0)
 			(effects
 				(font
@@ -25036,7 +25036,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_E13"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_E13"
 			(at 0 0 0)
 			(effects
 				(font
@@ -25203,7 +25203,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_E7"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_E7"
 			(at 0 0 0)
 			(effects
 				(font
@@ -25370,7 +25370,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_E9"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_E9"
 			(at 0 0 0)
 			(effects
 				(font
@@ -25537,7 +25537,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_F"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_F"
 			(at 0 0 0)
 			(effects
 				(font
@@ -25704,7 +25704,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_F'"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_F'"
 			(at 0 0 0)
 			(effects
 				(font
@@ -25871,7 +25871,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_F0"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_F0"
 			(at 0 0 0)
 			(effects
 				(font
@@ -26038,7 +26038,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_F13"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_F13"
 			(at 0 0 0)
 			(effects
 				(font
@@ -26205,7 +26205,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_F8"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_F8"
 			(at 0 0 0)
 			(effects
 				(font
@@ -26372,7 +26372,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_G"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_G"
 			(at 0 0 0)
 			(effects
 				(font
@@ -26539,7 +26539,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_H"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_H"
 			(at 0 0 0)
 			(effects
 				(font
@@ -26706,7 +26706,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_SMD_A5"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_SMD_A5"
 			(at 0 0 0)
 			(effects
 				(font
@@ -26873,7 +26873,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_SMD_B6"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_SMD_B6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -27040,7 +27040,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_SMD_C6"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_SMD_C6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -27207,7 +27207,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_SMD_E12"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_SMD_E12"
 			(at 0 0 0)
 			(effects
 				(font
@@ -27374,7 +27374,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_SMD_E7"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_SMD_E7"
 			(at 0 0 0)
 			(effects
 				(font
@@ -27541,7 +27541,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_SMD_F12"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_SMD_F12"
 			(at 0 0 0)
 			(effects
 				(font
@@ -27708,7 +27708,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SANYO-OSCON_SMD_F8"
+		(property "Footprint" "LibreServo-v4.0.0:SANYO-OSCON_SMD_F8"
 			(at 0 0 0)
 			(effects
 				(font
@@ -27875,7 +27875,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SMC_A"
+		(property "Footprint" "LibreServo-v4.0.0:SMC_A"
 			(at 0 0 0)
 			(effects
 				(font
@@ -28042,7 +28042,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SMC_B"
+		(property "Footprint" "LibreServo-v4.0.0:SMC_B"
 			(at 0 0 0)
 			(effects
 				(font
@@ -28209,7 +28209,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SMC_C"
+		(property "Footprint" "LibreServo-v4.0.0:SMC_C"
 			(at 0 0 0)
 			(effects
 				(font
@@ -28376,7 +28376,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SMC_D"
+		(property "Footprint" "LibreServo-v4.0.0:SMC_D"
 			(at 0 0 0)
 			(effects
 				(font
@@ -28543,7 +28543,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SMC_E"
+		(property "Footprint" "LibreServo-v4.0.0:SMC_E"
 			(at 0 0 0)
 			(effects
 				(font
@@ -28710,7 +28710,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SMC_P"
+		(property "Footprint" "LibreServo-v4.0.0:SMC_P"
 			(at 0 0 0)
 			(effects
 				(font
@@ -28877,7 +28877,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SMC_Z"
+		(property "Footprint" "LibreServo-v4.0.0:SMC_Z"
 			(at 0 0 0)
 			(effects
 				(font
@@ -29044,7 +29044,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TAP5-45"
+		(property "Footprint" "LibreServo-v4.0.0:TAP5-45"
 			(at 0 0 0)
 			(effects
 				(font
@@ -29211,7 +29211,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TAP5-50"
+		(property "Footprint" "LibreServo-v4.0.0:TAP5-50"
 			(at 0 0 0)
 			(effects
 				(font
@@ -29378,7 +29378,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TAP5-60"
+		(property "Footprint" "LibreServo-v4.0.0:TAP5-60"
 			(at 0 0 0)
 			(effects
 				(font
@@ -29545,7 +29545,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TAP5-70"
+		(property "Footprint" "LibreServo-v4.0.0:TAP5-70"
 			(at 0 0 0)
 			(effects
 				(font
@@ -29712,7 +29712,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TAP5-80"
+		(property "Footprint" "LibreServo-v4.0.0:TAP5-80"
 			(at 0 0 0)
 			(effects
 				(font
@@ -29879,7 +29879,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT2D4"
+		(property "Footprint" "LibreServo-v4.0.0:TT2D4"
 			(at 0 0 0)
 			(effects
 				(font
@@ -30046,7 +30046,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT2D4L"
+		(property "Footprint" "LibreServo-v4.0.0:TT2D4L"
 			(at 0 0 0)
 			(effects
 				(font
@@ -30213,7 +30213,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT2D5"
+		(property "Footprint" "LibreServo-v4.0.0:TT2D5"
 			(at 0 0 0)
 			(effects
 				(font
@@ -30380,7 +30380,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT2D5L"
+		(property "Footprint" "LibreServo-v4.0.0:TT2D5L"
 			(at 0 0 0)
 			(effects
 				(font
@@ -30547,7 +30547,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT2D6"
+		(property "Footprint" "LibreServo-v4.0.0:TT2D6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -30714,7 +30714,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT2D6L"
+		(property "Footprint" "LibreServo-v4.0.0:TT2D6L"
 			(at 0 0 0)
 			(effects
 				(font
@@ -30881,7 +30881,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT2D7"
+		(property "Footprint" "LibreServo-v4.0.0:TT2D7"
 			(at 0 0 0)
 			(effects
 				(font
@@ -31048,7 +31048,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT2D7L"
+		(property "Footprint" "LibreServo-v4.0.0:TT2D7L"
 			(at 0 0 0)
 			(effects
 				(font
@@ -31215,7 +31215,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT5D10"
+		(property "Footprint" "LibreServo-v4.0.0:TT5D10"
 			(at 0 0 0)
 			(effects
 				(font
@@ -31382,7 +31382,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT5D11"
+		(property "Footprint" "LibreServo-v4.0.0:TT5D11"
 			(at 0 0 0)
 			(effects
 				(font
@@ -31549,7 +31549,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT5D11L"
+		(property "Footprint" "LibreServo-v4.0.0:TT5D11L"
 			(at 0 0 0)
 			(effects
 				(font
@@ -31716,7 +31716,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT5D6L"
+		(property "Footprint" "LibreServo-v4.0.0:TT5D6L"
 			(at 0 0 0)
 			(effects
 				(font
@@ -31883,7 +31883,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT5D7"
+		(property "Footprint" "LibreServo-v4.0.0:TT5D7"
 			(at 0 0 0)
 			(effects
 				(font
@@ -32050,7 +32050,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT5D7L"
+		(property "Footprint" "LibreServo-v4.0.0:TT5D7L"
 			(at 0 0 0)
 			(effects
 				(font
@@ -32217,7 +32217,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT5D9"
+		(property "Footprint" "LibreServo-v4.0.0:TT5D9"
 			(at 0 0 0)
 			(effects
 				(font
@@ -32384,7 +32384,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT5D9L"
+		(property "Footprint" "LibreServo-v4.0.0:TT5D9L"
 			(at 0 0 0)
 			(effects
 				(font
@@ -32551,7 +32551,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:TT5D6"
+		(property "Footprint" "LibreServo-v4.0.0:TT5D6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -32718,7 +32718,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:UD-10X10_NICHICON"
+		(property "Footprint" "LibreServo-v4.0.0:UD-10X10_NICHICON"
 			(at 0 0 0)
 			(effects
 				(font
@@ -32885,7 +32885,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:UD-4X5,8_NICHICON"
+		(property "Footprint" "LibreServo-v4.0.0:UD-4X5,8_NICHICON"
 			(at 0 0 0)
 			(effects
 				(font
@@ -33052,7 +33052,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:UD-5X5,8_NICHICON"
+		(property "Footprint" "LibreServo-v4.0.0:UD-5X5,8_NICHICON"
 			(at 0 0 0)
 			(effects
 				(font
@@ -33219,7 +33219,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:UD-6,3X5,8_NICHICON"
+		(property "Footprint" "LibreServo-v4.0.0:UD-6,3X5,8_NICHICON"
 			(at 0 0 0)
 			(effects
 				(font
@@ -33386,7 +33386,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:UD-6,3X7,7_NICHICON"
+		(property "Footprint" "LibreServo-v4.0.0:UD-6,3X7,7_NICHICON"
 			(at 0 0 0)
 			(effects
 				(font
@@ -33553,7 +33553,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:UD-8X10_NICHICON"
+		(property "Footprint" "LibreServo-v4.0.0:UD-8X10_NICHICON"
 			(at 0 0 0)
 			(effects
 				(font
@@ -33720,7 +33720,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:MLP8"
+		(property "Footprint" "LibreServo-v4.0.0:MLP8"
 			(at 0 0 0)
 			(effects
 				(font
@@ -34204,7 +34204,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0402"
+		(property "Footprint" "LibreServo-v4.0.0:0402"
 			(at 0 0 0)
 			(effects
 				(font
@@ -34397,7 +34397,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0603"
+		(property "Footprint" "LibreServo-v4.0.0:0603"
 			(at 0 0 0)
 			(effects
 				(font
@@ -34590,7 +34590,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:FFC-5-0.5"
+		(property "Footprint" "LibreServo-v4.0.0:FFC-5-0.5"
 			(at 0 0 0)
 			(effects
 				(font
@@ -34905,7 +34905,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:HEADER_4_1.27"
+		(property "Footprint" "LibreServo-v4.0.0:HEADER_4_1.27"
 			(at 0 0 0)
 			(effects
 				(font
@@ -35050,7 +35050,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:HEADER_4_1.27_0.1"
+		(property "Footprint" "LibreServo-v4.0.0:HEADER_4_1.27_0.1"
 			(at 0 0 0)
 			(effects
 				(font
@@ -35195,7 +35195,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:HEADER_4_1.27_0.2"
+		(property "Footprint" "LibreServo-v4.0.0:HEADER_4_1.27_0.2"
 			(at 0 0 0)
 			(effects
 				(font
@@ -35340,7 +35340,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:HEADER_4_1.27_0.3"
+		(property "Footprint" "LibreServo-v4.0.0:HEADER_4_1.27_0.3"
 			(at 0 0 0)
 			(effects
 				(font
@@ -35485,7 +35485,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:HEADER_4_STD"
+		(property "Footprint" "LibreServo-v4.0.0:HEADER_4_STD"
 			(at 0 0 0)
 			(effects
 				(font
@@ -35630,7 +35630,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:HEADER_4_MIN"
+		(property "Footprint" "LibreServo-v4.0.0:HEADER_4_MIN"
 			(at 0 0 0)
 			(effects
 				(font
@@ -35938,7 +35938,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:JST_PH-4_HOLE"
+		(property "Footprint" "LibreServo-v4.0.0:JST_PH-4_HOLE"
 			(at 0 0 0)
 			(effects
 				(font
@@ -36119,7 +36119,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:JST_PH-4_HOLE_B"
+		(property "Footprint" "LibreServo-v4.0.0:JST_PH-4_HOLE_B"
 			(at 0 0 0)
 			(effects
 				(font
@@ -36300,7 +36300,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:JST_PH-4_HOLEV"
+		(property "Footprint" "LibreServo-v4.0.0:JST_PH-4_HOLEV"
 			(at 0 0 0)
 			(effects
 				(font
@@ -36481,7 +36481,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:PLCC-4_2.2X2"
+		(property "Footprint" "LibreServo-v4.0.0:PLCC-4_2.2X2"
 			(at 0 0 0)
 			(effects
 				(font
@@ -37056,7 +37056,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:DFN5X6"
+		(property "Footprint" "LibreServo-v4.0.0:DFN5X6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -38279,7 +38279,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:MPM36XX"
+		(property "Footprint" "LibreServo-v4.0.0:MPM36XX"
 			(at 0 0 0)
 			(effects
 				(font
@@ -39238,7 +39238,7 @@
 						)
 					)
 				)
-				(number "1"
+				(number "4"
 					(effects
 						(font
 							(size 0 0)
@@ -39256,7 +39256,7 @@
 						)
 					)
 				)
-				(number "2"
+				(number "10"
 					(effects
 						(font
 							(size 0 0)
@@ -39274,7 +39274,7 @@
 						)
 					)
 				)
-				(number "3"
+				(number "32"
 					(effects
 						(font
 							(size 0 0)
@@ -39292,7 +39292,7 @@
 						)
 					)
 				)
-				(number "4"
+				(number "3"
 					(effects
 						(font
 							(size 0 0)
@@ -39310,7 +39310,7 @@
 						)
 					)
 				)
-				(number "5"
+				(number "20"
 					(effects
 						(font
 							(size 0 0)
@@ -39328,7 +39328,7 @@
 						)
 					)
 				)
-				(number "6"
+				(number "22"
 					(effects
 						(font
 							(size 0 0)
@@ -39346,7 +39346,7 @@
 						)
 					)
 				)
-				(number "7"
+				(number "21"
 					(effects
 						(font
 							(size 0 0)
@@ -39364,7 +39364,7 @@
 						)
 					)
 				)
-				(number "8"
+				(number "1"
 					(effects
 						(font
 							(size 0 0)
@@ -39382,7 +39382,7 @@
 						)
 					)
 				)
-				(number "32"
+				(number "6"
 					(effects
 						(font
 							(size 0 0)
@@ -39400,7 +39400,7 @@
 						)
 					)
 				)
-				(number "9"
+				(number "7"
 					(effects
 						(font
 							(size 0 0)
@@ -39418,7 +39418,7 @@
 						)
 					)
 				)
-				(number "31"
+				(number "18"
 					(effects
 						(font
 							(size 0 0)
@@ -39436,7 +39436,7 @@
 						)
 					)
 				)
-				(number "10"
+				(number "11"
 					(effects
 						(font
 							(size 0 0)
@@ -39454,7 +39454,7 @@
 						)
 					)
 				)
-				(number "30"
+				(number "15"
 					(effects
 						(font
 							(size 0 0)
@@ -39472,7 +39472,7 @@
 						)
 					)
 				)
-				(number "11"
+				(number "30"
 					(effects
 						(font
 							(size 0 0)
@@ -39490,7 +39490,7 @@
 						)
 					)
 				)
-				(number "29"
+				(number "14"
 					(effects
 						(font
 							(size 0 0)
@@ -39508,7 +39508,7 @@
 						)
 					)
 				)
-				(number "12"
+				(number "19"
 					(effects
 						(font
 							(size 0 0)
@@ -39544,7 +39544,7 @@
 						)
 					)
 				)
-				(number "28"
+				(number "13"
 					(effects
 						(font
 							(size 0 0)
@@ -39562,7 +39562,7 @@
 						)
 					)
 				)
-				(number "13"
+				(number "31"
 					(effects
 						(font
 							(size 0 0)
@@ -39580,7 +39580,7 @@
 						)
 					)
 				)
-				(number "27"
+				(number "26"
 					(effects
 						(font
 							(size 0 0)
@@ -39598,7 +39598,7 @@
 						)
 					)
 				)
-				(number "14"
+				(number "25"
 					(effects
 						(font
 							(size 0 0)
@@ -39616,7 +39616,7 @@
 						)
 					)
 				)
-				(number "26"
+				(number "8"
 					(effects
 						(font
 							(size 0 0)
@@ -39634,7 +39634,7 @@
 						)
 					)
 				)
-				(number "15"
+				(number "27"
 					(effects
 						(font
 							(size 0 0)
@@ -39652,7 +39652,7 @@
 						)
 					)
 				)
-				(number "25"
+				(number "12"
 					(effects
 						(font
 							(size 0 0)
@@ -39670,7 +39670,7 @@
 						)
 					)
 				)
-				(number "16"
+				(number "5"
 					(effects
 						(font
 							(size 0 0)
@@ -39724,7 +39724,7 @@
 						)
 					)
 				)
-				(number "22"
+				(number "16"
 					(effects
 						(font
 							(size 0 0)
@@ -39742,7 +39742,7 @@
 						)
 					)
 				)
-				(number "21"
+				(number "17"
 					(effects
 						(font
 							(size 0 0)
@@ -39760,7 +39760,7 @@
 						)
 					)
 				)
-				(number "20"
+				(number "9"
 					(effects
 						(font
 							(size 0 0)
@@ -39778,7 +39778,7 @@
 						)
 					)
 				)
-				(number "19"
+				(number "28"
 					(effects
 						(font
 							(size 0 0)
@@ -39796,7 +39796,7 @@
 						)
 					)
 				)
-				(number "18"
+				(number "29"
 					(effects
 						(font
 							(size 0 0)
@@ -39814,7 +39814,7 @@
 						)
 					)
 				)
-				(number "17"
+				(number "2"
 					(effects
 						(font
 							(size 0 0)
@@ -39950,7 +39950,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:OSC-2X1.6"
+		(property "Footprint" "LibreServo-v4.0.0:OSC-2X1.6"
 			(at 0 0 0)
 			(effects
 				(font
@@ -40359,7 +40359,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:OSC-2.5X2"
+		(property "Footprint" "LibreServo-v4.0.0:OSC-2.5X2"
 			(at 0 0 0)
 			(effects
 				(font
@@ -40768,7 +40768,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SOT23"
+		(property "Footprint" "LibreServo-v4.0.0:SOT23"
 			(at 0 0 0)
 			(effects
 				(font
@@ -41246,7 +41246,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:POTEN_SERVO"
+		(property "Footprint" "LibreServo-v4.0.0:POTEN_SERVO"
 			(at 0 0 0)
 			(effects
 				(font
@@ -41373,7 +41373,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:1206_CORRIENTE"
+		(property "Footprint" "LibreServo-v4.0.0:1206_CORRIENTE"
 			(at 0 0 0)
 			(effects
 				(font
@@ -41578,7 +41578,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0201"
+		(property "Footprint" "LibreServo-v4.0.0:0201"
 			(at 0 0 0)
 			(effects
 				(font
@@ -41783,7 +41783,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0402"
+		(property "Footprint" "LibreServo-v4.0.0:0402"
 			(at 0 0 0)
 			(effects
 				(font
@@ -41988,7 +41988,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0402_MIN"
+		(property "Footprint" "LibreServo-v4.0.0:0402_MIN"
 			(at 0 0 0)
 			(effects
 				(font
@@ -42193,7 +42193,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0603"
+		(property "Footprint" "LibreServo-v4.0.0:0603"
 			(at 0 0 0)
 			(effects
 				(font
@@ -42398,7 +42398,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:0805"
+		(property "Footprint" "LibreServo-v4.0.0:0805"
 			(at 0 0 0)
 			(effects
 				(font
@@ -42603,7 +42603,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:1206"
+		(property "Footprint" "LibreServo-v4.0.0:1206"
 			(at 0 0 0)
 			(effects
 				(font
@@ -42808,7 +42808,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:R-5W"
+		(property "Footprint" "LibreServo-v4.0.0:R-5W"
 			(at 0 0 0)
 			(effects
 				(font
@@ -43013,7 +43013,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:MSOP-8"
+		(property "Footprint" "LibreServo-v4.0.0:MSOP-8"
 			(at 0 0 0)
 			(effects
 				(font
@@ -43879,7 +43879,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:SERVO_SLOT"
+		(property "Footprint" "LibreServo-v4.0.0:SERVO_SLOT"
 			(at 0 0 0)
 			(effects
 				(font
@@ -44000,7 +44000,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "LibreServo-v2.3.1:QFN32"
+		(property "Footprint" "LibreServo-v4.0.0:QFN32"
 			(at 0 0 0)
 			(effects
 				(font
@@ -45786,6 +45786,667 @@
 					(effects
 						(font
 							(size 0 0)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "SLB9672_TPM"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -22.86 34.29 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "SLB 9672AU2.0"
+			(at -22.86 -35.56 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/assets/row/public/documents/30/49/infineon-slb9672-tpm20-spi-fw16.xx-ds-rev1-3-2024-11-18-datasheet-en.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Infineon OPTIGA TPM SLB 9672AU2.0 FW16.xx, TPM 2.0 over SPI, PG-UQFN-32-1,-2, -40 to +105 degC. Pin numbers are the PG-UQFN-32 pads per datasheet Rev 1.3 Figure 6 and Tables 11-13; pin 33 is the exposed pad, internally tied to GND."
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "SLB9672_TPM_1_1"
+			(rectangle
+				(start -22.86 -33.02)
+				(end 22.86 33.02)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(pin input line
+				(at -26.67 30.48 0)
+				(length 3.81)
+				(name "CS#"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -26.67 27.94 0)
+				(length 3.81)
+				(name "SCLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -26.67 25.4 0)
+				(length 3.81)
+				(name "MOSI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at -26.67 22.86 0)
+				(length 3.81)
+				(name "MISO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at -26.67 20.32 0)
+				(length 3.81)
+				(name "PIRQ#"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -26.67 17.78 0)
+				(length 3.81)
+				(name "RST#"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at -26.67 15.24 0)
+				(length 3.81)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at -26.67 12.7 0)
+				(length 3.81)
+				(name "GPIO_02"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 26.67 30.48 180)
+				(length 3.81)
+				(name "NCI/VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 26.67 27.94 180)
+				(length 3.81)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "22"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 26.67 25.4 180)
+				(length 3.81)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 26.67 22.86 180)
+				(length 3.81)
+				(name "VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 26.67 20.32 180)
+				(length 3.81)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 26.67 17.78 180)
+				(length 3.81)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 26.67 15.24 180)
+				(length 3.81)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "23"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 26.67 12.7 180)
+				(length 3.81)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "32"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 26.67 10.16 180)
+				(length 3.81)
+				(name "NCI/GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 7.62 180)
+				(length 3.81)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "29"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 5.08 180)
+				(length 3.81)
+				(name "NC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "30"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 2.54 180)
+				(length 3.81)
+				(name "GPIO_00"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 0.0 180)
+				(length 3.81)
+				(name "GPIO_01"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -2.54 180)
+				(length 3.81)
+				(name "NCI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -5.08 180)
+				(length 3.81)
+				(name "NCI/VDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -7.62 180)
+				(length 3.81)
+				(name "NCI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -10.16 180)
+				(length 3.81)
+				(name "NCI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -12.7 180)
+				(length 3.81)
+				(name "NCI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -15.24 180)
+				(length 3.81)
+				(name "NCI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -17.78 180)
+				(length 3.81)
+				(name "NCI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "25"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -20.32 180)
+				(length 3.81)
+				(name "NCI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "26"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -22.86 180)
+				(length 3.81)
+				(name "NCI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "27"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -25.4 180)
+				(length 3.81)
+				(name "NCI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "28"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin no_connect line
+				(at 26.67 -27.94 180)
+				(length 3.81)
+				(name "NCI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "31"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 26.67 -30.48 180)
+				(length 3.81)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "33"
+					(effects
+						(font
+							(size 1.27 1.27)
 						)
 					)
 				)

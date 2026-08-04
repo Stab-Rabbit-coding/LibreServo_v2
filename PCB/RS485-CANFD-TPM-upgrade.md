@@ -7,6 +7,7 @@ Engineering analysis and part recommendations for the LibreServo v2.3.1 board (`
 **Decision: MCU is being swapped to STM32G431** (native FDCAN) — see §5. This is the bigger of the two alternatives originally laid out, chosen over adding an external MCP2518FD controller to the existing STM32F302K8U6.
 
 Local datasheet copies for the three parts driving this change are in [`datasheets/`](datasheets/):
+
 - [`ADM2582E-ADM2587E.pdf`](datasheets/ADM2582E-ADM2587E.pdf) — isolated RS-485 transceiver (§2)
 - [`ADM3055E-ADM3057E.pdf`](datasheets/ADM3055E-ADM3057E.pdf) — isolated CAN-FD transceiver (§3)
 - [`Infineon-SLB9672-TPM2.0-SPI-FW16.xx-datasheet.pdf`](datasheets/Infineon-SLB9672-TPM2.0-SPI-FW16.xx-datasheet.pdf) — TPM (§4)
@@ -52,7 +53,7 @@ Since §1 confirmed the current `U1` (STM32F302K8U6) has no FDCAN peripheral, an
 **Decision: [STMicroelectronics STM32G431](https://www.st.com/resource/en/datasheet/stm32g431c6.pdf)** series (e.g. STM32G431K6/K8, UFQFPN32) — HQ Plan-les-Ouates, Switzerland, fabs in France/Italy, **EU**. Cortex-M4 @ up to 170 MHz, native FDCAN peripheral (hardware bit-timing, message RAM, no CPU-mediated SPI framing), and is ST's official successor line to F3 — see [AN5094, "Migrating between STM32F334/303 and STM32G431/G474/G491"](https://www.st.com/resource/en/application_note/an5094-migrating-between-stm32f334303-and-stm32g431g474g491-mcus-stmicroelectronics.pdf).
 
 | | Pros | Cons |
-|---|---|---|
+| --- | --- | --- |
 | **Design impact** | Hardware FDCAN = precise bit timing, higher achievable throughput, no CPU cycles spent bit-banging SPI framing; frees SPI1 for the TPM alone; more GPIO/peripheral headroom than the F302K8 for future features | Full MCU swap: new schematic symbol/footprint, PCB relayout, and a firmware port (clock tree, HAL/peripheral register differences, re-mapping ADC/TIM/USART pins for existing PID/curve-generation/current-sense code) — the biggest-impact item in this whole upgrade |
 | **Sourcing / "reach"** | ST has deep, redundant EU + global distribution (Digi-Key, Mouser, Farnell/element14, RS Components, Arrow); G4 is a current mainstream family with a long support runway, not a legacy part being phased out | Bigger BOM/unit-cost delta than the external-controller alternative; verification/requalification effort (schematic, layout, firmware, EMC) is proportionally larger |
 | **REACH/RoHS** | ST publishes REACH SVHC and RoHS declarations for this family as standard | — |
@@ -70,6 +71,7 @@ Since §1 confirmed the current `U1` (STM32F302K8U6) has no FDCAN peripheral, an
 **Devicesets added** (symbol + a package-less placeholder `<device>`, same pattern EAGLE uses for its own `GND`/`+3V3`/`+7V` supply symbols in this library): `STM32G431`, `ADM2587E`, `ADM3055E`, `SLB9672`. No footprint/package exists for any of the four yet — see "Still missing" below, unchanged from before.
 
 **`U1`: STM32F302K8U6 → STM32G431.** All of `U1`'s pre-existing nets were re-pinned onto the new symbol's actual UFQFPN32 pinout (pin-mapped from `datasheets/stm32g431c6.pdf` Table 12, not assumed to line up with the old F302 pinout — it doesn't, only some pins keep the same physical position). Net-for-net:
+
 - Unchanged pins/nets: `VDD_1`/`VDD_2` (`+3V3`), `VSS_1`/`VSS_2`/`EP` (`GND`, note the two `VSS` pins swapped physical corners between the two parts — doesn't matter electrically), `VDDA/VREF+` (`VDDA-FILTRADO`) and the renamed `VSSA` (was `VSSA/VREF-`, `GND`) which both moved to new physical pins, `PF0-OSC_IN` (`CLK-8MHZ`, unchanged position), `PF1-OSC_OUT` and `PG10-NRST` (both still deliberately NC-marked, matching the existing external-oscillator/no-reset-button design), `PB8-BOOT0` (was `BOOT0`, still hard-tied to `GND` exactly as before — the G431 supports boot-mode selection via option bytes instead of the pin, but this schematic keeps the existing pin-strap behavior rather than assuming firmware will set that option byte), all of `PA0`–`PA10`, `PA13`–`PA15`, `PB0`, `PB5`–`PB7` keep their existing signal names (`SPI_CLK`/`SPI_IN`/`SPI_OUT`, `LED_RED/GREEN/BLUE`, `V_TEMP`, `V_CORRIENTE`, `V_BAT`, `PWM-1`/`PWM-3`, `EN-Q`, `USART1_TX/RX`, `SEL_SERIAL`, `SWDIO`/`SWCLK`), though several physically moved pin position (SPI/LED pins in particular).
 - **Displaced by FDCAN1**: `PA11` and `PA12` are the *only* FDCAN1 RX/TX-capable pins broken out on the UFQFPN32 package (confirmed against the full alternate-function table in `datasheets/stm32g431c6.pdf` — `PD0`/`PD1`/`PB9`, the other FDCAN1-capable pins, aren't bonded out on this 32-pin package). Those two pins previously carried `PWM-2` and `PWM-4` (motor driver direction inputs). They're now `FDCAN1_RX` (`PA11`) and `FDCAN1_TX` (`PA12`); `PWM-2` and `PWM-4` were moved to `PB4`/`PB3`, which were both **already unused** on the F302 (explicitly NC-marked in the schematic, not carrying any signal) — so this was a like-for-like pin swap with no net pin-budget shortfall, not a compromise. `PA15` was the one spare/NC pin left after that swap — it's now used for `TPM_CS#` (see "TPM wiring" below), which means the UFQFPN32 package is **fully pinned out**: every one of `U1`'s 32 signal pins (plus `EP`) now carries a net, with zero spares remaining.
 - **Caveat for firmware**: `PB3`/`PB4` don't have a `TIM1` alternate function on the G431 (unlike some of the pins they're replacing might have implied) — if the motor-PWM firmware needs a specific hardware timer channel on these two lines specifically, that's a firmware-side pin/timer re-assignment to check during the port, not something resolved by this schematic pass.
@@ -81,7 +83,7 @@ Since §1 confirmed the current `U1` (STM32F302K8U6) has no FDCAN peripheral, an
 **`U7` (new): SLB9672 TPM, and the pin-budget audit behind it** (§4). Before wiring anything, this pass did the "full pin audit" that §4 flagged as still outstanding: every one of `U1`'s 32 UFQFPN32 signal pins was checked against what it already carries. Result — after the FDCAN1 re-pin above, **exactly one pin was free: `PA15`**. Every SPI1-capable pin on this package (confirmed against the alternate-function table in `datasheets/stm32g431c6.pdf`) is already committed to something else:
 
 | SPI1 pin group (AF5) | Pin | Already carries |
-|---|---|---|
+| --- | --- | --- |
 | Default (NSS/SCK/MISO/MOSI) | `PA4`/`PA5`/`PA6`/`PA7` | `LED_GREEN`/`LED_BLUE`/`V_TEMP`/`V_CORRIENTE` |
 | Remap (NSS/SCK/MISO/MOSI) | `PA15`/`PB3`/`PB4`/`PB5` | *(free)*/`PWM-4`/`PWM-2`/`SEL_SERIAL` |
 
@@ -101,6 +103,7 @@ Footprints/packages, devicesets (which pair a symbol with a footprint and map sy
 The MCU swap also means a firmware port, not just a layout change: `Src/main.c`, `Src/LS_*.c`, and `Test_LibreServo_v2.ioc` all target the STM32F302K8U6's HAL/register set today (ADC1, TIM1/15/16/17, USART1 pin mappings) and will need re-mapping onto the STM32G431's pinout (which, per the wiring above, is **not** a 1:1 physical remap of the old pin assignments), plus new FDCAN and — once the physical PWM pin/timer question above is settled — motor-PWM init code.
 
 Open items for whoever does the layout/firmware pass:
+
 - Footprints/devicesets/3D models and `.brd` placement for `STM32G431`, `ADM2587E`, `ADM3055E`, `SLB9672` (see above).
 - Confirm `PB3`/`PB4` (now `PWM-2`/`PWM-4`) have adequate timer/PWM capability for the motor-drive firmware, or re-pin if a specific `TIM1` channel is required.
 - Pick the exact STM32G431 part/package (K6 vs K8 flash size) — pinout is already fixed to UFQFPN32 by the schematic work above, so this is now just a flash-size choice, not a package/pin-count one.

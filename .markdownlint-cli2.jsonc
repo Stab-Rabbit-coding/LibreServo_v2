@@ -1,0 +1,17 @@
+{
+  // markdownlint-cli2 config — see https://github.com/DavidAnson/markdownlint
+  // Matches the sibling Griffing.tech design repos (Open-Secure-ESC).
+  "config": {
+    "default": true,
+    // Design-change records cite datasheets and KiCad library paths that do
+    // not survive wrapping at 80 columns; wrapping them would harm readability.
+    "MD013": false,
+    // Citation lists intentionally use bare URLs rather than link syntax.
+    "MD034": false,
+    // Markdown has no subscript/superscript syntax, and datasheet symbol names
+    // (C_VDD, C_VCORE, I_OUT) are unreadable without them.
+    "MD033": { "allowed_elements": ["sub", "sup"] }
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["**/node_modules/**"]
+}
